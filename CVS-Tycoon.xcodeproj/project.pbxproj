@@ -384,7 +384,10 @@
 		4FF9D933143B3F0B0079F92A = {
 			isa = PBXGroup;
 			children = (
-				4FF9D952143B3F0B0079F92A /* CVS-Tycoon */,
+				4FF9D952143B3F0B0079F92A /* Classes */,
+				4FF9D953143B3F0B0079F92A /* Resources */,
+				4FF9D967143B3F0B0079F92A /* libs */,
+				4FF9DAA0143B3F0D0079F92A /* Supporting Files */,
 				4FF9D941143B3F0B0079F92A /* Frameworks */,
 				4FF9D93F143B3F0B0079F92A /* Products */,
 			);
@@ -413,7 +416,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4FF9D952143B3F0B0079F92A /* CVS-Tycoon */ = {
+		4FF9D952143B3F0B0079F92A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				4FF9DAA4143B3F0D0079F92A /* AppDelegate.h */,
@@ -423,10 +426,8 @@
 				4FF9DAAA143B3F0D0079F92A /* HelloWorldLayer.h */,
 				4FF9DAAB143B3F0E0079F92A /* HelloWorldLayer.m */,
 				4FF9DAAD143B3F0E0079F92A /* GameConfig.h */,
-				4FF9D953143B3F0B0079F92A /* Resources */,
-				4FF9D967143B3F0B0079F92A /* libs */,
-				4FF9DAA0143B3F0D0079F92A /* Supporting Files */,
 			);
+			name = Classes;
 			path = "CVS-Tycoon";
 			sourceTree = "<group>";
 		};
@@ -445,6 +446,7 @@
 				4FF9D965143B3F0B0079F92A /* iTunesArtwork */,
 			);
 			name = Resources;
+			path = "CVS-Tycoon";
 			sourceTree = "<group>";
 		};
 		4FF9D967143B3F0B0079F92A /* libs */ = {
@@ -461,6 +463,7 @@
 				4FF9DA8E143B3F0D0079F92A /* FontLabel */,
 			);
 			name = libs;
+			path = "CVS-Tycoon";
 			sourceTree = "<group>";
 		};
 		4FF9D968143B3F0B0079F92A /* cocos2d */ = {
@@ -756,6 +759,7 @@
 				4FF9DAA2143B3F0D0079F92A /* main.m */,
 			);
 			name = "Supporting Files";
+			path = "CVS-Tycoon";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
