@@ -470,9 +470,56 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		4F8063CC14532A11000F3DC5 /* Config Plists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Config Plists";
+			sourceTree = "<group>";
+		};
+		4F8063D114532ADB000F3DC5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		4F8063D214532B16000F3DC5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		4F8063D314532B1F000F3DC5 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				4FF9DAAA143B3F0D0079F92A /* HelloWorldLayer.h */,
+				4FF9DAAB143B3F0E0079F92A /* HelloWorldLayer.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		4F8063D414532B35000F3DC5 /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		4F8063D514532B58000F3DC5 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				4FF9DAA4143B3F0D0079F92A /* AppDelegate.h */,
+				4FF9DAA5143B3F0D0079F92A /* AppDelegate.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
 		4FF9D933143B3F0B0079F92A = {
 			isa = PBXGroup;
 			children = (
+				4F8063CC14532A11000F3DC5 /* Config Plists */,
 				4F8063A114532810000F3DC5 /* Images */,
 				4FF9D952143B3F0B0079F92A /* Classes */,
 				4FF9D953143B3F0B0079F92A /* Resources */,
@@ -509,12 +556,13 @@
 		4FF9D952143B3F0B0079F92A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4FF9DAA4143B3F0D0079F92A /* AppDelegate.h */,
-				4FF9DAA5143B3F0D0079F92A /* AppDelegate.m */,
+				4F8063D114532ADB000F3DC5 /* Constants */,
+				4F8063D214532B16000F3DC5 /* Scenes */,
+				4F8063D314532B1F000F3DC5 /* Layers */,
+				4F8063D414532B35000F3DC5 /* GameObjects */,
+				4F8063D514532B58000F3DC5 /* Singletons */,
 				4FF9DAA7143B3F0D0079F92A /* RootViewController.h */,
 				4FF9DAA8143B3F0D0079F92A /* RootViewController.m */,
-				4FF9DAAA143B3F0D0079F92A /* HelloWorldLayer.h */,
-				4FF9DAAB143B3F0E0079F92A /* HelloWorldLayer.m */,
 				4FF9DAAD143B3F0E0079F92A /* GameConfig.h */,
 			);
 			name = Classes;
@@ -1032,7 +1080,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1040,10 +1088,10 @@
 					"COCOS2D_DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1052,13 +1100,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 			};
