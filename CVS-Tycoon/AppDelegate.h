@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  CVS-Tycoon
 //
-//  Created by Zhang Zhe on 10/4/11.
+//  Created by Zhang Zhe on 9/22/11.
 //  Copyright AvalonGameArt 2011. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @class RootViewController;
 
-@interface AppDelegate : NSObject <UIApplicationDelegate> {
+@interface CVSTycoonAppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow			*window;
 	RootViewController	*viewController;
 }

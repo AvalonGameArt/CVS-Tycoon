@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  CVS-Tycoon
 //
-//  Created by Zhang Zhe on 10/4/11.
+//  Created by Zhang Zhe on 9/22/11.
 //  Copyright AvalonGameArt 2011. All rights reserved.
 //
 
@@ -10,10 +10,10 @@
 
 #import "AppDelegate.h"
 #import "GameConfig.h"
-#import "HelloWorldLayer.h"
 #import "RootViewController.h"
+#import "GameScene.h"
 
-@implementation AppDelegate
+@implementation CVSTycoonAppDelegate
 
 @synthesize window;
 
@@ -69,9 +69,9 @@
 	// attach the openglView to the director
 	[director setOpenGLView:glView];
 	
-//	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-//	if( ! [director enableRetinaDisplay:YES] )
-//		CCLOG(@"Retina Display Not supported");
+	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
+	if( ! [director enableRetinaDisplay:YES] )
+		CCLOG(@"Retina Display Not supported");
 	
 	//
 	// VERY IMPORTANT:
@@ -110,7 +110,8 @@
 	[self removeStartupFlicker];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+//	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [GameScene node]];
 }
 
 

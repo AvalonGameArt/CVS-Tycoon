@@ -54,9 +54,6 @@ typedef enum {
                 atLocation:(CGPoint)spawnLocation
                 withZValue:(int)ZValue;
 
--(void) createPhaserWithDirection:(PhaserDirection)PhaserDirection
-                      andPosition:(CGPoint)spawnPosition;
-
 @end
 
 
