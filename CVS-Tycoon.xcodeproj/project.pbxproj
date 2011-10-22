@@ -27,6 +27,8 @@
 		4F8063DF14532DDA000F3DC5 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063DC14532DDA000F3DC5 /* BackgroundLayer.m */; };
 		4F8063E014532DDA000F3DC5 /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063DE14532DDA000F3DC5 /* GameplayLayer.m */; };
 		4F8063E31453306F000F3DC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E21453306F000F3DC5 /* AppDelegate.m */; };
+		4F8063E814533120000F3DC5 /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E514533120000F3DC5 /* GameCharacter.m */; };
+		4F8063E914533120000F3DC5 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E714533120000F3DC5 /* GameObject.m */; };
 		4FF9D943143B3F0B0079F92A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D942143B3F0B0079F92A /* QuartzCore.framework */; };
 		4FF9D945143B3F0B0079F92A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D944143B3F0B0079F92A /* OpenGLES.framework */; };
 		4FF9D947143B3F0B0079F92A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D946143B3F0B0079F92A /* OpenAL.framework */; };
@@ -160,8 +162,12 @@
 		4F8063DC14532DDA000F3DC5 /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
 		4F8063DD14532DDA000F3DC5 /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		4F8063DE14532DDA000F3DC5 /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
-		4F8063E11453306F000F3DC5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		4F8063E21453306F000F3DC5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F8063E11453306F000F3DC5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4F8063E21453306F000F3DC5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4F8063E414533120000F3DC5 /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
+		4F8063E514533120000F3DC5 /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
+		4F8063E614533120000F3DC5 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		4F8063E714533120000F3DC5 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		4FF9D93E143B3F0B0079F92A /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF9D942143B3F0B0079F92A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4FF9D944143B3F0B0079F92A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -517,6 +523,10 @@
 		4F8063D414532B35000F3DC5 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				4F8063E614533120000F3DC5 /* GameObject.h */,
+				4F8063E714533120000F3DC5 /* GameObject.m */,
+				4F8063E414533120000F3DC5 /* GameCharacter.h */,
+				4F8063E514533120000F3DC5 /* GameCharacter.m */,
 			);
 			name = GameObjects;
 			sourceTree = "<group>";
@@ -1086,6 +1096,8 @@
 				4F8063DF14532DDA000F3DC5 /* BackgroundLayer.m in Sources */,
 				4F8063E014532DDA000F3DC5 /* GameplayLayer.m in Sources */,
 				4F8063E31453306F000F3DC5 /* AppDelegate.m in Sources */,
+				4F8063E814533120000F3DC5 /* GameCharacter.m in Sources */,
+				4F8063E914533120000F3DC5 /* GameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
