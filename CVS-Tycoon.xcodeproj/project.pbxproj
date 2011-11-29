@@ -29,6 +29,10 @@
 		4F8063E31453306F000F3DC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E21453306F000F3DC5 /* AppDelegate.m */; };
 		4F8063E814533120000F3DC5 /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E514533120000F3DC5 /* GameCharacter.m */; };
 		4F8063E914533120000F3DC5 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E714533120000F3DC5 /* GameObject.m */; };
+		4F9C19AD14845D2600FA1348 /* FiniteStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */; };
+		4F9C19B114859AF600FA1348 /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C19B014859AF600FA1348 /* StateBase.m */; };
+		4FA2914D14652B900091D789 /* static_obj_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2914B14652B900091D789 /* static_obj_default.plist */; };
+		4FA2914E14652B900091D789 /* static_obj_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2914C14652B900091D789 /* static_obj_default.png */; };
 		4FF9D943143B3F0B0079F92A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D942143B3F0B0079F92A /* QuartzCore.framework */; };
 		4FF9D945143B3F0B0079F92A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D944143B3F0B0079F92A /* OpenGLES.framework */; };
 		4FF9D947143B3F0B0079F92A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D946143B3F0B0079F92A /* OpenAL.framework */; };
@@ -168,6 +172,12 @@
 		4F8063E514533120000F3DC5 /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 		4F8063E614533120000F3DC5 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		4F8063E714533120000F3DC5 /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
+		4F9C19AB14845D2600FA1348 /* FiniteStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiniteStateMachine.h; sourceTree = "<group>"; };
+		4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiniteStateMachine.m; sourceTree = "<group>"; };
+		4F9C19AF14859AF600FA1348 /* StateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateBase.h; sourceTree = "<group>"; };
+		4F9C19B014859AF600FA1348 /* StateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateBase.m; sourceTree = "<group>"; };
+		4FA2914B14652B900091D789 /* static_obj_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = static_obj_default.plist; sourceTree = "<group>"; };
+		4FA2914C14652B900091D789 /* static_obj_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = static_obj_default.png; sourceTree = "<group>"; };
 		4FF9D93E143B3F0B0079F92A /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF9D942143B3F0B0079F92A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4FF9D944143B3F0B0079F92A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -416,6 +426,10 @@
 		4F8063A114532810000F3DC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4FA2914B14652B900091D789 /* static_obj_default.plist */,
+				4FA2914C14652B900091D789 /* static_obj_default.png */,
+				4FA29146146523150091D789 /* Fonts */,
+				4FA29144146523060091D789 /* Menus */,
 				4F8063A214532810000F3DC5 /* App Launch Images */,
 				4F8063AA14532810000F3DC5 /* Backgrounds */,
 				4F8063B114532810000F3DC5 /* Icons */,
@@ -526,7 +540,11 @@
 				4F8063E614533120000F3DC5 /* GameObject.h */,
 				4F8063E714533120000F3DC5 /* GameObject.m */,
 				4F8063E414533120000F3DC5 /* GameCharacter.h */,
+				4F9C19AF14859AF600FA1348 /* StateBase.h */,
+				4F9C19B014859AF600FA1348 /* StateBase.m */,
 				4F8063E514533120000F3DC5 /* GameCharacter.m */,
+				4F9C19AB14845D2600FA1348 /* FiniteStateMachine.h */,
+				4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */,
 			);
 			name = GameObjects;
 			sourceTree = "<group>";
@@ -538,6 +556,20 @@
 				4F8063E21453306F000F3DC5 /* AppDelegate.m */,
 			);
 			name = Singletons;
+			sourceTree = "<group>";
+		};
+		4FA29144146523060091D789 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
+		4FA29146146523150091D789 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		4FF9D933143B3F0B0079F92A = {
@@ -986,6 +1018,8 @@
 				4F8063C514532810000F3DC5 /* Icon-Small@2x.png in Resources */,
 				4F8063C614532810000F3DC5 /* icon.png in Resources */,
 				4F8063C714532810000F3DC5 /* icon@2x.png in Resources */,
+				4FA2914D14652B900091D789 /* static_obj_default.plist in Resources */,
+				4FA2914E14652B900091D789 /* static_obj_default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1098,6 +1132,8 @@
 				4F8063E31453306F000F3DC5 /* AppDelegate.m in Sources */,
 				4F8063E814533120000F3DC5 /* GameCharacter.m in Sources */,
 				4F8063E914533120000F3DC5 /* GameObject.m in Sources */,
+				4F9C19AD14845D2600FA1348 /* FiniteStateMachine.m in Sources */,
+				4F9C19B114859AF600FA1348 /* StateBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
