@@ -31,6 +31,10 @@
 		4F8063E914533120000F3DC5 /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8063E714533120000F3DC5 /* GameObject.m */; };
 		4F9C19AD14845D2600FA1348 /* FiniteStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */; };
 		4F9C19B114859AF600FA1348 /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C19B014859AF600FA1348 /* StateBase.m */; };
+		4F9C19B31485AB6700FA1348 /* CVS_01.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C19B21485AB6700FA1348 /* CVS_01.tmx */; };
+		4F9C19B51485AD3400FA1348 /* mapset2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C19B41485AD3400FA1348 /* mapset2.png */; };
+		4F9C19B81485AF1400FA1348 /* isometric_grass_and_water.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C19B61485AF1400FA1348 /* isometric_grass_and_water.png */; };
+		4F9C19B91485AF1400FA1348 /* isometric_grass_and_water.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4F9C19B71485AF1400FA1348 /* isometric_grass_and_water.tmx */; };
 		4FA2914D14652B900091D789 /* static_obj_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2914B14652B900091D789 /* static_obj_default.plist */; };
 		4FA2914E14652B900091D789 /* static_obj_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA2914C14652B900091D789 /* static_obj_default.png */; };
 		4FF9D943143B3F0B0079F92A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D942143B3F0B0079F92A /* QuartzCore.framework */; };
@@ -176,6 +180,10 @@
 		4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiniteStateMachine.m; sourceTree = "<group>"; };
 		4F9C19AF14859AF600FA1348 /* StateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateBase.h; sourceTree = "<group>"; };
 		4F9C19B014859AF600FA1348 /* StateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateBase.m; sourceTree = "<group>"; };
+		4F9C19B21485AB6700FA1348 /* CVS_01.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CVS_01.tmx; sourceTree = "<group>"; };
+		4F9C19B41485AD3400FA1348 /* mapset2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapset2.png; sourceTree = "<group>"; };
+		4F9C19B61485AF1400FA1348 /* isometric_grass_and_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isometric_grass_and_water.png; sourceTree = "<group>"; };
+		4F9C19B71485AF1400FA1348 /* isometric_grass_and_water.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = isometric_grass_and_water.tmx; sourceTree = "<group>"; };
 		4FA2914B14652B900091D789 /* static_obj_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = static_obj_default.plist; sourceTree = "<group>"; };
 		4FA2914C14652B900091D789 /* static_obj_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = static_obj_default.png; sourceTree = "<group>"; };
 		4FF9D93E143B3F0B0079F92A /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -426,6 +434,10 @@
 		4F8063A114532810000F3DC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4F9C19B61485AF1400FA1348 /* isometric_grass_and_water.png */,
+				4F9C19B71485AF1400FA1348 /* isometric_grass_and_water.tmx */,
+				4F9C19B41485AD3400FA1348 /* mapset2.png */,
+				4F9C19B21485AB6700FA1348 /* CVS_01.tmx */,
 				4FA2914B14652B900091D789 /* static_obj_default.plist */,
 				4FA2914C14652B900091D789 /* static_obj_default.png */,
 				4FA29146146523150091D789 /* Fonts */,
@@ -1020,6 +1032,10 @@
 				4F8063C714532810000F3DC5 /* icon@2x.png in Resources */,
 				4FA2914D14652B900091D789 /* static_obj_default.plist in Resources */,
 				4FA2914E14652B900091D789 /* static_obj_default.png in Resources */,
+				4F9C19B31485AB6700FA1348 /* CVS_01.tmx in Resources */,
+				4F9C19B51485AD3400FA1348 /* mapset2.png in Resources */,
+				4F9C19B81485AF1400FA1348 /* isometric_grass_and_water.png in Resources */,
+				4F9C19B91485AF1400FA1348 /* isometric_grass_and_water.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

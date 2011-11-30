@@ -57,6 +57,15 @@
         [self addChild:gameBeginLabel];
         id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], nil];
         [gameBeginLabel runAction:labelAction];
+        
+        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric_grass_and_water.tmx"];
+        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
+        [groundLayer retain];
+        [groundLayer removeFromParentAndCleanup:NO];
+//        [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
+        [self addChild:groundLayer z:30];
+        [groundLayer release];
+
     }
     
     return self;

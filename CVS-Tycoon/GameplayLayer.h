@@ -14,5 +14,6 @@
 @interface GameplayLayer : CCLayer <GameplayLayerDelegate>
 {
     CCSpriteBatchNode* sceneSpriteBatchNode;
+    CCTMXTiledMap* tiledMapNode;
 }
 @end
