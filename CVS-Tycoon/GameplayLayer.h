@@ -15,5 +15,6 @@
 {
     CCSpriteBatchNode* sceneSpriteBatchNode;
     CCTMXTiledMap* tiledMapNode;
+    CGPoint beginPoint;
 }
 @end

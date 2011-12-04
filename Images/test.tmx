@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="32" height="32" tilewidth="128" tileheight="64">
+ <tileset firstgid="1" name="textureatlas_default" tilewidth="128" tileheight="64" spacing="2" margin="1">
+  <image source="textureatlas_default.png" width="256" height="256"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="32" height="32">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA8WW4QrAIAiE8/1feuzHIES7qzwXjGSrvsvSaWMMc4+yRQwVM2NFPEtsBZ8df6sjWgudceVZZHtBjBsNKx+yPjjVYK6P7GhMlQZ0r/27ag2ZfzMN7Nq7McPG/E7L5vvcyeSXSh0ZU5lTGU7Hf+Trd+5zhw4lC91DNbtjnyu+t+fvSq6iPmDYyF7NqWb/ef6zjqpxJ1ylBlS7qOM70nIbZyf+UtbB7PjqeN+pN1X5hqmjVPUT0oD4lQ35uiO//ZVD5/ZqeAB0UYMJABAAAA==
+  </data>
+ </layer>
+</map>

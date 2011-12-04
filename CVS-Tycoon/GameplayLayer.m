@@ -58,17 +58,54 @@
         id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], nil];
         [gameBeginLabel runAction:labelAction];
         
-        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric_grass_and_water.tmx"];
+        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"test.tmx"];
         CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
+//        CCTMXLayer* workingSpace = [tiledMapNode layerNamed:@"workingspace"];
+//        CCTMXObjectGroup* objectGroup = [tiledMapNode objectGroupNamed:@"shelf"];
+//        NSMutableDictionary* shelfs = [objectGroup objectNamed:@"shelf"];
+//        int x = [[shelfs valueForKey:@"x"] intValue];
+//        int y = [[shelfs valueForKey:@"y"] intValue];
+//        
+        
         [groundLayer retain];
         [groundLayer removeFromParentAndCleanup:NO];
-//        [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
+        [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [self addChild:groundLayer z:30];
         [groundLayer release];
 
+//        [workingSpace retain];
+//        [workingSpace removeFromParentAndCleanup:NO];
+//        [workingSpace setAnchorPoint:CGPointMake(0.5f, 0.5f)];
+//        [self addChild:workingSpace z:35];
+//        [workingSpace release];
     }
     
     return self;
+}
+
+-(void) registerWithTouchDispatcher
+{
+    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+
+-(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [touch locationInView: [touch view]];		
+    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
+    touchLocation = [self convertToNodeSpace:touchLocation];
+    beginPoint = touchLocation;
+    return YES;
+}
+
+-(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchLocation = [touch locationInView: [touch view]];		
+    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
+    touchLocation = [self convertToNodeSpace:touchLocation];
+    
+    CGPoint diff = ccpSub(beginPoint, touchLocation);
+    CGPoint oldPos = [self position];
+    [self setPosition:ccpSub(oldPos, diff)];    
 }
 
 -(void) dealloc
