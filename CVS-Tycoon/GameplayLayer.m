@@ -38,13 +38,13 @@
         
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.png"];
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"static_obj_default.plist"];
+            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"static_obj_default.png"];
         }
         else
         {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlasiPhone.plist"];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlasiPhone.png"];            
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"static_obj_default.plist"];
+            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"static_obj_default.png"];            
         }
         [self addChild:sceneSpriteBatchNode];
 
@@ -58,14 +58,16 @@
         id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], nil];
         [gameBeginLabel runAction:labelAction];
         
-        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"test.tmx"];
-        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
-//        CCTMXLayer* workingSpace = [tiledMapNode layerNamed:@"workingspace"];
-//        CCTMXObjectGroup* objectGroup = [tiledMapNode objectGroupNamed:@"shelf"];
-//        NSMutableDictionary* shelfs = [objectGroup objectNamed:@"shelf"];
-//        int x = [[shelfs valueForKey:@"x"] intValue];
-//        int y = [[shelfs valueForKey:@"y"] intValue];
-//        
+        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
+        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"ground"];
+        CCTMXObjectGroup* objectGroup = [tiledMapNode objectGroupNamed:@"shelf"];
+        NSMutableDictionary* shelf001 = [objectGroup objectNamed:@"shelf001"];
+        int x = [[shelf001 valueForKey:@"x"] intValue];
+        int y = [[shelf001 valueForKey:@"y"] intValue];
+        CCSprite* shelf = [CCSprite spriteWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"shelf01empty.png"]];
+        [shelf setPosition:ccp(x,y)];
+        [self addChild:shelf];
+        
         
         [groundLayer retain];
         [groundLayer removeFromParentAndCleanup:NO];
