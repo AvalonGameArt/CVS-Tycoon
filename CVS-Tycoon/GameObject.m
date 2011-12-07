@@ -11,7 +11,6 @@
 @implementation GameObject
 @synthesize reactsToScreenBoundaries;
 @synthesize screenSize;
-@synthesize isActive;
 @synthesize gameObjectType;
 
 - (id)init
@@ -21,16 +20,10 @@
         // Initialization code here.
         CCLOG(@"GameObject init");
         screenSize = [CCDirector sharedDirector].winSize;
-        isActive = TRUE;
         gameObjectType = kObjectTypeNone;
     }
     
     return self;
-}
-
--(void)changeState:(CharacterStates)newState
-{
-    CCLOG(@"GameObject->changeState method should be overridden");
 }
 
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime

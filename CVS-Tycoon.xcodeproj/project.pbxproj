@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F018D401490266000071503 /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F018D3F1490266000071503 /* MovingObject.m */; };
 		4F7D42BA1487D94E00BE845D /* textureatlas_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D42B91487D94E00BE845D /* textureatlas_default.png */; };
 		4F7D42E2148C45B700BE845D /* firstlevel.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4F7D42E1148C45B700BE845D /* firstlevel.tmx */; };
 		4F8063B814532810000F3DC5 /* Default-Landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8063A314532810000F3DC5 /* Default-Landscape.png */; };
@@ -144,6 +145,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F018D3E1490265F00071503 /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
+		4F018D3F1490266000071503 /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
 		4F7D42B91487D94E00BE845D /* textureatlas_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textureatlas_default.png; sourceTree = "<group>"; };
 		4F7D42E1148C45B700BE845D /* firstlevel.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = firstlevel.tmx; sourceTree = "<group>"; };
 		4F8063A314532810000F3DC5 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
@@ -545,6 +548,8 @@
 			children = (
 				4F8063E614533120000F3DC5 /* GameObject.h */,
 				4F8063E714533120000F3DC5 /* GameObject.m */,
+				4F018D3E1490265F00071503 /* MovingObject.h */,
+				4F018D3F1490266000071503 /* MovingObject.m */,
 				4F8063E414533120000F3DC5 /* GameCharacter.h */,
 				4F8063E514533120000F3DC5 /* GameCharacter.m */,
 				4F9C19AF14859AF600FA1348 /* StateBase.h */,
@@ -1142,6 +1147,7 @@
 				4F8063E914533120000F3DC5 /* GameObject.m in Sources */,
 				4F9C19AD14845D2600FA1348 /* FiniteStateMachine.m in Sources */,
 				4F9C19B114859AF600FA1348 /* StateBase.m in Sources */,
+				4F018D401490266000071503 /* MovingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
