@@ -9,5 +9,24 @@
 #import "StateBase.h"
 
 @implementation StateBase
+-(void)enter:(GameObject*)owner
+{
+    
+}
+
+-(void)update:(GameObject*)owner withTime:(ccTime)deltaTime
+{
+    
+}
+
+-(void)changeState:(StateBase*) newState
+{
+    
+}
+
+-(void)exit:(GameObject*)owner
+{
+    
+}
 
 @end

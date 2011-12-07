@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "GameObject.h"
+#import "StateBase.h"
 
 @interface FiniteStateMachine : NSObject
+{
+    GameObject* owner_;
+    StateBase* currentState_;
+    StateBase* globalState_;
+}
+
+-(void)update:(ccTime)deltaTime;
+
 
 @end

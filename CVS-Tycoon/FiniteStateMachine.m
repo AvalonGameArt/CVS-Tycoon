@@ -10,4 +10,9 @@
 
 @implementation FiniteStateMachine
 
+-(void)update:(ccTime)deltaTime
+{
+    if(currentState_)
+        [currentState_ update:owner_ withTime:deltaTime];
+}
 @end

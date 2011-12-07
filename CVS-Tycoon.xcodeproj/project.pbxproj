@@ -546,9 +546,9 @@
 				4F8063E614533120000F3DC5 /* GameObject.h */,
 				4F8063E714533120000F3DC5 /* GameObject.m */,
 				4F8063E414533120000F3DC5 /* GameCharacter.h */,
+				4F8063E514533120000F3DC5 /* GameCharacter.m */,
 				4F9C19AF14859AF600FA1348 /* StateBase.h */,
 				4F9C19B014859AF600FA1348 /* StateBase.m */,
-				4F8063E514533120000F3DC5 /* GameCharacter.m */,
 				4F9C19AB14845D2600FA1348 /* FiniteStateMachine.h */,
 				4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */,
 			);
@@ -1193,7 +1193,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CVS-Tycoon/Prefix.pch";
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_THUMB_SUPPORT = NO;
+				"GCC_THUMB_SUPPORT[arch=armv7]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "CVS-Tycoon/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
@@ -1212,7 +1213,8 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CVS-Tycoon/Prefix.pch";
-				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_THUMB_SUPPORT = NO;
+				"GCC_THUMB_SUPPORT[arch=armv7]" = "";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "CVS-Tycoon/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
