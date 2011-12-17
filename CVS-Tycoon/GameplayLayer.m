@@ -34,17 +34,17 @@
         CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.isTouchEnabled = YES;
 //        vikingSprite = [CCSprite spriteWithFile:@"sv_anim_1.png"];
-        srand(time(NULL));
+        srand(time(0));
         
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"static_obj_default.plist"];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"static_obj_default.png"];
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas_default.plist"];
+            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas_default.png"];
         }
         else
         {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"static_obj_default.plist"];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"static_obj_default.png"];            
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas_default.plist"];
+            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas_default.png"];            
         }
         [self addChild:sceneSpriteBatchNode];
 
@@ -59,14 +59,14 @@
         [gameBeginLabel runAction:labelAction];
         
         tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
-        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"ground"];
-        CCTMXObjectGroup* objectGroup = [tiledMapNode objectGroupNamed:@"shelf"];
-        NSMutableDictionary* shelf001 = [objectGroup objectNamed:@"shelf001"];
-        int x = [[shelf001 valueForKey:@"x"] intValue];
-        int y = [[shelf001 valueForKey:@"y"] intValue];
-        CCSprite* shelf = [CCSprite spriteWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"shelf01empty.png"]];
-        [shelf setPosition:ccp(x,y)];
-        [self addChild:shelf];
+        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
+//        CCTMXObjectGroup* objectGroup = [tiledMapNode objectGroupNamed:@"shelf"];
+//        NSMutableDictionary* shelf001 = [objectGroup objectNamed:@"shelf001"];
+//        int x = [[shelf001 valueForKey:@"x"] intValue];
+//        int y = [[shelf001 valueForKey:@"y"] intValue];
+//        CCSprite* shelf = [CCSprite spriteWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"shelf01empty.png"]];
+//        [shelf setPosition:ccp(x,y)];
+//        [sceneSpriteBatchNode addChild:shelf];
         
         
         [groundLayer retain];

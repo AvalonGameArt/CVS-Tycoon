@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="isometric" width="16" height="16" tilewidth="64" tileheight="32">
- <tileset firstgid="1" name="textureatlas_default" tilewidth="64" tileheight="32" spacing="2" margin="1">
-  <image source="textureatlas_default.png" width="256" height="256"/>
+ <tileset firstgid="1" name="mapset3" tilewidth="64" tileheight="64">
+  <image source="mapset3.png" width="256" height="256"/>
  </tileset>
- <layer name="ground" width="16" height="16">
+ <layer name="Tile Layer 1" width="16" height="16">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA2NmYGBgphCTC0b1j+of1U+5fmLyJi55AOyRDsUABAAA
+   H4sIAAAAAAAAA2NgGD6AEQseSfpHwSggFQAAS4FthQAEAAA=
   </data>
  </layer>
- <objectgroup name="shelf" width="16" height="16">
-  <object name="cashier001" x="190" y="354" width="37" height="63"/>
-  <object name="shelf001" x="100" y="162" width="58" height="27"/>
-  <object name="shelf002" x="195" y="165" width="57" height="22"/>
-  <object name="shelf003" x="291" y="163" width="62" height="26"/>
- </objectgroup>
+ <layer name="Tile Layer 2" width="16" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGH6AGYrJASxAzATFA6F/FIwCegIACfChhgAEAAA=
+  </data>
+ </layer>
 </map>
