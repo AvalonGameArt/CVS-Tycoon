@@ -135,6 +135,7 @@
 		4FF9DA9E143B3F0D0079F92A /* ZFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9DA9D143B3F0D0079F92A /* ZFont.m */; };
 		4FF9DAA3143B3F0D0079F92A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9DAA2143B3F0D0079F92A /* main.m */; };
 		4FF9DAA9143B3F0D0079F92A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9DAA8143B3F0D0079F92A /* RootViewController.m */; };
+		701653D01465823200E742CA /* GameStaticObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 701653CF1465823200E742CA /* GameStaticObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -392,6 +393,8 @@
 		4FF9DAA7143B3F0D0079F92A /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4FF9DAA8143B3F0D0079F92A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4FF9DAAD143B3F0E0079F92A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		701653CD146581EB00E742CA /* GameStaticObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStaticObj.h; sourceTree = "<group>"; };
+		701653CF1465823200E742CA /* GameStaticObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStaticObj.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,6 +530,8 @@
 				4F8063E714533120000F3DC5 /* GameObject.m */,
 				4F8063E414533120000F3DC5 /* GameCharacter.h */,
 				4F8063E514533120000F3DC5 /* GameCharacter.m */,
+				701653CD146581EB00E742CA /* GameStaticObj.h */,
+				701653CF1465823200E742CA /* GameStaticObj.m */,
 			);
 			name = GameObjects;
 			sourceTree = "<group>";
@@ -1098,6 +1103,7 @@
 				4F8063E31453306F000F3DC5 /* AppDelegate.m in Sources */,
 				4F8063E814533120000F3DC5 /* GameCharacter.m in Sources */,
 				4F8063E914533120000F3DC5 /* GameObject.m in Sources */,
+				701653D01465823200E742CA /* GameStaticObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
