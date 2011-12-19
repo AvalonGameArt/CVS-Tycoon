@@ -36,8 +36,8 @@
 		4F9C19AD14845D2600FA1348 /* FiniteStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */; };
 		4F9C19B114859AF600FA1348 /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9C19B014859AF600FA1348 /* StateBase.m */; };
 		4FAAC87014996EE500297313 /* dog_animation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAC86F14996EE500297313 /* dog_animation.plist */; };
-		4FAAC87B1499780300297313 /* scene1atlas_default.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAC8791499780300297313 /* scene1atlas_default.plist */; };
-		4FAAC87C1499780300297313 /* scene1atlas_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAC87A1499780300297313 /* scene1atlas_default.png */; };
+		4FC23000149E3C2900825DEF /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC22FFE149E3C2900825DEF /* scene1atlas.plist */; };
+		4FC23001149E3C2900825DEF /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FC22FFF149E3C2900825DEF /* scene1atlas.pvr.ccz */; };
 		4FE434C5149C809700ACF308 /* mapset3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FE434C4149C809700ACF308 /* mapset3.png */; };
 		4FF9D943143B3F0B0079F92A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D942143B3F0B0079F92A /* QuartzCore.framework */; };
 		4FF9D945143B3F0B0079F92A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF9D944143B3F0B0079F92A /* OpenGLES.framework */; };
@@ -189,8 +189,8 @@
 		4F9C19AF14859AF600FA1348 /* StateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateBase.h; sourceTree = "<group>"; };
 		4F9C19B014859AF600FA1348 /* StateBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateBase.m; sourceTree = "<group>"; };
 		4FAAC86F14996EE500297313 /* dog_animation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dog_animation.plist; sourceTree = "<group>"; };
-		4FAAC8791499780300297313 /* scene1atlas_default.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas_default.plist; sourceTree = "<group>"; };
-		4FAAC87A1499780300297313 /* scene1atlas_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scene1atlas_default.png; sourceTree = "<group>"; };
+		4FC22FFE149E3C2900825DEF /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
+		4FC22FFF149E3C2900825DEF /* scene1atlas.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene1atlas.pvr.ccz; sourceTree = "<group>"; };
 		4FE434C4149C809700ACF308 /* mapset3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapset3.png; sourceTree = "<group>"; };
 		4FF9D93E143B3F0B0079F92A /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF9D942143B3F0B0079F92A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -440,9 +440,9 @@
 		4F8063A114532810000F3DC5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4FC22FFE149E3C2900825DEF /* scene1atlas.plist */,
+				4FC22FFF149E3C2900825DEF /* scene1atlas.pvr.ccz */,
 				4FE434C4149C809700ACF308 /* mapset3.png */,
-				4FAAC8791499780300297313 /* scene1atlas_default.plist */,
-				4FAAC87A1499780300297313 /* scene1atlas_default.png */,
 				4F7D42E1148C45B700BE845D /* firstlevel.tmx */,
 				4F7D42B91487D94E00BE845D /* textureatlas_default.png */,
 				4FA29146146523150091D789 /* Fonts */,
@@ -1043,9 +1043,9 @@
 				4F7D42BA1487D94E00BE845D /* textureatlas_default.png in Resources */,
 				4F7D42E2148C45B700BE845D /* firstlevel.tmx in Resources */,
 				4FAAC87014996EE500297313 /* dog_animation.plist in Resources */,
-				4FAAC87B1499780300297313 /* scene1atlas_default.plist in Resources */,
-				4FAAC87C1499780300297313 /* scene1atlas_default.png in Resources */,
 				4FE434C5149C809700ACF308 /* mapset3.png in Resources */,
+				4FC23000149E3C2900825DEF /* scene1atlas.plist in Resources */,
+				4FC23001149E3C2900825DEF /* scene1atlas.pvr.ccz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

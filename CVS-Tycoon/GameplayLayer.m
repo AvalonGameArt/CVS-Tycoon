@@ -38,25 +38,27 @@
         
         if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas_default.plist"];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas_default.png"];
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
+            [CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];
         }
         else
         {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas_default.plist"];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas_default.png"];            
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
+            [CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
+            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];            
         }
         [self addChild:sceneSpriteBatchNode];
 
         [self scheduleUpdate];
 //        [self schedule:@selector(addEnemy) interval:10.0f];
 
-        CCLabelTTF* gameBeginLabel = [CCLabelTTF labelWithString:@"Game Start" fontName:@"Helvetica" fontSize:64];
-        [gameBeginLabel setPosition:ccp(screenSize.width/2, screenSize.height/2)];
-        
-        [self addChild:gameBeginLabel];
-        id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], nil];
-        [gameBeginLabel runAction:labelAction];
+//        CCLabelTTF* gameBeginLabel = [CCLabelTTF labelWithString:@"Game Start" fontName:@"Helvetica" fontSize:64];
+//        [gameBeginLabel setPosition:ccp(screenSize.width/2, screenSize.height/2)];
+//        
+//        [self addChild:gameBeginLabel];
+//        id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], nil];
+//        [gameBeginLabel runAction:labelAction];
         
         tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
         CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
@@ -80,6 +82,17 @@
 //        [workingSpace setAnchorPoint:CGPointMake(0.5f, 0.5f)];
 //        [self addChild:workingSpace z:35];
 //        [workingSpace release];
+        
+        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog001.png"];
+        CCAnimation* dogAnim = [CCAnimation animation];
+        [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog001.png"]];
+        [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog002.png"]];
+        [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog003.png"]];
+        [dogAnim setDelay:0.3];
+        [sceneSpriteBatchNode addChild:dog];
+        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:dogAnim restoreOriginalFrame:NO]];
+        [dog setScale:3.0];
+        [dog runAction:action];
     }
     
     return self;
