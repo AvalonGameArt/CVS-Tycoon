@@ -53,6 +53,7 @@
 		4FF9D966143B3F0B0079F92A /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9D965143B3F0B0079F92A /* iTunesArtwork */; };
 		4FF9DAA3143B3F0D0079F92A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9DAA2143B3F0D0079F92A /* main.m */; };
 		4FF9DAA9143B3F0D0079F92A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9DAA8143B3F0D0079F92A /* RootViewController.m */; };
+		701653D01465823200E742CA /* GameStaticObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 701653CF1465823200E742CA /* GameStaticObj.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -597,6 +598,8 @@
 		4FF9DAA7143B3F0D0079F92A /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4FF9DAA8143B3F0D0079F92A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4FF9DAAD143B3F0E0079F92A /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		701653CD146581EB00E742CA /* GameStaticObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStaticObj.h; sourceTree = "<group>"; };
+		701653CF1465823200E742CA /* GameStaticObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStaticObj.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -825,6 +828,8 @@
 				4F9C19B014859AF600FA1348 /* StateBase.m */,
 				4F9C19AB14845D2600FA1348 /* FiniteStateMachine.h */,
 				4F9C19AC14845D2600FA1348 /* FiniteStateMachine.m */,
+				701653CD146581EB00E742CA /* GameStaticObj.h */,
+				701653CF1465823200E742CA /* GameStaticObj.m */,
 			);
 			name = GameObjects;
 			sourceTree = "<group>";
@@ -1508,6 +1513,7 @@
 				4F9C19B114859AF600FA1348 /* StateBase.m in Sources */,
 				4F018D401490266000071503 /* MovingObject.m in Sources */,
 				4F018D431490310700071503 /* UILayer.m in Sources */,
+				701653D01465823200E742CA /* GameStaticObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
