@@ -10,10 +10,6 @@
 
 @implementation GameCharacter
 
--(void)dealloc
-{
-    [super dealloc];
-}
 
 -(void)checkAndClampSpritePosition
 {

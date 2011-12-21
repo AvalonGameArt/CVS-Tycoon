@@ -71,11 +71,9 @@
 //        [sceneSpriteBatchNode addChild:shelf];
         
         
-        [groundLayer retain];
         [groundLayer removeFromParentAndCleanup:NO];
         [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [self addChild:groundLayer z:30];
-        [groundLayer release];
 
 //        [workingSpace retain];
 //        [workingSpace removeFromParentAndCleanup:NO];
@@ -123,8 +121,4 @@
     [self setPosition:ccpSub(oldPos, diff)];    
 }
 
--(void) dealloc
-{
-    [super dealloc];
-}
 @end

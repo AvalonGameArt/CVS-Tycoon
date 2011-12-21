@@ -140,9 +140,7 @@
 	
 	[[director openGLView] removeFromSuperview];
 	
-	[viewController release];
 	
-	[window release];
 	
 	[director end];	
 }
@@ -153,8 +151,6 @@
 
 - (void)dealloc {
 	[[CCDirector sharedDirector] end];
-	[window release];
-	[super dealloc];
 }
 
 @end
