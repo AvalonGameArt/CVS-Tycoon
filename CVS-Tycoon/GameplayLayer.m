@@ -31,7 +31,7 @@
     self = [super init];
     if (self) {
         // Initialization code here.
-        CGSize screenSize = [CCDirector sharedDirector].winSize;
+//        CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.isTouchEnabled = YES;
 //        vikingSprite = [CCSprite spriteWithFile:@"sv_anim_1.png"];
         srand(time(0));
