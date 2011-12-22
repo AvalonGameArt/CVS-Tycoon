@@ -10,19 +10,6 @@
 
 @implementation GameCharacter
 
-@synthesize characterHealth;
-@synthesize characterState;
-
--(void)dealloc
-{
-    [super dealloc];
-}
-
--(int)getWeaponDamage
-{
-    CCLOG(@"getWeaponDamage should be overriden");
-    return 0;
-}
 
 -(void)checkAndClampSpritePosition
 {

@@ -7,17 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GameObject.h"
+#import "MovingObject.h"
 
-@interface GameCharacter : GameObject
+@interface GameCharacter : MovingObject
 {
-    int characterHealth;
-    CharacterStates characterState;
 }
 
 -(void)checkAndClampSpritePosition;
--(int)getWeaponDamage;
-
-@property (readwrite) int characterHealth;
-@property (readwrite) CharacterStates characterState;
 @end

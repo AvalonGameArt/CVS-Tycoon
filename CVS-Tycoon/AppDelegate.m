@@ -45,8 +45,8 @@
 	
 	// Try to use CADisplayLink director
 	// if it fails (SDK < 3.1) use the default director
-	if( ! [CCDirector setDirectorType:kCCDirectorTypeDisplayLink] )
-		[CCDirector setDirectorType:kCCDirectorTypeDefault];
+//	if( ! [CCDirector setDirectorType:kCCDirectorTypeDisplayLink] )
+//		[CCDirector setDirectorType:kCCDirectorTypeDefault];
 	
 	
 	CCDirector *director = [CCDirector sharedDirector];
@@ -83,7 +83,7 @@
 	// Edit the RootViewController.m file to edit the supported orientations.
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
-	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+	[director setDeviceOrientation:UIDeviceOrientationPortrait];
 #else
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif
@@ -140,9 +140,7 @@
 	
 	[[director openGLView] removeFromSuperview];
 	
-	[viewController release];
 	
-	[window release];
 	
 	[director end];	
 }
@@ -153,8 +151,6 @@
 
 - (void)dealloc {
 	[[CCDirector sharedDirector] end];
-	[window release];
-	[super dealloc];
 }
 
 @end
