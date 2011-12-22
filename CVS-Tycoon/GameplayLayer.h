@@ -14,5 +14,7 @@
 @interface GameplayLayer : CCLayer <GameplayLayerDelegate>
 {
     CCSpriteBatchNode* sceneSpriteBatchNode;
+    CCTMXTiledMap* tiledMapNode;
+    CGPoint beginPoint;
 }
 @end
