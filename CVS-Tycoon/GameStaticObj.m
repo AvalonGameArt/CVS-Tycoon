@@ -19,7 +19,7 @@
 -(void) createStaticObj:(NSString*)newName
 {
     CCLOG(@"create a GameStaticObj Name is %@", newName);
-    [self setName:name];
+    [self setName:newName];
 }
 
 @end

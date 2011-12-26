@@ -11,15 +11,20 @@
 #import "Constants.h"
 #import "CommonProtocols.h"
 
+@class FiniteStateMachine;
+
 @interface GameObject : CCSprite
 {
     BOOL reactsToScreenBoundaries;
     CGSize screenSize;
     GameObjectType gameObjectType;
+    
+    FiniteStateMachine* mainFSM;
 }
-@property (readwrite) BOOL reactsToScreenBoundaries;
-@property (readwrite) CGSize screenSize;
-@property (readwrite) GameObjectType gameObjectType;
+@property (nonatomic) BOOL reactsToScreenBoundaries;
+@property (nonatomic) CGSize screenSize;
+@property (nonatomic) GameObjectType gameObjectType;
+@property (strong, nonatomic) FiniteStateMachine* mainFSM;
 
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime
            andListOfGameObjects:(CCArray*)listOfGameObjects;

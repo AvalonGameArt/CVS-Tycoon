@@ -9,6 +9,7 @@
 #import "GameplayLayer.h"
 
 @implementation GameplayLayer
+@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint;
 
 #pragma mark -
 #pragma mark Update Method

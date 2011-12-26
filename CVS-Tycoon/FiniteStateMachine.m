@@ -7,12 +7,20 @@
 //
 
 #import "FiniteStateMachine.h"
+#import "StateBase.h"
 
 @implementation FiniteStateMachine
+@synthesize currentState = currentState_;
+@synthesize globalState = globalState_;
 
 -(void)update:(ccTime)deltaTime
 {
-    if(currentState_)
-        [currentState_ update:owner_ withTime:deltaTime];
+    if([self currentState])
+        [[self currentState] update:owner_ withTime:deltaTime];
+}
+
+-(void)dealloc
+{
+    owner_ = nil;
 }
 @end

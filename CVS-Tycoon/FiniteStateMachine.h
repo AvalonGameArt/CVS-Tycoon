@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "GameObject.h"
-#import "StateBase.h"
+
+@class StateBase;
 
 @interface FiniteStateMachine : NSObject
 {
-    GameObject* owner_;
+    __weak GameObject* owner_;
     StateBase* currentState_;
     StateBase* globalState_;
 }
+
+@property (strong, nonatomic) StateBase* currentState;
+@property (strong, nonatomic) StateBase* globalState;
 
 -(void)update:(ccTime)deltaTime;
 

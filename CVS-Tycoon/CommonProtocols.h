@@ -48,13 +48,10 @@ typedef enum {
 } GameObjectType;
 
 @protocol GameplayLayerDelegate
-
 -(void) createObjectOfType:(GameObjectType)objectType
                 withHealth:(int)initialHealth
                 atLocation:(CGPoint)spawnLocation
                 withZValue:(int)ZValue;
-
 @end
-
 
 #endif
