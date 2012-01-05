@@ -13,17 +13,9 @@
 
 @class FiniteStateMachine;
 
-@interface GameObject : CCSprite
+@interface GameObject : CCNode
 {
-    BOOL reactsToScreenBoundaries;
-    CGSize screenSize;
-    GameObjectType gameObjectType;
-    
-    FiniteStateMachine* mainFSM;
 }
-@property (nonatomic) BOOL reactsToScreenBoundaries;
-@property (nonatomic) CGSize screenSize;
-@property (nonatomic) GameObjectType gameObjectType;
 @property (strong, nonatomic) FiniteStateMachine* mainFSM;
 
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime
