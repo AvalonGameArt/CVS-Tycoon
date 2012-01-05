@@ -533,6 +533,20 @@
 			remoteGlobalIDString = A094A9C414436D9A0055E239;
 			remoteInfo = ParticleBatchTest;
 		};
+		4FD0871F14AEBE64004EE9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4D380814A2394A00A9BFD6 /* cocos2d-ios.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5018F24C0DFDEAC400C013A5;
+			remoteInfo = cocos2d;
+		};
+		4FD0872114AEBE8A004EE9B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F4D380814A2394A00A9BFD6 /* cocos2d-ios.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 50CB2FC91004C8B100B7A750;
+			remoteInfo = CocosDenshion;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -945,6 +959,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				4FD0872014AEBE64004EE9B6 /* PBXTargetDependency */,
+				4FD0872214AEBE8A004EE9B6 /* PBXTargetDependency */,
 			);
 			name = "CVS-Tycoon";
 			productName = "CVS-Tycoon";
@@ -1518,6 +1534,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FD0872014AEBE64004EE9B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cocos2d;
+			targetProxy = 4FD0871F14AEBE64004EE9B6 /* PBXContainerItemProxy */;
+		};
+		4FD0872214AEBE8A004EE9B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocosDenshion;
+			targetProxy = 4FD0872114AEBE8A004EE9B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4FF9DAAE143B3F0E0079F92A /* Debug */ = {

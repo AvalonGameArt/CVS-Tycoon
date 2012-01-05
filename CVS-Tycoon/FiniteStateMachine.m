@@ -10,17 +10,28 @@
 #import "StateBase.h"
 
 @implementation FiniteStateMachine
-@synthesize currentState = currentState_;
-@synthesize globalState = globalState_;
+@synthesize owner = owner_;
+@synthesize currentState;
+@synthesize globalState;
 
 -(void)update:(ccTime)deltaTime
 {
     if([self currentState])
-        [[self currentState] update:owner_ withTime:deltaTime];
+        [[self currentState] update:[self owner] withTime:deltaTime];
+}
+
+-(void)changeState:(id<GameObjectStateDelegate>)newState
+{
+    [newState enter:[self owner]];
+    if([self currentState])
+        [[self currentState] exit:[self owner]];
+    [self setCurrentState:newState];
 }
 
 -(void)dealloc
 {
-    owner_ = nil;
+    [self setOwner: nil];
+    [self setCurrentState:nil];
+    [self setGlobalState:nil];
 }
 @end

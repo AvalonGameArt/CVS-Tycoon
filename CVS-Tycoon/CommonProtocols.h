@@ -54,4 +54,13 @@ typedef enum {
                 withZValue:(int)ZValue;
 @end
 
+@class GameObject;
+@protocol GameObjectStateDelegate <NSObject>
+-(void)enter:(id)owner;
+-(void)update:(id)owner withTime:(ccTime)deltaTime;
+-(void)exit:(id)owner;
+@end
+
+
+
 #endif
