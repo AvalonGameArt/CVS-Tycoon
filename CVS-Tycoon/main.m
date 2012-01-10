@@ -2,8 +2,8 @@
 //  main.m
 //  CVS-Tycoon
 //
-//  Created by Zhang Zhe on 10/4/11.
-//  Copyright AvalonGameArt 2011. All rights reserved.
+//  Created by ZHANG ZHE on 1/10/12.
+//  Copyright AvalonGameArt 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,7 +11,7 @@
 int main(int argc, char *argv[]) {
     
     @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, @"CVSTycoonAppDelegate");
+        int retVal = UIApplicationMain(argc, argv, nil, @"AppController");
         return retVal;
     }
 }

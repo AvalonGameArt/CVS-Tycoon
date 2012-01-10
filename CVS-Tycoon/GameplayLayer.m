@@ -23,10 +23,6 @@
 }
 
 #pragma mark -
--(void)createObjectOfType:(GameObjectType)objectType withHealth:(int)initialHealth atLocation:(CGPoint)spawnLocation withZValue:(int)ZValue
-{
-}
-
 - (id)init
 {
     self = [super init];
@@ -52,36 +48,14 @@
         [self addChild:sceneSpriteBatchNode];
 
         [self scheduleUpdate];
-//        [self schedule:@selector(addEnemy) interval:10.0f];
-
-//        CCLabelTTF* gameBeginLabel = [CCLabelTTF labelWithString:@"Game Start" fontName:@"Helvetica" fontSize:64];
-//        [gameBeginLabel setPosition:ccp(screenSize.width/2, screenSize.height/2)];
-//        
-//        [self addChild:gameBeginLabel];
-//        id labelAction = [CCSpawn actions:[CCScaleBy actionWithDuration:2.0f scale:4], [CCFadeOut actionWithDuration:2.0f], nil];
-//        [gameBeginLabel runAction:labelAction];
         
         tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
         CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
-//        CCTMXObjectGroup* objectGroup = [tiledMapNode objectGroupNamed:@"shelf"];
-//        NSMutableDictionary* shelf001 = [objectGroup objectNamed:@"shelf001"];
-//        int x = [[shelf001 valueForKey:@"x"] intValue];
-//        int y = [[shelf001 valueForKey:@"y"] intValue];
-//        CCSprite* shelf = [CCSprite spriteWithSpriteFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"shelf01empty.png"]];
-//        [shelf setPosition:ccp(x,y)];
-//        [sceneSpriteBatchNode addChild:shelf];
-        
         
         [groundLayer removeFromParentAndCleanup:NO];
         [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [self addChild:groundLayer z:30];
 
-//        [workingSpace retain];
-//        [workingSpace removeFromParentAndCleanup:NO];
-//        [workingSpace setAnchorPoint:CGPointMake(0.5f, 0.5f)];
-//        [self addChild:workingSpace z:35];
-//        [workingSpace release];
-        
         CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog001.png"];
         CCAnimation* dogAnim = [CCAnimation animation];
         [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog001.png"]];
@@ -99,7 +73,7 @@
 
 -(void) registerWithTouchDispatcher
 {
-    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    [[[CCDirector sharedDirector] touchDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 }
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
