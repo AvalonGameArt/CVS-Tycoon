@@ -2,19 +2,23 @@
 //  AppDelegate.h
 //  CVS-Tycoon
 //
-//  Created by Zhang Zhe on 9/22/11.
-//  Copyright AvalonGameArt 2011. All rights reserved.
+//  Created by ZHANG ZHE on 1/10/12.
+//  Copyright AvalonGameArt 2012. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "cocos2d.h"
 
-@class RootViewController;
+@interface AppController : UIResponder <UIApplicationDelegate, CCDirectorDelegate>
+{
+	UIWindow *window_;
+	UINavigationController *navController_;
 
-@interface CVSTycoonAppDelegate : NSObject <UIApplicationDelegate> {
-	UIWindow			*window;
-	RootViewController	*viewController;
+	CCDirectorIOS	*__weak director_;							// weak ref
 }
 
 @property (nonatomic, strong) UIWindow *window;
+@property (readonly) UINavigationController *navController;
+@property (readonly) CCDirectorIOS *director;
 
 @end

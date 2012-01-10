@@ -8,17 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "GameObject.h"
-#import "StateBase.h"
+#import "CommonProtocols.h"
 
 @interface FiniteStateMachine : NSObject
 {
-    GameObject* owner_;
-    StateBase* currentState_;
-    StateBase* globalState_;
 }
 
--(void)update:(ccTime)deltaTime;
+@property (weak, nonatomic) id owner;
+@property (strong, nonatomic) id<GameObjectStateDelegate> currentState;
+@property (strong, nonatomic) id<GameObjectStateDelegate> globalState;
 
+-(void)update:(ccTime)deltaTime;
+-(void)changeState:(id<GameObjectStateDelegate>)newState;
 
 @end

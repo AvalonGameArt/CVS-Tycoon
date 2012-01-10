@@ -7,11 +7,10 @@
 //
 
 #import "GameObject.h"
+#import "FiniteStateMachine.h"
 
 @implementation GameObject
-@synthesize reactsToScreenBoundaries;
-@synthesize screenSize;
-@synthesize gameObjectType;
+@synthesize mainFSM;
 
 - (id)init
 {
@@ -19,8 +18,7 @@
     if (self) {
         // Initialization code here.
         CCLOG(@"GameObject init");
-        screenSize = [CCDirector sharedDirector].winSize;
-        gameObjectType = kObjectTypeNone;
+        mainFSM = [[FiniteStateMachine alloc] init];
     }
     
     return self;
@@ -30,6 +28,7 @@
            andListOfGameObjects:(CCArray*)listOfGameObject
 {
     CCLOG(@"updateStateWithDeltaTime method should be overridden");
+    [[self mainFSM] update:deltaTime];
 }
 
 -(CGRect)adjustedBoundingBox

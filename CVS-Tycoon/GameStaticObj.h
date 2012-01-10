@@ -20,11 +20,11 @@
     int disLike;
 }
 
-@property (copy, readwrite) NSString* name;
-@property (readwrite) int price;
-@property (readwrite) int touchCount;
-@property (readwrite) int like;
-@property (readwrite) int disLike;
+@property (strong, nonatomic) NSString* name;
+@property (nonatomic) int price;
+@property (nonatomic) int touchCount;
+@property (nonatomic) int like;
+@property (nonatomic) int disLike;
 
 -(void) createStaticObj:(NSString*)name;
 
