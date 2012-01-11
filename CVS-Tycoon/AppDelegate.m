@@ -6,8 +6,6 @@
 //  Copyright AvalonGameArt 2012. All rights reserved.
 //
 
-#import "cocos2d.h"
-
 #import "AppDelegate.h"
 
 #import "GameScene.h"

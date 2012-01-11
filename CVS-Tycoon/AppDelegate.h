@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "cocos2d.h"
 
 @interface AppController : UIResponder <UIApplicationDelegate, CCDirectorDelegate>
 {
