@@ -11,8 +11,6 @@
 #import "CommonProtocols.h"
 
 @interface FiniteStateMachine : NSObject
-{
-}
 
 @property (weak, nonatomic) id owner;
 @property (strong, nonatomic) id<GameObjectStateDelegate> currentState;

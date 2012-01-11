@@ -18,10 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	// Create the main window
-	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-
 	// Create an EAGLView with a RGB565 color buffer, and a depth buffer of 0-bits
 	EAGLView *glView = [EAGLView viewWithFrame:[window_ bounds]
 								   pixelFormat:kEAGLColorFormatRGB565	//kEAGLColorFormatRGBA8
@@ -56,15 +52,11 @@
 		CCLOG(@"Retina Display Not supported");
 
 	// Create a Navigation Controller with the Director
-	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
-	navController_.navigationBarHidden = YES;
-
-	// set the Navigation Controller as the root view controller
-//	[window_ setRootViewController:rootViewController_];
-	[window_ addSubview:navController_.view];
-
-	// make main window visible
-	[window_ makeKeyAndVisible];
+//	navController_ = [[UINavigationController alloc] initWithRootViewController:director_];
+//	navController_.navigationBarHidden = YES;
+    navController_ = (UINavigationController*)self.window.rootViewController;
+//    [navController_ pushViewController:director_ animated:NO];
+    [navController_ initWithRootViewController:director_];
 
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
