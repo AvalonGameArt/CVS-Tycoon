@@ -9,17 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "GameObject.h"
 
-@class StateBase;
-@protocol GameObjectStateDelegate
 
--(void)enter:(GameObject*)owner;
--(void)update:(GameObject*)owner withTime:(ccTime)deltaTime;
--(void)changeState:(StateBase*) newState;
--(void)exit:(GameObject*)owner;
-
-@end
-
-@interface StateBase : NSObject<GameObjectStateDelegate>
+@interface StateBase : NSObject <GameObjectStateDelegate>
 {
 }
 

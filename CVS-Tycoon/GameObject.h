@@ -8,18 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "Constants.h"
 #import "CommonProtocols.h"
 
-@interface GameObject : CCSprite
+@class FiniteStateMachine;
+
+@interface GameObject : CCNode
 {
-    BOOL reactsToScreenBoundaries;
-    CGSize screenSize;
-    GameObjectType gameObjectType;
 }
-@property (readwrite) BOOL reactsToScreenBoundaries;
-@property (readwrite) CGSize screenSize;
-@property (readwrite) GameObjectType gameObjectType;
+@property (strong, nonatomic) FiniteStateMachine* mainFSM;
 
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime
            andListOfGameObjects:(CCArray*)listOfGameObjects;

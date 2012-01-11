@@ -14,11 +14,6 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
-        // Backgraound Layer
-        BackgroundLayer* backgroundLayer = [BackgroundLayer node];
-        [self addChild:backgroundLayer z:0];
-        
         GameplayLayer* gameplayerLayer = [GameplayLayer node];
         [self addChild:gameplayerLayer z:5];
     }
