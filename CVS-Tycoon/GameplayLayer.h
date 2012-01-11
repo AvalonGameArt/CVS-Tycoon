@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "cocos2d.h"
-
 #import "CommonProtocols.h"
 
 @interface GameplayLayer : CCLayer

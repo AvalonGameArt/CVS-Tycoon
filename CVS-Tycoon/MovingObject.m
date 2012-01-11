@@ -7,6 +7,10 @@
 //
 
 #import "MovingObject.h"
+#import "StateBase.h"
+
+@interface IdleState : StateBase;
+@end
 
 @implementation MovingObject
 
