@@ -56,8 +56,9 @@
 //	navController_.navigationBarHidden = YES;
     navController_ = (UINavigationController*)self.window.rootViewController;
 //    [navController_ pushViewController:director_ animated:NO];
-    [navController_ initWithRootViewController:director_];
-
+    UINavigationController* navCon = [navController_ initWithRootViewController:director_];
+    NSInteger c = [[navCon viewControllers] count];
+    NSLog(@"Navigation View Controller Count: %d", c);
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
 	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
 	// You can change anytime.
