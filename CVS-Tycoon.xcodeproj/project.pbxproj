@@ -75,6 +75,7 @@
 		4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8114BC6D1100A8123E /* StateBase.m */; };
 		4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8514BC6D9800A8123E /* GameScene.m */; };
 		4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8814BC6DD800A8123E /* GameplayLayer.m */; };
+		4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAE06D14BDC23800A8123E /* PackTextures.sh */; };
 		97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BC9814BD238400934812 /* MainStoryboard.storyboard */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
 /* End PBXBuildFile section */
@@ -479,6 +480,13 @@
 			remoteGlobalIDString = A04A1FEA13B826B300ABAFB7;
 			remoteInfo = kazmath;
 		};
+		4FAAE07314BDC52200A8123E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAADC1714BC5E5A00A8123E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FAAE06F14BDC46100A8123E;
+			remoteInfo = TexturePacker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -562,6 +570,7 @@
 		4FAADF8514BC6D9800A8123E /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		4FAADF8714BC6DD800A8123E /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		4FAADF8814BC6DD800A8123E /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
+		4FAAE06D14BDC23800A8123E /* PackTextures.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PackTextures.sh; sourceTree = SOURCE_ROOT; };
 		97D7BC9814BD238400934812 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		97D7BE6014BD69CD00934812 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -649,6 +658,7 @@
 				4FAADC3A14BC5E5A00A8123E /* fps_images.png */,
 				4FAADC4A14BC5E5A00A8123E /* Info.plist */,
 				4FAADC4B14BC5E5A00A8123E /* iTunesArtwork */,
+				4FAAE06D14BDC23800A8123E /* PackTextures.sh */,
 			);
 			name = Resources;
 			path = "CVS-Tycoon";
@@ -857,6 +867,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		4FAAE06F14BDC46100A8123E /* TexturePacker */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "\"$(PROJECT_DIR)/PackTextures.sh\"";
+			buildConfigurationList = 4FAAE07014BDC46100A8123E /* Build configuration list for PBXLegacyTarget "TexturePacker" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/bash;
+			buildWorkingDirectory = "$(PROJECT_DIR)";
+			dependencies = (
+			);
+			name = TexturePacker;
+			passBuildSettingsInEnvironment = 1;
+			productName = TexturePacker;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		4FAADC1F14BC5E5A00A8123E /* CVS-Tycoon */ = {
 			isa = PBXNativeTarget;
@@ -869,6 +896,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4FAAE07414BDC52200A8123E /* PBXTargetDependency */,
 				4FAADEAE14BC5F8500A8123E /* PBXTargetDependency */,
 				4FAADEB014BC5F8500A8123E /* PBXTargetDependency */,
 			);
@@ -905,6 +933,7 @@
 			projectRoot = "";
 			targets = (
 				4FAADC1F14BC5E5A00A8123E /* CVS-Tycoon */,
+				4FAAE06F14BDC46100A8123E /* TexturePacker */,
 			);
 		};
 /* End PBXProject section */
@@ -1351,6 +1380,7 @@
 				4FAADF6B14BC699600A8123E /* scene1atlas.pvr.ccz in Resources */,
 				97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */,
 				97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */,
+				4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1386,6 +1416,11 @@
 			isa = PBXTargetDependency;
 			name = kazmath;
 			targetProxy = 4FAADEAF14BC5F8500A8123E /* PBXContainerItemProxy */;
+		};
+		4FAAE07414BDC52200A8123E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FAAE06F14BDC46100A8123E /* TexturePacker */;
+			targetProxy = 4FAAE07314BDC52200A8123E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1466,6 +1501,51 @@
 			};
 			name = Release;
 		};
+		4FAAE07114BDC46100A8123E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = 5.0;
+			};
+			name = Debug;
+		};
+		4FAAE07214BDC46100A8123E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1486,6 +1566,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4FAAE07014BDC46100A8123E /* Build configuration list for PBXLegacyTarget "TexturePacker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FAAE07114BDC46100A8123E /* Debug */,
+				4FAAE07214BDC46100A8123E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
