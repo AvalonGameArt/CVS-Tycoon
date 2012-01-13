@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA984E614C07CD400A7F7C3 /* scene1atlas-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA984E414C07CD400A7F7C3 /* scene1atlas-hd.plist */; };
+		4FA984E714C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FA984E514C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz */; };
 		4FAADC2514BC5E5A00A8123E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2414BC5E5A00A8123E /* QuartzCore.framework */; };
 		4FAADC2714BC5E5A00A8123E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2614BC5E5A00A8123E /* OpenGLES.framework */; };
 		4FAADC2914BC5E5A00A8123E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2814BC5E5A00A8123E /* OpenAL.framework */; };
@@ -65,8 +67,6 @@
 		4FAADF6714BC699600A8123E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5214BC699600A8123E /* icon.png */; };
 		4FAADF6814BC699600A8123E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5314BC699600A8123E /* icon@2x.png */; };
 		4FAADF6914BC699600A8123E /* mapset3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5414BC699600A8123E /* mapset3.png */; };
-		4FAADF6A14BC699600A8123E /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5514BC699600A8123E /* scene1atlas.plist */; };
-		4FAADF6B14BC699600A8123E /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5614BC699600A8123E /* scene1atlas.pvr.ccz */; };
 		4FAADF7A14BC6CC700A8123E /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7314BC6CC700A8123E /* GameCharacter.m */; };
 		4FAADF7B14BC6CC700A8123E /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7514BC6CC700A8123E /* GameObject.m */; };
 		4FAADF7C14BC6CC700A8123E /* GameStaticObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7714BC6CC700A8123E /* GameStaticObj.m */; };
@@ -76,6 +76,7 @@
 		4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8514BC6D9800A8123E /* GameScene.m */; };
 		4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8814BC6DD800A8123E /* GameplayLayer.m */; };
 		4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAE06D14BDC23800A8123E /* PackTextures.sh */; };
+		4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAE15014BDE11A00A8123E /* SpawnPoint.m */; };
 		97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BC9814BD238400934812 /* MainStoryboard.storyboard */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
 /* End PBXBuildFile section */
@@ -490,6 +491,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FA984E414C07CD400A7F7C3 /* scene1atlas-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene1atlas-hd.plist"; sourceTree = "<group>"; };
+		4FA984E514C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scene1atlas-hd.pvr.ccz"; sourceTree = "<group>"; };
 		4FAADC2014BC5E5A00A8123E /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAADC2414BC5E5A00A8123E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4FAADC2614BC5E5A00A8123E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -551,8 +554,6 @@
 		4FAADF5214BC699600A8123E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4FAADF5314BC699600A8123E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		4FAADF5414BC699600A8123E /* mapset3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapset3.png; sourceTree = "<group>"; };
-		4FAADF5514BC699600A8123E /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
-		4FAADF5614BC699600A8123E /* scene1atlas.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene1atlas.pvr.ccz; sourceTree = "<group>"; };
 		4FAADF6E14BC6B0500A8123E /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
 		4FAADF7214BC6CC700A8123E /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
 		4FAADF7314BC6CC700A8123E /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
@@ -571,6 +572,8 @@
 		4FAADF8714BC6DD800A8123E /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		4FAADF8814BC6DD800A8123E /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
 		4FAAE06D14BDC23800A8123E /* PackTextures.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PackTextures.sh; sourceTree = SOURCE_ROOT; };
+		4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpawnPoint.h; sourceTree = "<group>"; };
+		4FAAE15014BDE11A00A8123E /* SpawnPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpawnPoint.m; sourceTree = "<group>"; };
 		97D7BC9814BD238400934812 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		97D7BE6014BD69CD00934812 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -786,8 +789,8 @@
 				4FAADF4D14BC699600A8123E /* Icons */,
 				4FAADF4C14BC699600A8123E /* firstlevel.tmx */,
 				4FAADF5414BC699600A8123E /* mapset3.png */,
-				4FAADF5514BC699600A8123E /* scene1atlas.plist */,
-				4FAADF5614BC699600A8123E /* scene1atlas.pvr.ccz */,
+				4FA984E414C07CD400A7F7C3 /* scene1atlas-hd.plist */,
+				4FA984E514C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz */,
 			);
 			name = Images;
 			path = "CVS-Tycoon/Images";
@@ -859,6 +862,8 @@
 				4FAADF7514BC6CC700A8123E /* GameObject.m */,
 				4FAADF7614BC6CC700A8123E /* GameStaticObj.h */,
 				4FAADF7714BC6CC700A8123E /* GameStaticObj.m */,
+				4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */,
+				4FAAE15014BDE11A00A8123E /* SpawnPoint.m */,
 				4FAADF7814BC6CC700A8123E /* MovingObject.h */,
 				4FAADF7914BC6CC700A8123E /* MovingObject.m */,
 			);
@@ -1376,11 +1381,11 @@
 				4FAADF6714BC699600A8123E /* icon.png in Resources */,
 				4FAADF6814BC699600A8123E /* icon@2x.png in Resources */,
 				4FAADF6914BC699600A8123E /* mapset3.png in Resources */,
-				4FAADF6A14BC699600A8123E /* scene1atlas.plist in Resources */,
-				4FAADF6B14BC699600A8123E /* scene1atlas.pvr.ccz in Resources */,
 				97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */,
 				97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */,
 				4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */,
+				4FA984E614C07CD400A7F7C3 /* scene1atlas-hd.plist in Resources */,
+				4FA984E714C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1401,6 +1406,7 @@
 				4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */,
 				4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */,
 				4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */,
+				4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1504,45 +1510,12 @@
 		4FAAE07114BDC46100A8123E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = 5.0;
 			};
 			name = Debug;
 		};
 		4FAAE07214BDC46100A8123E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = 5.0;
 			};
 			name = Release;
 		};
@@ -1574,6 +1547,7 @@
 				4FAAE07214BDC46100A8123E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
