@@ -7,6 +7,8 @@
 //
 
 #import "GameplayLayer.h"
+#import "Categories.h"
+#import "GameObject.h"
 
 @implementation GameplayLayer
 @synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint;
@@ -33,18 +35,8 @@
 //        vikingSprite = [CCSprite spriteWithFile:@"sv_anim_1.png"];
         srand(time(0));
         
-        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-        {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
-            [CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];
-        }
-        else
-        {
-            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
-            [CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
-            sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];            
-        }
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
+        sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];
         [self addChild:sceneSpriteBatchNode];
 
         [self scheduleUpdate];
@@ -56,16 +48,17 @@
         [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [self addChild:groundLayer z:30];
 
-        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog001.png"];
-        CCAnimation* dogAnim = [CCAnimation animation];
-        [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog001.png"]];
-        [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog002.png"]];
-        [dogAnim addFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:@"dog003.png"]];
-        [dogAnim setDelay:0.3];
+        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1.png"];
+//        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
+        CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
+//        CCAnimation* dogAnimWalkDownLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:7 frameCountEnd:9 delay:0.3];
+//        CCAnimation* dogAnimWalkUpLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:10 frameCountEnd:12 delay:0.3];
+        
         [sceneSpriteBatchNode addChild:dog];
-        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:dogAnim restoreOriginalFrame:NO]];
+        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:dogAnimWalkDownRight restoreOriginalFrame:NO]];
         [dog setScale:3.0];
         [dog runAction:action];
+//        [[[GameObject alloc] init] loadPlistForAnimation:@"dog_animation"];
     }
     
     return self;

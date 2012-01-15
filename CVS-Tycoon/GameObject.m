@@ -8,9 +8,11 @@
 
 #import "GameObject.h"
 #import "FiniteStateMachine.h"
+#import "Categories.h"
+
 
 @implementation GameObject
-@synthesize mainFSM;
+@synthesize mainFSM, animationDict;
 
 - (id)init
 {
@@ -37,50 +39,28 @@
     return [self boundingBox];
 }
 
--(CCAnimation*)loadPlistForAnimationWithName:(NSString*)animationName
-                                andClassName:(NSString*)className
+-(void)loadPlistForAnimation:(NSString*)plistName
 {
-    CCAnimation* animationToReturn = nil;
-    NSString* fullFileName = [NSString stringWithFormat:@"%@.plist",className];
     NSString* plistPath;
-    NSString* rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                               NSUserDomainMask, YES) objectAtIndex:0];
-    plistPath = [rootPath stringByAppendingPathComponent:fullFileName];
     if(![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
     {
-        plistPath = [[NSBundle mainBundle] pathForResource:className ofType:@"plist"];
+        plistPath = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
     }
-    
     NSDictionary* plistDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
     
     if(plistDictionary == nil)
-    {
-        CCLOG(@"Error reading plist: %@.plist", className);
-        return nil;
+        CCLOG(@"Error reading plist: %@", plistName);
+    
+    NSEnumerator* keyIter = [plistDictionary keyEnumerator];
+    id key;
+    while (key = [keyIter nextObject]) {
+        NSDictionary* settings = [plistDictionary objectForKey:key];
+        NSString* frameBaseName = [[settings objectForKey:@"frameBaseName"] stringValue];
+        float delay = [[settings objectForKey:@"delay"] floatValue];
+        int frameBegin = [[settings objectForKey:@"frameBegin"] intValue];
+        int frameEnd = [[settings objectForKey:@"frameEnd"] intValue];
+        CCAnimation* animation = [CCAnimation animationWithFrame:frameBaseName frameCountBegin:frameBegin frameCountEnd:frameEnd delay:delay];
+        [animationDict setObject:animation forKey:(NSString*)key];
     }
-    
-    NSDictionary* animationSettings = [plistDictionary objectForKey:animationName];
-    if(animationSettings == nil)
-    {
-        CCLOG(@"Could not locate AnimationWithName:%@",animationName);
-        return nil;
-    }
-    
-    float animationDelay = [[animationSettings objectForKey:@"delay"] floatValue];
-    animationToReturn = [CCAnimation animation];
-    [animationToReturn setDelay:animationDelay];
-    
-    NSString* animationFramePrefix = [animationSettings objectForKey:@"filenamePrefix"];
-    NSString* animationFrames = [animationSettings objectForKey:@"animationFrames"];
-    NSArray* animationFrameNumbers = [animationFrames componentsSeparatedByString:@","];
-    
-    for (NSString* frameNumber in animationFrameNumbers)
-    {
-        NSString* frameName = [NSString stringWithFormat:@"%@%@.png", animationFramePrefix, frameNumber];
-        [animationToReturn addFrame: [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:frameName]];
-    }
-    
-    return animationToReturn;
-    
 }
 @end

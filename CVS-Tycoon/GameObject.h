@@ -15,12 +15,12 @@
 {
 }
 @property (strong, nonatomic) FiniteStateMachine* mainFSM;
+@property (strong, nonatomic) NSMutableDictionary* animationDict;
 
 -(void)updateStateWithDeltaTime:(ccTime)deltaTime
            andListOfGameObjects:(CCArray*)listOfGameObjects;
 
 -(CGRect)adjustedBoundingBox;
 
--(CCAnimation*)loadPlistForAnimationWithName:(NSString*)animationName
-                                andClassName:(NSString*)className;
+-(void)loadPlistForAnimation:(NSString*)plistName;
 @end

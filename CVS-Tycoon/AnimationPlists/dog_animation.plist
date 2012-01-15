@@ -2,14 +2,49 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>walkingRightAnim</key>
+	<key>walkUpRight</key>
 	<dict>
-		<key>filenamePrefix</key>
+		<key>frameBaseName</key>
 		<string>dog</string>
 		<key>delay</key>
-		<real>0.08</real>
-		<key>animationFrames</key>
-		<string>001,002,003</string>
+		<real>0.3</real>
+		<key>frameBegin</key>
+		<integer>1</integer>
+		<key>frameEnd</key>
+		<integer>3</integer>
+	</dict>
+	<key>walkDownRight</key>
+	<dict>
+		<key>frameBaseName</key>
+		<string>dog</string>
+		<key>delay</key>
+		<real>0.3</real>
+		<key>frameBegin</key>
+		<integer>4</integer>
+		<key>frameEnd</key>
+		<integer>6</integer>
+	</dict>
+	<key>walkUpLeft</key>
+	<dict>
+		<key>frameBaseName</key>
+		<string>dog</string>
+		<key>delay</key>
+		<real>0.3</real>
+		<key>frameBegin</key>
+		<integer>10</integer>
+		<key>frameEnd</key>
+		<integer>12</integer>
+	</dict>
+	<key>walkDownLeft</key>
+	<dict>
+		<key>frameBaseName</key>
+		<string>dog</string>
+		<key>delay</key>
+		<real>0.3</real>
+		<key>frameBegin</key>
+		<integer>7</integer>
+		<key>frameEnd</key>
+		<integer>9</integer>
 	</dict>
 </dict>
 </plist>

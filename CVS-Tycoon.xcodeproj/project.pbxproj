@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FA984E614C07CD400A7F7C3 /* scene1atlas-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA984E414C07CD400A7F7C3 /* scene1atlas-hd.plist */; };
-		4FA984E714C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FA984E514C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz */; };
+		4FA325E714C08AD700A161CD /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA325E614C08AD700A161CD /* Categories.m */; };
+		4FA325EA14C113DB00A161CD /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E814C113DB00A161CD /* scene1atlas.plist */; };
+		4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */; };
 		4FAADC2514BC5E5A00A8123E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2414BC5E5A00A8123E /* QuartzCore.framework */; };
 		4FAADC2714BC5E5A00A8123E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2614BC5E5A00A8123E /* OpenGLES.framework */; };
 		4FAADC2914BC5E5A00A8123E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2814BC5E5A00A8123E /* OpenAL.framework */; };
@@ -75,7 +76,6 @@
 		4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8114BC6D1100A8123E /* StateBase.m */; };
 		4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8514BC6D9800A8123E /* GameScene.m */; };
 		4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8814BC6DD800A8123E /* GameplayLayer.m */; };
-		4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAE06D14BDC23800A8123E /* PackTextures.sh */; };
 		4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAE15014BDE11A00A8123E /* SpawnPoint.m */; };
 		97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BC9814BD238400934812 /* MainStoryboard.storyboard */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
@@ -491,8 +491,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4FA984E414C07CD400A7F7C3 /* scene1atlas-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "scene1atlas-hd.plist"; sourceTree = "<group>"; };
-		4FA984E514C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scene1atlas-hd.pvr.ccz"; sourceTree = "<group>"; };
+		4FA325E514C08AD700A161CD /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		4FA325E614C08AD700A161CD /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		4FA325E814C113DB00A161CD /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
+		4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene1atlas.pvr.ccz; sourceTree = "<group>"; };
 		4FAADC2014BC5E5A00A8123E /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAADC2414BC5E5A00A8123E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4FAADC2614BC5E5A00A8123E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -789,8 +791,8 @@
 				4FAADF4D14BC699600A8123E /* Icons */,
 				4FAADF4C14BC699600A8123E /* firstlevel.tmx */,
 				4FAADF5414BC699600A8123E /* mapset3.png */,
-				4FA984E414C07CD400A7F7C3 /* scene1atlas-hd.plist */,
-				4FA984E514C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz */,
+				4FA325E814C113DB00A161CD /* scene1atlas.plist */,
+				4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */,
 			);
 			name = Images;
 			path = "CVS-Tycoon/Images";
@@ -831,6 +833,8 @@
 				4FAADF8014BC6D1100A8123E /* StateBase.h */,
 				4FAADF8114BC6D1100A8123E /* StateBase.m */,
 				4FAADF6E14BC6B0500A8123E /* CommonProtocols.h */,
+				4FA325E514C08AD700A161CD /* Categories.h */,
+				4FA325E614C08AD700A161CD /* Categories.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1383,9 +1387,8 @@
 				4FAADF6914BC699600A8123E /* mapset3.png in Resources */,
 				97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */,
 				97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */,
-				4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */,
-				4FA984E614C07CD400A7F7C3 /* scene1atlas-hd.plist in Resources */,
-				4FA984E714C07CD400A7F7C3 /* scene1atlas-hd.pvr.ccz in Resources */,
+				4FA325EA14C113DB00A161CD /* scene1atlas.plist in Resources */,
+				4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1407,6 +1410,7 @@
 				4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */,
 				4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */,
 				4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */,
+				4FA325E714C08AD700A161CD /* Categories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

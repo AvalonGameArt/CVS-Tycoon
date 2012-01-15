@@ -23,8 +23,8 @@ if [ "${ACTION}" = "clean" ]
 then
 echo "cleaning..."
 
-rm CVS-Tycoon/Images/scene1atlas.pvr.ccz
-rm CVS-Tycoon/Images/scene1atlas.plist
+#rm CVS-Tycoon/Images/scene1atlas.pvr.ccz
+#rm CVS-Tycoon/Images/scene1atlas.plist
 
 # ....
 # add all files to be removed in clean phase
@@ -35,8 +35,8 @@ echo "building..."
 # create hd assets
 ${TP} --smart-update \
 --format cocos2d \
---data CVS-Tycoon/Images/scene1atlas-hd.plist \
---sheet CVS-Tycoon/Images/scene1atlas-hd.pvr.ccz \
+--data CVS-Tycoon/Images/scene1atlas.plist \
+--sheet CVS-Tycoon/Images/scene1atlas.pvr.ccz \
 --algorithm MaxRects \
 --maxrects-heuristics best \
 --max-size 1024 \

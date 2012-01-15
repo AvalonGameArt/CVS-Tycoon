@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog11.png</key>
+            <key>dog10.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{20,45},{16,13}}</string>
@@ -186,7 +186,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog12.png</key>
+            <key>dog11.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,45},{16,13}}</string>
@@ -199,7 +199,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog13.png</key>
+            <key>dog12.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{110,31},{16,13}}</string>
@@ -225,7 +225,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog21.png</key>
+            <key>dog3.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{74,31},{16,13}}</string>
@@ -238,7 +238,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog22.png</key>
+            <key>dog4.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{56,30},{16,13}}</string>
@@ -251,7 +251,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog23.png</key>
+            <key>dog5.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{38,30},{16,13}}</string>
@@ -264,7 +264,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog3.png</key>
+            <key>dog6.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{20,30},{16,13}}</string>
@@ -277,7 +277,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog31.png</key>
+            <key>dog7.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,30},{16,13}}</string>
@@ -290,7 +290,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog32.png</key>
+            <key>dog8.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{102,16},{16,13}}</string>
@@ -303,7 +303,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog33.png</key>
+            <key>dog9.png</key>
             <dict>
                 <key>frame</key>
                 <string>{{84,16},{16,13}}</string>
@@ -374,13 +374,13 @@
             <key>format</key>
             <integer>2</integer>
             <key>realTextureFileName</key>
-            <string>scene1atlas-hd.pvr.ccz</string>
+            <string>scene1atlas.pvr.ccz</string>
             <key>size</key>
             <string>{128,64}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:47d044bb71e3d85ddc30faf707d65c3b$</string>
+            <string>$TexturePacker:SmartUpdate:e8d05ebf3c984914a7dba44a193e09fd$</string>
             <key>textureFileName</key>
-            <string>scene1atlas-hd.pvr.ccz</string>
+            <string>scene1atlas.pvr.ccz</string>
         </dict>
     </dict>
 </plist>
