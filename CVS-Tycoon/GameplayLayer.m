@@ -59,6 +59,7 @@
         [dog setScale:3.0];
         [dog runAction:action];
 //        [[[GameObject alloc] init] loadPlistForAnimation:@"dog_animation"];
+        
     }
     
     return self;

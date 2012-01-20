@@ -68,10 +68,8 @@
 		4FAADF6714BC699600A8123E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5214BC699600A8123E /* icon.png */; };
 		4FAADF6814BC699600A8123E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5314BC699600A8123E /* icon@2x.png */; };
 		4FAADF6914BC699600A8123E /* mapset3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5414BC699600A8123E /* mapset3.png */; };
-		4FAADF7A14BC6CC700A8123E /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7314BC6CC700A8123E /* GameCharacter.m */; };
 		4FAADF7B14BC6CC700A8123E /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7514BC6CC700A8123E /* GameObject.m */; };
 		4FAADF7C14BC6CC700A8123E /* GameStaticObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7714BC6CC700A8123E /* GameStaticObj.m */; };
-		4FAADF7D14BC6CC700A8123E /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7914BC6CC700A8123E /* MovingObject.m */; };
 		4FAADF8214BC6D1200A8123E /* FiniteStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7F14BC6D1100A8123E /* FiniteStateMachine.m */; };
 		4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8114BC6D1100A8123E /* StateBase.m */; };
 		4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8514BC6D9800A8123E /* GameScene.m */; };
@@ -557,14 +555,10 @@
 		4FAADF5314BC699600A8123E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		4FAADF5414BC699600A8123E /* mapset3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapset3.png; sourceTree = "<group>"; };
 		4FAADF6E14BC6B0500A8123E /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
-		4FAADF7214BC6CC700A8123E /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
-		4FAADF7314BC6CC700A8123E /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 		4FAADF7414BC6CC700A8123E /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		4FAADF7514BC6CC700A8123E /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		4FAADF7614BC6CC700A8123E /* GameStaticObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStaticObj.h; sourceTree = "<group>"; };
 		4FAADF7714BC6CC700A8123E /* GameStaticObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStaticObj.m; sourceTree = "<group>"; };
-		4FAADF7814BC6CC700A8123E /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
-		4FAADF7914BC6CC700A8123E /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
 		4FAADF7E14BC6D1100A8123E /* FiniteStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiniteStateMachine.h; sourceTree = "<group>"; };
 		4FAADF7F14BC6D1100A8123E /* FiniteStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiniteStateMachine.m; sourceTree = "<group>"; };
 		4FAADF8014BC6D1100A8123E /* StateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateBase.h; sourceTree = "<group>"; };
@@ -647,6 +641,7 @@
 				4FAADF6D14BC6AD500A8123E /* Common */,
 				4FAADF6F14BC6B4D00A8123E /* Scenes */,
 				4FAADF7014BC6B5200A8123E /* Layers */,
+				4FE4C49714C85E24008B22A7 /* Component */,
 				4FAADF7114BC6C2A00A8123E /* GameObjects */,
 				4FAADDC314BC5E5D00A8123E /* AppDelegate.h */,
 				4FAADDC414BC5E5D00A8123E /* AppDelegate.m */,
@@ -860,18 +855,21 @@
 		4FAADF7114BC6C2A00A8123E /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
-				4FAADF7214BC6CC700A8123E /* GameCharacter.h */,
-				4FAADF7314BC6CC700A8123E /* GameCharacter.m */,
 				4FAADF7414BC6CC700A8123E /* GameObject.h */,
 				4FAADF7514BC6CC700A8123E /* GameObject.m */,
 				4FAADF7614BC6CC700A8123E /* GameStaticObj.h */,
 				4FAADF7714BC6CC700A8123E /* GameStaticObj.m */,
 				4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */,
 				4FAAE15014BDE11A00A8123E /* SpawnPoint.m */,
-				4FAADF7814BC6CC700A8123E /* MovingObject.h */,
-				4FAADF7914BC6CC700A8123E /* MovingObject.m */,
 			);
 			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		4FE4C49714C85E24008B22A7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1401,10 +1399,8 @@
 			files = (
 				4FAADDC214BC5E5D00A8123E /* main.m in Sources */,
 				4FAADDC514BC5E5D00A8123E /* AppDelegate.m in Sources */,
-				4FAADF7A14BC6CC700A8123E /* GameCharacter.m in Sources */,
 				4FAADF7B14BC6CC700A8123E /* GameObject.m in Sources */,
 				4FAADF7C14BC6CC700A8123E /* GameStaticObj.m in Sources */,
-				4FAADF7D14BC6CC700A8123E /* MovingObject.m in Sources */,
 				4FAADF8214BC6D1200A8123E /* FiniteStateMachine.m in Sources */,
 				4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */,
 				4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */,
