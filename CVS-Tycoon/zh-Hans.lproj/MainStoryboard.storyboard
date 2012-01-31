@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BqW-jo-E7I">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="iec-bt-JrH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAn-0B-fnK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ft4-a6-DNQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WtH-Ry-8sA" customClass="EAGLView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="3IY-U3-zdh"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-128" y="59"/>
+        </scene>
+        <scene sceneID="lbh-vg-DYd">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ts-eQ-U1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="BqW-jo-E7I" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="h4j-vp-6rq">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ft4-a6-DNQ" kind="relationship" relationship="rootViewController" id="xHf-EO-CRf"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-662" y="59"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="EAGLView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EAGLView.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <nil key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
