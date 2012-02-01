@@ -17,9 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	// Create an EAGLView with a RGB565 color buffer, and a depth buffer of 0-bits
-	EAGLView *glView = [EAGLView viewWithFrame:[window_ bounds]
+	CCGLView *glView = [CCGLView viewWithFrame:[window_ bounds]
 								   pixelFormat:kEAGLColorFormatRGB565	//kEAGLColorFormatRGBA8
-								   depthFormat:0	//GL_DEPTH_COMPONENT24_OES
+								   depthFormat:GL_DEPTH_COMPONENT24_OES	//0
 							preserveBackbuffer:NO
 									sharegroup:nil
 								 multiSampling:NO
@@ -79,7 +79,8 @@
 // Supported orientations: Landscape. Customize it for your own needs
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+    return YES;
+//	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 

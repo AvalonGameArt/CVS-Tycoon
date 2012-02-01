@@ -23,8 +23,8 @@ if [ "${ACTION}" = "clean" ]
 then
 echo "cleaning..."
 
-rm CVS-Tycoon/Images/scene1atlas.pvr.ccz
-rm CVS-Tycoon/Images/scene1atlas.plist
+#rm CVS-Tycoon/Images/scene1atlas.pvr.ccz
+#rm CVS-Tycoon/Images/scene1atlas.plist
 
 # ....
 # add all files to be removed in clean phase
@@ -37,8 +37,12 @@ ${TP} --smart-update \
 --format cocos2d \
 --data CVS-Tycoon/Images/scene1atlas.plist \
 --sheet CVS-Tycoon/Images/scene1atlas.pvr.ccz \
+--algorithm MaxRects \
+--maxrects-heuristics best \
+--max-size 1024 \
 --dither-fs-alpha \
 --opt RGBA4444 \
+--premultiply-alpha \
 Assets/Images/*.png
 
 #${TP} --smart-update \

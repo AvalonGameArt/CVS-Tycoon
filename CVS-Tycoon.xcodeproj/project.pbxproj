@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FA325E714C08AD700A161CD /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA325E614C08AD700A161CD /* Categories.m */; };
+		4FA325EA14C113DB00A161CD /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E814C113DB00A161CD /* scene1atlas.plist */; };
+		4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */; };
 		4FAADC2514BC5E5A00A8123E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2414BC5E5A00A8123E /* QuartzCore.framework */; };
 		4FAADC2714BC5E5A00A8123E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2614BC5E5A00A8123E /* OpenGLES.framework */; };
 		4FAADC2914BC5E5A00A8123E /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADC2814BC5E5A00A8123E /* OpenAL.framework */; };
@@ -65,18 +68,16 @@
 		4FAADF6714BC699600A8123E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5214BC699600A8123E /* icon.png */; };
 		4FAADF6814BC699600A8123E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5314BC699600A8123E /* icon@2x.png */; };
 		4FAADF6914BC699600A8123E /* mapset3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5414BC699600A8123E /* mapset3.png */; };
-		4FAADF6A14BC699600A8123E /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5514BC699600A8123E /* scene1atlas.plist */; };
-		4FAADF6B14BC699600A8123E /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FAADF5614BC699600A8123E /* scene1atlas.pvr.ccz */; };
-		4FAADF7A14BC6CC700A8123E /* GameCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7314BC6CC700A8123E /* GameCharacter.m */; };
 		4FAADF7B14BC6CC700A8123E /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7514BC6CC700A8123E /* GameObject.m */; };
 		4FAADF7C14BC6CC700A8123E /* GameStaticObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7714BC6CC700A8123E /* GameStaticObj.m */; };
-		4FAADF7D14BC6CC700A8123E /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7914BC6CC700A8123E /* MovingObject.m */; };
 		4FAADF8214BC6D1200A8123E /* FiniteStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF7F14BC6D1100A8123E /* FiniteStateMachine.m */; };
 		4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8114BC6D1100A8123E /* StateBase.m */; };
 		4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8514BC6D9800A8123E /* GameScene.m */; };
 		4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAADF8814BC6DD800A8123E /* GameplayLayer.m */; };
-		4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4FAAE06D14BDC23800A8123E /* PackTextures.sh */; };
-		97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BC9814BD238400934812 /* MainStoryboard.storyboard */; };
+		4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAAE15014BDE11A00A8123E /* SpawnPoint.m */; };
+		4FC1571714D81E5B009B27EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571914D81E5B009B27EC /* Localizable.strings */; };
+		4FC1571C14D8206B009B27EC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571E14D8206B009B27EC /* MainStoryboard.storyboard */; };
+		4FC1572314D821D0009B27EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1572514D821D0009B27EC /* InfoPlist.strings */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
 /* End PBXBuildFile section */
 
@@ -490,6 +491,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FA325E514C08AD700A161CD /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		4FA325E614C08AD700A161CD /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		4FA325E814C113DB00A161CD /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
+		4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene1atlas.pvr.ccz; sourceTree = "<group>"; };
 		4FAADC2014BC5E5A00A8123E /* CVS-Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CVS-Tycoon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAADC2414BC5E5A00A8123E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4FAADC2614BC5E5A00A8123E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -551,17 +556,11 @@
 		4FAADF5214BC699600A8123E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		4FAADF5314BC699600A8123E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		4FAADF5414BC699600A8123E /* mapset3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapset3.png; sourceTree = "<group>"; };
-		4FAADF5514BC699600A8123E /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
-		4FAADF5614BC699600A8123E /* scene1atlas.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = scene1atlas.pvr.ccz; sourceTree = "<group>"; };
 		4FAADF6E14BC6B0500A8123E /* CommonProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonProtocols.h; sourceTree = "<group>"; };
-		4FAADF7214BC6CC700A8123E /* GameCharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCharacter.h; sourceTree = "<group>"; };
-		4FAADF7314BC6CC700A8123E /* GameCharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCharacter.m; sourceTree = "<group>"; };
 		4FAADF7414BC6CC700A8123E /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		4FAADF7514BC6CC700A8123E /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
 		4FAADF7614BC6CC700A8123E /* GameStaticObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStaticObj.h; sourceTree = "<group>"; };
 		4FAADF7714BC6CC700A8123E /* GameStaticObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStaticObj.m; sourceTree = "<group>"; };
-		4FAADF7814BC6CC700A8123E /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
-		4FAADF7914BC6CC700A8123E /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
 		4FAADF7E14BC6D1100A8123E /* FiniteStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiniteStateMachine.h; sourceTree = "<group>"; };
 		4FAADF7F14BC6D1100A8123E /* FiniteStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiniteStateMachine.m; sourceTree = "<group>"; };
 		4FAADF8014BC6D1100A8123E /* StateBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateBase.h; sourceTree = "<group>"; };
@@ -571,7 +570,14 @@
 		4FAADF8714BC6DD800A8123E /* GameplayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayLayer.h; sourceTree = "<group>"; };
 		4FAADF8814BC6DD800A8123E /* GameplayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayLayer.m; sourceTree = "<group>"; };
 		4FAAE06D14BDC23800A8123E /* PackTextures.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = PackTextures.sh; sourceTree = SOURCE_ROOT; };
-		97D7BC9814BD238400934812 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpawnPoint.h; sourceTree = "<group>"; };
+		4FAAE15014BDE11A00A8123E /* SpawnPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpawnPoint.m; sourceTree = "<group>"; };
+		4FC1571814D81E5B009B27EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4FC1571A14D81E6B009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4FC1571D14D8206B009B27EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		4FC1572014D820E2009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		4FC1572414D821D0009B27EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4FC1572614D821D7009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		97D7BE6014BD69CD00934812 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -642,10 +648,11 @@
 				4FAADF6D14BC6AD500A8123E /* Common */,
 				4FAADF6F14BC6B4D00A8123E /* Scenes */,
 				4FAADF7014BC6B5200A8123E /* Layers */,
+				4FE4C49714C85E24008B22A7 /* Component */,
 				4FAADF7114BC6C2A00A8123E /* GameObjects */,
 				4FAADDC314BC5E5D00A8123E /* AppDelegate.h */,
 				4FAADDC414BC5E5D00A8123E /* AppDelegate.m */,
-				97D7BC9814BD238400934812 /* MainStoryboard.storyboard */,
+				4FC1571E14D8206B009B27EC /* MainStoryboard.storyboard */,
 			);
 			name = Classes;
 			path = "CVS-Tycoon";
@@ -659,6 +666,7 @@
 				4FAADC4A14BC5E5A00A8123E /* Info.plist */,
 				4FAADC4B14BC5E5A00A8123E /* iTunesArtwork */,
 				4FAAE06D14BDC23800A8123E /* PackTextures.sh */,
+				4FC1571914D81E5B009B27EC /* Localizable.strings */,
 			);
 			name = Resources;
 			path = "CVS-Tycoon";
@@ -704,6 +712,7 @@
 			children = (
 				4FAADDC014BC5E5D00A8123E /* Prefix.pch */,
 				4FAADDC114BC5E5D00A8123E /* main.m */,
+				4FC1572514D821D0009B27EC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			path = "CVS-Tycoon";
@@ -786,8 +795,8 @@
 				4FAADF4D14BC699600A8123E /* Icons */,
 				4FAADF4C14BC699600A8123E /* firstlevel.tmx */,
 				4FAADF5414BC699600A8123E /* mapset3.png */,
-				4FAADF5514BC699600A8123E /* scene1atlas.plist */,
-				4FAADF5614BC699600A8123E /* scene1atlas.pvr.ccz */,
+				4FA325E814C113DB00A161CD /* scene1atlas.plist */,
+				4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */,
 			);
 			name = Images;
 			path = "CVS-Tycoon/Images";
@@ -828,6 +837,8 @@
 				4FAADF8014BC6D1100A8123E /* StateBase.h */,
 				4FAADF8114BC6D1100A8123E /* StateBase.m */,
 				4FAADF6E14BC6B0500A8123E /* CommonProtocols.h */,
+				4FA325E514C08AD700A161CD /* Categories.h */,
+				4FA325E614C08AD700A161CD /* Categories.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -853,16 +864,21 @@
 		4FAADF7114BC6C2A00A8123E /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
-				4FAADF7214BC6CC700A8123E /* GameCharacter.h */,
-				4FAADF7314BC6CC700A8123E /* GameCharacter.m */,
 				4FAADF7414BC6CC700A8123E /* GameObject.h */,
 				4FAADF7514BC6CC700A8123E /* GameObject.m */,
 				4FAADF7614BC6CC700A8123E /* GameStaticObj.h */,
 				4FAADF7714BC6CC700A8123E /* GameStaticObj.m */,
-				4FAADF7814BC6CC700A8123E /* MovingObject.h */,
-				4FAADF7914BC6CC700A8123E /* MovingObject.m */,
+				4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */,
+				4FAAE15014BDE11A00A8123E /* SpawnPoint.m */,
 			);
 			name = GameObjects;
+			sourceTree = "<group>";
+		};
+		4FE4C49714C85E24008B22A7 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -920,6 +936,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 4FAADC1514BC5E5A00A8123E;
 			productRefGroup = 4FAADC2114BC5E5A00A8123E /* Products */;
@@ -1376,11 +1394,12 @@
 				4FAADF6714BC699600A8123E /* icon.png in Resources */,
 				4FAADF6814BC699600A8123E /* icon@2x.png in Resources */,
 				4FAADF6914BC699600A8123E /* mapset3.png in Resources */,
-				4FAADF6A14BC699600A8123E /* scene1atlas.plist in Resources */,
-				4FAADF6B14BC699600A8123E /* scene1atlas.pvr.ccz in Resources */,
-				97D7BC9914BD238500934812 /* MainStoryboard.storyboard in Resources */,
+				4FC1571C14D8206B009B27EC /* MainStoryboard.storyboard in Resources */,
 				97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */,
-				4FAAE06E14BDC23800A8123E /* PackTextures.sh in Resources */,
+				4FA325EA14C113DB00A161CD /* scene1atlas.plist in Resources */,
+				4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */,
+				4FC1571714D81E5B009B27EC /* Localizable.strings in Resources */,
+				4FC1572314D821D0009B27EC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1393,14 +1412,14 @@
 			files = (
 				4FAADDC214BC5E5D00A8123E /* main.m in Sources */,
 				4FAADDC514BC5E5D00A8123E /* AppDelegate.m in Sources */,
-				4FAADF7A14BC6CC700A8123E /* GameCharacter.m in Sources */,
 				4FAADF7B14BC6CC700A8123E /* GameObject.m in Sources */,
 				4FAADF7C14BC6CC700A8123E /* GameStaticObj.m in Sources */,
-				4FAADF7D14BC6CC700A8123E /* MovingObject.m in Sources */,
 				4FAADF8214BC6D1200A8123E /* FiniteStateMachine.m in Sources */,
 				4FAADF8314BC6D1200A8123E /* StateBase.m in Sources */,
 				4FAADF8614BC6D9800A8123E /* GameScene.m in Sources */,
 				4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */,
+				4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */,
+				4FA325E714C08AD700A161CD /* Categories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,6 +1442,37 @@
 			targetProxy = 4FAAE07314BDC52200A8123E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4FC1571914D81E5B009B27EC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FC1571814D81E5B009B27EC /* en */,
+				4FC1571A14D81E6B009B27EC /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4FC1571E14D8206B009B27EC /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FC1571D14D8206B009B27EC /* en */,
+				4FC1572014D820E2009B27EC /* zh-Hans */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		4FC1572514D821D0009B27EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FC1572414D821D0009B27EC /* en */,
+				4FC1572614D821D7009B27EC /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4FAADDC914BC5E5D00A8123E /* Debug */ = {
@@ -1504,45 +1554,12 @@
 		4FAAE07114BDC46100A8123E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = 5.0;
 			};
 			name = Debug;
 		};
 		4FAAE07214BDC46100A8123E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = 5.0;
 			};
 			name = Release;
 		};
@@ -1574,6 +1591,7 @@
 				4FAAE07214BDC46100A8123E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
