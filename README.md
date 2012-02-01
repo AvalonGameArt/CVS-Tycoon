@@ -14,6 +14,11 @@ Example:
 	$ git submodule init
 	$ git submodule update --merge
 
+How to run your homebrew iOS App in your jailbroken iPhone
+----------------------------------------------------------
+
+[Reference Link](https://github.com/zhangjiji/SpaceViking/wiki/How-to-make-app-for-jailbroken-iPhone%283gs%2Cios5%2Cjailbroken%2Cunlock%29-on-Mac%28Lion%2Cxcode4.2%29)
+
 Misc
 ----
 
