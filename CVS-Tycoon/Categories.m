@@ -14,7 +14,7 @@
 {
     NSMutableArray* frames = [NSMutableArray arrayWithCapacity:end-beg+1];
     for (int i = beg; i<= end; ++i) {
-        NSString* file = [NSString stringWithFormat:@"%@%i.png", frameBaseName, i];
+        NSString* file = [NSString stringWithFormat:@"%@%i", frameBaseName, i];
         CCSpriteFrameCache* frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
         CCSpriteFrame* frame = [frameCache spriteFrameByName:file];
         [frames addObject:frame];

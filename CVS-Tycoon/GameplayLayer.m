@@ -48,7 +48,7 @@
         [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
         [self addChild:groundLayer z:30];
 
-        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1.png"];
+        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1"];
 //        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
         CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
 //        CCAnimation* dogAnimWalkDownLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:7 frameCountEnd:9 delay:0.3];
