@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GameplayLayer.h"
+@class GameplayLayer;
+@class UserInterfaceLayer;
 
 @interface GameScene : CCScene
+
+@property (strong, nonatomic) GameplayLayer* gameplayLayer;
+@property (strong, nonatomic) UserInterfaceLayer* uiLayer;
+@property (strong, nonatomic) CCTMXLayer* backgroundLayer;
 
 @end

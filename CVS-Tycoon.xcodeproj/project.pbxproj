@@ -78,6 +78,10 @@
 		4FC1571714D81E5B009B27EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571914D81E5B009B27EC /* Localizable.strings */; };
 		4FC1571C14D8206B009B27EC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571E14D8206B009B27EC /* MainStoryboard.storyboard */; };
 		4FC1572314D821D0009B27EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1572514D821D0009B27EC /* InfoPlist.strings */; };
+		4FF76CCB14DD61FA00AA530A /* UserInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CCA14DD61FA00AA530A /* UserInterfaceLayer.m */; };
+		4FF76CCE14DF53AB00AA530A /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CCD14DF53AB00AA530A /* Customer.m */; };
+		4FF76CD114DF544100AA530A /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD014DF544100AA530A /* Shelf.m */; };
+		4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD314DF556A00AA530A /* GoodsComponent.m */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
 /* End PBXBuildFile section */
 
@@ -578,6 +582,14 @@
 		4FC1572014D820E2009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4FC1572414D821D0009B27EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FC1572614D821D7009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4FF76CC914DD61FA00AA530A /* UserInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterfaceLayer.h; sourceTree = "<group>"; };
+		4FF76CCA14DD61FA00AA530A /* UserInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInterfaceLayer.m; sourceTree = "<group>"; };
+		4FF76CCC14DF53AB00AA530A /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		4FF76CCD14DF53AB00AA530A /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		4FF76CCF14DF544100AA530A /* Shelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shelf.h; sourceTree = "<group>"; };
+		4FF76CD014DF544100AA530A /* Shelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shelf.m; sourceTree = "<group>"; };
+		4FF76CD214DF556A00AA530A /* GoodsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsComponent.h; sourceTree = "<group>"; };
+		4FF76CD314DF556A00AA530A /* GoodsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsComponent.m; sourceTree = "<group>"; };
 		97D7BE6014BD69CD00934812 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -857,6 +869,8 @@
 			children = (
 				4FAADF8714BC6DD800A8123E /* GameplayLayer.h */,
 				4FAADF8814BC6DD800A8123E /* GameplayLayer.m */,
+				4FF76CC914DD61FA00AA530A /* UserInterfaceLayer.h */,
+				4FF76CCA14DD61FA00AA530A /* UserInterfaceLayer.m */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -870,6 +884,10 @@
 				4FAADF7714BC6CC700A8123E /* GameStaticObj.m */,
 				4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */,
 				4FAAE15014BDE11A00A8123E /* SpawnPoint.m */,
+				4FF76CCC14DF53AB00AA530A /* Customer.h */,
+				4FF76CCD14DF53AB00AA530A /* Customer.m */,
+				4FF76CCF14DF544100AA530A /* Shelf.h */,
+				4FF76CD014DF544100AA530A /* Shelf.m */,
 			);
 			name = GameObjects;
 			sourceTree = "<group>";
@@ -877,6 +895,8 @@
 		4FE4C49714C85E24008B22A7 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				4FF76CD214DF556A00AA530A /* GoodsComponent.h */,
+				4FF76CD314DF556A00AA530A /* GoodsComponent.m */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -1420,6 +1440,10 @@
 				4FAADF8914BC6DD800A8123E /* GameplayLayer.m in Sources */,
 				4FAAE15114BDE11A00A8123E /* SpawnPoint.m in Sources */,
 				4FA325E714C08AD700A161CD /* Categories.m in Sources */,
+				4FF76CCB14DD61FA00AA530A /* UserInterfaceLayer.m in Sources */,
+				4FF76CCE14DF53AB00AA530A /* Customer.m in Sources */,
+				4FF76CD114DF544100AA530A /* Shelf.m in Sources */,
+				4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
