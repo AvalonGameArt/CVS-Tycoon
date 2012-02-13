@@ -19,8 +19,8 @@
 {
     self = [super init];
     if (self) {
-        CCTMXTiledMap* tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
-        backgroundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
+        CCTMXTiledMap* tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
+        backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
         [backgroundLayer removeFromParentAndCleanup:NO];
         [self addChild:backgroundLayer z:-100];
         

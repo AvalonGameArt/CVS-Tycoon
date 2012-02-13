@@ -78,6 +78,9 @@
 		4FC1571714D81E5B009B27EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571914D81E5B009B27EC /* Localizable.strings */; };
 		4FC1571C14D8206B009B27EC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571E14D8206B009B27EC /* MainStoryboard.storyboard */; };
 		4FC1572314D821D0009B27EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1572514D821D0009B27EC /* InfoPlist.strings */; };
+		4FF458DF14E2CFA000999B95 /* dg_iso32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF458DD14E2CF9F00999B95 /* dg_iso32.png */; };
+		4FF458E014E2CFA000999B95 /* isometric-with-border.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4FF458DE14E2CFA000999B95 /* isometric-with-border.tmx */; };
+		4FF458E314E2D2D600999B95 /* LoadScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF458E214E2D2D600999B95 /* LoadScene.m */; };
 		4FF76CCB14DD61FA00AA530A /* UserInterfaceLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CCA14DD61FA00AA530A /* UserInterfaceLayer.m */; };
 		4FF76CCE14DF53AB00AA530A /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CCD14DF53AB00AA530A /* Customer.m */; };
 		4FF76CD114DF544100AA530A /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD014DF544100AA530A /* Shelf.m */; };
@@ -582,6 +585,10 @@
 		4FC1572014D820E2009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4FC1572414D821D0009B27EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FC1572614D821D7009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4FF458DD14E2CF9F00999B95 /* dg_iso32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dg_iso32.png; sourceTree = "<group>"; };
+		4FF458DE14E2CFA000999B95 /* isometric-with-border.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "isometric-with-border.tmx"; sourceTree = "<group>"; };
+		4FF458E114E2D2D600999B95 /* LoadScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadScene.h; sourceTree = "<group>"; };
+		4FF458E214E2D2D600999B95 /* LoadScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadScene.m; sourceTree = "<group>"; };
 		4FF76CC914DD61FA00AA530A /* UserInterfaceLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterfaceLayer.h; sourceTree = "<group>"; };
 		4FF76CCA14DD61FA00AA530A /* UserInterfaceLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInterfaceLayer.m; sourceTree = "<group>"; };
 		4FF76CCC14DF53AB00AA530A /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
@@ -805,6 +812,8 @@
 			children = (
 				4FAADF3D14BC699600A8123E /* App Launch Images */,
 				4FAADF4D14BC699600A8123E /* Icons */,
+				4FF458DD14E2CF9F00999B95 /* dg_iso32.png */,
+				4FF458DE14E2CFA000999B95 /* isometric-with-border.tmx */,
 				4FAADF4C14BC699600A8123E /* firstlevel.tmx */,
 				4FAADF5414BC699600A8123E /* mapset3.png */,
 				4FA325E814C113DB00A161CD /* scene1atlas.plist */,
@@ -860,6 +869,8 @@
 			children = (
 				4FAADF8414BC6D9800A8123E /* GameScene.h */,
 				4FAADF8514BC6D9800A8123E /* GameScene.m */,
+				4FF458E114E2D2D600999B95 /* LoadScene.h */,
+				4FF458E214E2D2D600999B95 /* LoadScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -1420,6 +1431,8 @@
 				4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */,
 				4FC1571714D81E5B009B27EC /* Localizable.strings in Resources */,
 				4FC1572314D821D0009B27EC /* InfoPlist.strings in Resources */,
+				4FF458DF14E2CFA000999B95 /* dg_iso32.png in Resources */,
+				4FF458E014E2CFA000999B95 /* isometric-with-border.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1444,6 +1457,7 @@
 				4FF76CCE14DF53AB00AA530A /* Customer.m in Sources */,
 				4FF76CD114DF544100AA530A /* Shelf.m in Sources */,
 				4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */,
+				4FF458E314E2D2D600999B95 /* LoadScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
