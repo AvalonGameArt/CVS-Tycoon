@@ -13,17 +13,14 @@
 
 @implementation GameScene
 
-@synthesize gameplayLayer, uiLayer, backgroundLayer;
+@synthesize gameplayLayer, uiLayer;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        CCTMXTiledMap* tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
-        backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
-        [backgroundLayer removeFromParentAndCleanup:NO];
-        [self addChild:backgroundLayer z:-100];
-        
+        srand(time(0));
+
         gameplayLayer = [GameplayLayer node];
         [self addChild:gameplayLayer z:5];
         

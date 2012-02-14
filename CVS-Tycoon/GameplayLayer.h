@@ -19,5 +19,10 @@
 
 @property (strong, nonatomic) CCSpriteBatchNode* sceneSpriteBatchNode;
 @property (strong, nonatomic) CCTMXTiledMap* tiledMapNode;
+@property (strong, nonatomic) CCTMXLayer* backgroundLayer;
+@property (strong, nonatomic) CCTMXLayer* groundObjectLayer;
+@property (strong, nonatomic) CCTMXLayer* objectLayer;
+@property (strong, nonatomic) CCTMXLayer* collisionLayer;
+
 @property (nonatomic) CGPoint beginPoint;
 @end

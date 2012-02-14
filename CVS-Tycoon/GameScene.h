@@ -15,6 +15,5 @@
 
 @property (strong, nonatomic) GameplayLayer* gameplayLayer;
 @property (strong, nonatomic) UserInterfaceLayer* uiLayer;
-@property (strong, nonatomic) CCTMXLayer* backgroundLayer;
 
 @end

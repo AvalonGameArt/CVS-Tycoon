@@ -11,7 +11,7 @@
 #import "GameObject.h"
 
 @implementation GameplayLayer
-@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint;
+@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer;
 
 #pragma mark -
 #pragma mark Update Method
@@ -32,8 +32,6 @@
         // Initialization code here.
 //        CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.isTouchEnabled = YES;
-//        vikingSprite = [CCSprite spriteWithFile:@"sv_anim_1.png"];
-        srand(time(0));
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
         sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];
@@ -41,13 +39,17 @@
 
         [self scheduleUpdate];
         
-//        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
-//        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
-//        
-//        [groundLayer removeFromParentAndCleanup:NO];
-//        [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
-//        [self addChild:groundLayer z:30];
-
+        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
+        //        backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
+        //        [backgroundLayer removeFromParentAndCleanup:NO];
+        //        [self addChild:backgroundLayer z:-100];
+        [self addChild:tiledMapNode];
+        
+        backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
+        groundObjectLayer = [tiledMapNode layerNamed:@"GroundObjects"];
+        objectLayer = [tiledMapNode layerNamed:@"Objects"];
+        collisionLayer = [tiledMapNode layerNamed:@"Collisions"];
+        
 //        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1"];
 //        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
 //        CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
