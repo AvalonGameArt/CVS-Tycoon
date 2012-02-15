@@ -49,6 +49,8 @@
         groundObjectLayer = [tiledMapNode layerNamed:@"GroundObjects"];
         objectLayer = [tiledMapNode layerNamed:@"Objects"];
         collisionLayer = [tiledMapNode layerNamed:@"Collisions"];
+        [collisionLayer setVisible:NO];
+        
         
 //        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1"];
 //        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
