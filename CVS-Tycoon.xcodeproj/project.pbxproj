@@ -85,7 +85,6 @@
 		4FF76CCE14DF53AB00AA530A /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CCD14DF53AB00AA530A /* Customer.m */; };
 		4FF76CD114DF544100AA530A /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD014DF544100AA530A /* Shelf.m */; };
 		4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD314DF556A00AA530A /* GoodsComponent.m */; };
-		97A658D214EB777100575E9E /* PositionTextureColorAlphaTest.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 97A658D114EB777100575E9E /* PositionTextureColorAlphaTest.fsh */; };
 		97A658D314EB77D400575E9E /* PositionTextureColorAlphaTest.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 97A658D114EB777100575E9E /* PositionTextureColorAlphaTest.fsh */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
 /* End PBXBuildFile section */
@@ -1463,7 +1462,6 @@
 				4FF76CD114DF544100AA530A /* Shelf.m in Sources */,
 				4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */,
 				4FF458E314E2D2D600999B95 /* LoadScene.m in Sources */,
-				97A658D214EB777100575E9E /* PositionTextureColorAlphaTest.fsh in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
