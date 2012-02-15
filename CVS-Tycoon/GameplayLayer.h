@@ -25,4 +25,5 @@
 @property (strong, nonatomic) CCTMXLayer* collisionLayer;
 
 @property (nonatomic) CGPoint beginPoint;
+-(CGPoint)locationFromTouch:(UITouch*)touch;
 @end

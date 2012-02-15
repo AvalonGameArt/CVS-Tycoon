@@ -40,9 +40,6 @@
         [self scheduleUpdate];
         
         tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
-        //        backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
-        //        [backgroundLayer removeFromParentAndCleanup:NO];
-        //        [self addChild:backgroundLayer z:-100];
         [self addChild:tiledMapNode];
         
         backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
@@ -50,7 +47,6 @@
         objectLayer = [tiledMapNode layerNamed:@"Objects"];
         collisionLayer = [tiledMapNode layerNamed:@"Collisions"];
         [collisionLayer setVisible:NO];
-        
         
 //        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1"];
 //        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
@@ -76,22 +72,26 @@
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInView: [touch view]];		
-    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
-    touchLocation = [self convertToNodeSpace:touchLocation];
-    beginPoint = touchLocation;
+    beginPoint = [self locationFromTouch:touch];
     return YES;
 }
 
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInView: [touch view]];		
-    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
-    touchLocation = [self convertToNodeSpace:touchLocation];
+    CGPoint touchLocation = [self locationFromTouch:touch];		
     
     CGPoint diff = ccpSub(beginPoint, touchLocation);
     CGPoint oldPos = [self position];
     [self setPosition:ccpSub(oldPos, diff)];    
+}
+
+-(CGPoint) locationFromTouch:(UITouch*)touch
+{
+    CGPoint touchLocation = [touch locationInView: [touch view]];		
+    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
+    touchLocation = [self convertToNodeSpace:touchLocation];
+    
+    return touchLocation;
 }
 
 @end
