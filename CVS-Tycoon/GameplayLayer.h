@@ -26,4 +26,6 @@
 
 @property (nonatomic) CGPoint beginPoint;
 -(CGPoint)locationFromTouch:(UITouch*)touch;
+-(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap;
+
 @end

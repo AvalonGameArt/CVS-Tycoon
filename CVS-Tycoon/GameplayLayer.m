@@ -94,4 +94,26 @@
     return touchLocation;
 }
 
+-(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap
+{
+    CGPoint pos = ccpSub(location, tileMap.position);
+    float tileWidth = [tileMap tileSize].width;
+    float tileHeight = [tileMap tileSize].height;
+    float halfMapWidth = [tileMap mapSize].width;
+    float mapHeight = [tileMap mapSize].height;
+    
+    CGPoint tilePosDiv = ccp(pos.x / tileWidth, pos.y / tileHeight);
+    float inverseTileY = mapHeight - tilePosDiv.y;
+    
+    float posX = (int)(inverseTileY + tilePosDiv.x - halfMapWidth);
+    float posY = (int)(inverseTileY - tilePosDiv.x + halfMapWidth);
+    
+    posX = MAX(0, posX);
+    posX = MIN([tileMap mapSize].width, posX);
+    posY = MAX(0, posY);
+    posY = MIN([tileMap mapSize].height, posY);
+    
+    return ccp(posX, posY);
+}
+
 @end
