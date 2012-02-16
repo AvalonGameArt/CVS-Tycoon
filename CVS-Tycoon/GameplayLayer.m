@@ -96,7 +96,7 @@
 
 -(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap
 {
-    CGPoint pos = ccpSub(location, tileMap.position);
+    CGPoint pos = ccpSub(tileMap.position, location);
     float tileWidth = [tileMap tileSize].width;
     float tileHeight = [tileMap tileSize].height;
     float halfMapWidth = [tileMap mapSize].width;
@@ -105,6 +105,7 @@
     CGPoint tilePosDiv = ccp(pos.x / tileWidth, pos.y / tileHeight);
     float inverseTileY = mapHeight - tilePosDiv.y;
     
+    //http://www.gandraxa.com/isometric_projection.xml
     float posX = (int)(inverseTileY + tilePosDiv.x - halfMapWidth);
     float posY = (int)(inverseTileY - tilePosDiv.x + halfMapWidth);
     
