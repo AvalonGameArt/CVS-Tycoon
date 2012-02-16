@@ -6,9 +6,13 @@
 //  Copyright (c) 2012 AvalonGameArt. All rights reserved.
 //
 
-#import "CCNode.h"
+#import "MovementComponent.h"
 
 @interface Customer : CCNode
+{
+@private __strong MovementComponent* moveComp;
+    
+}
 
 @property (strong, nonatomic) CCSprite* bodySprite;
 

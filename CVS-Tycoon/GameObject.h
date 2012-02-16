@@ -14,6 +14,8 @@
 @interface GameObject : CCNode
 {
 }
+
+@property (nonatomic) CGPoint position;
 @property (strong, nonatomic) FiniteStateMachine* mainFSM;
 @property (strong, nonatomic) NSMutableDictionary* animationDict;
 

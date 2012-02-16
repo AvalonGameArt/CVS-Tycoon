@@ -12,7 +12,7 @@
 
 
 @implementation GameObject
-@synthesize mainFSM, animationDict;
+@synthesize position, mainFSM, animationDict;
 
 - (id)init
 {

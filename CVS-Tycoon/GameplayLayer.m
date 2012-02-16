@@ -11,7 +11,7 @@
 #import "GameObject.h"
 
 @implementation GameplayLayer
-@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer;
+@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer, playableAreaOrig, playableAreaEnd;
 
 #pragma mark -
 #pragma mark Update Method
@@ -60,6 +60,8 @@
 //        [dog runAction:action];
 //        [[[GameObject alloc] init] loadPlistForAnimation:@"dog_animation"];
         
+        [self setPlayableAreaOrig:ccp(10,10)];
+        [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 10, [tiledMapNode mapSize].height - 10)];
     }
     
     return self;
