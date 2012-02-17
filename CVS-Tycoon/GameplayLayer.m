@@ -62,6 +62,23 @@
         
         [self setPlayableAreaOrig:ccp(10,10)];
         [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 10, [tiledMapNode mapSize].height - 10)];
+        
+		[CCMenuItemFont setFontSize:18];
+		[CCMenuItemFont setFontName: @"Helvetica"];
+		CCMenuItemFont *item7 = [CCMenuItemFont itemWithString: @"Quit" block:^(id sender){
+			[[sender parent] setVisible:NO];
+		}];
+        
+		id color_action = [CCTintBy actionWithDuration:0.5f red:0 green:-255 blue:-255];
+		id color_back = [color_action reverse];
+		id seq = [CCSequence actions:color_action, color_back, nil];
+		[item7 runAction:[CCRepeatForever actionWithAction:seq]];
+        
+        CCMenu* menu = [CCMenu menuWithItems:item7, nil];    
+        [menu alignItemsVertically];
+        [menu setVisible:NO];
+        
+        [self addChild:menu z:0 tag:1];
     }
     
     return self;
@@ -85,6 +102,13 @@
     CGPoint diff = ccpSub(beginPoint, touchLocation);
     CGPoint oldPos = [self position];
     [self setPosition:ccpSub(oldPos, diff)];    
+}
+
+-(void) ccTouchEnded:(UITouch*)touch withEvent:(UIEvent*)event
+{
+    CCMenu* menu = (CCMenu*)[self getChildByTag:1];
+    [menu setPosition:[self locationFromTouch:touch]];
+    [menu setVisible:YES];
 }
 
 -(CGPoint) locationFromTouch:(UITouch*)touch
