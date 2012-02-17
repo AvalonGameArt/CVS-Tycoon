@@ -10,6 +10,4 @@
 
 @implementation Customer
 
-@synthesize bodySprite;
-
 @end

@@ -11,9 +11,8 @@
 @interface Customer : CCNode
 {
 @private __strong MovementComponent* moveComp;
+@private __strong CCSprite* bodySprite;
     
 }
-
-@property (strong, nonatomic) CCSprite* bodySprite;
 
 @end
