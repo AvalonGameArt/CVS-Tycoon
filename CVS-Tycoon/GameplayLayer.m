@@ -63,18 +63,23 @@
         [self setPlayableAreaOrig:ccp(10,10)];
         [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 10, [tiledMapNode mapSize].height - 10)];
         
-		[CCMenuItemFont setFontSize:18];
-		[CCMenuItemFont setFontName: @"Helvetica"];
-		CCMenuItemFont *item7 = [CCMenuItemFont itemWithString: @"Quit" block:^(id sender){
-			[[sender parent] setVisible:NO];
-		}];
+//		[CCMenuItemFont setFontSize:18];
+//		[CCMenuItemFont setFontName: @"Helvetica"];
+//		CCMenuItemFont *item7 = [CCMenuItemFont itemWithString: @"Quit" block:^(id sender){
+//			[[sender parent] setVisible:NO];
+//		}];
+        
+        CCLabelBMFont* label = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"default_en_26.fnt"];
+        CCMenuItemLabel* item1 = [CCMenuItemLabel itemWithLabel:label block:^(id sender) {
+            [[sender parent] setVisible:NO];
+        }];
         
 		id color_action = [CCTintBy actionWithDuration:0.5f red:0 green:-255 blue:-255];
 		id color_back = [color_action reverse];
 		id seq = [CCSequence actions:color_action, color_back, nil];
-		[item7 runAction:[CCRepeatForever actionWithAction:seq]];
+		[item1 runAction:[CCRepeatForever actionWithAction:seq]];
         
-        CCMenu* menu = [CCMenu menuWithItems:item7, nil];    
+        CCMenu* menu = [CCMenu menuWithItems:item1, nil];    
         [menu alignItemsVertically];
         [menu setVisible:NO];
         
