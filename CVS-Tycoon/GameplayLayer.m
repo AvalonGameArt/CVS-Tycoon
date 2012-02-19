@@ -72,6 +72,9 @@
         CCLabelBMFont* label = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"default_en_26.fnt"];
         CCMenuItemLabel* item1 = [CCMenuItemLabel itemWithLabel:label block:^(id sender) {
             [[sender parent] setVisible:NO];
+            CCParticleSystem* emitter = [CCParticleSystemQuad particleWithFile:@"exploding_ring.plist"];
+            [emitter setPosition:[[sender parent] position]];
+            [self addChild:emitter z:10];
         }];
         
 		id color_action = [CCTintBy actionWithDuration:0.5f red:0 green:-255 blue:-255];
