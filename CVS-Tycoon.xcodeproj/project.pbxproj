@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F6438B714F14D2300117DA0 /* default_en_26.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438B514F14D2300117DA0 /* default_en_26.fnt */; };
 		4F6438B814F14D2300117DA0 /* default_en_26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438B614F14D2300117DA0 /* default_en_26.png */; };
-		4F6438BA14F14D3A00117DA0 /* exploding_ring.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438B914F14D3A00117DA0 /* exploding_ring.plist */; };
+		4F6438BD14F1C5FC00117DA0 /* exploding_ring.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */; };
+		4F6438BE14F1C5FC00117DA0 /* exploding_ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438BC14F1C5FC00117DA0 /* exploding_ring.png */; };
 		4FA325E714C08AD700A161CD /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA325E614C08AD700A161CD /* Categories.m */; };
 		4FA325EA14C113DB00A161CD /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E814C113DB00A161CD /* scene1atlas.plist */; };
 		4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */; };
@@ -505,7 +506,8 @@
 /* Begin PBXFileReference section */
 		4F6438B514F14D2300117DA0 /* default_en_26.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = default_en_26.fnt; path = "CVS-Tycoon/Fonts/default_en_26.fnt"; sourceTree = "<group>"; };
 		4F6438B614F14D2300117DA0 /* default_en_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_en_26.png; path = "CVS-Tycoon/Fonts/default_en_26.png"; sourceTree = "<group>"; };
-		4F6438B914F14D3A00117DA0 /* exploding_ring.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = exploding_ring.plist; path = Assets/Particles/exploding_ring.plist; sourceTree = "<group>"; };
+		4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = exploding_ring.plist; path = "CVS-Tycoon/Particles/exploding_ring.plist"; sourceTree = "<group>"; };
+		4F6438BC14F1C5FC00117DA0 /* exploding_ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exploding_ring.png; path = "CVS-Tycoon/Particles/exploding_ring.png"; sourceTree = "<group>"; };
 		4FA325E514C08AD700A161CD /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		4FA325E614C08AD700A161CD /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
 		4FA325E814C113DB00A161CD /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
@@ -645,7 +647,8 @@
 		4F6438B414F14CFB00117DA0 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
-				4F6438B914F14D3A00117DA0 /* exploding_ring.plist */,
+				4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */,
+				4F6438BC14F1C5FC00117DA0 /* exploding_ring.png */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -1469,7 +1472,8 @@
 				4FF458E014E2CFA000999B95 /* isometric-with-border.tmx in Resources */,
 				4F6438B714F14D2300117DA0 /* default_en_26.fnt in Resources */,
 				4F6438B814F14D2300117DA0 /* default_en_26.png in Resources */,
-				4F6438BA14F14D3A00117DA0 /* exploding_ring.plist in Resources */,
+				4F6438BD14F1C5FC00117DA0 /* exploding_ring.plist in Resources */,
+				4F6438BE14F1C5FC00117DA0 /* exploding_ring.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
