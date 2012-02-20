@@ -21,13 +21,13 @@
         // Initialization code here.
         CCLOG(@"GameObject init");
         mainFSM = [[FiniteStateMachine alloc] init];
+        [self scheduleUpdate];
     }
     
     return self;
 }
 
--(void)updateStateWithDeltaTime:(ccTime)deltaTime
-           andListOfGameObjects:(CCArray*)listOfGameObject
+-(void)update:(ccTime)deltaTime
 {
     CCLOG(@"updateStateWithDeltaTime method should be overridden");
     [[self mainFSM] update:deltaTime];

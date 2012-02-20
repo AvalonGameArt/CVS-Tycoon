@@ -92,6 +92,8 @@
 		971A00A214ECB46F00155F35 /* MovementComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 971A00A114ECB46F00155F35 /* MovementComponent.m */; };
 		97A658D314EB77D400575E9E /* PositionTextureColorAlphaTest.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 97A658D114EB777100575E9E /* PositionTextureColorAlphaTest.fsh */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
+		97E8A80D14F222C400E43094 /* NavigationNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E8A80C14F222C400E43094 /* NavigationNode.m */; };
+		97E8A81014F22F4F00E43094 /* PathPlanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E8A80F14F22F4E00E43094 /* PathPlanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -611,6 +613,10 @@
 		971A00A114ECB46F00155F35 /* MovementComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovementComponent.m; sourceTree = "<group>"; };
 		97A658D114EB777100575E9E /* PositionTextureColorAlphaTest.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PositionTextureColorAlphaTest.fsh; sourceTree = "<group>"; };
 		97D7BE6014BD69CD00934812 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
+		97E8A80B14F222C300E43094 /* NavigationNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationNode.h; sourceTree = "<group>"; };
+		97E8A80C14F222C400E43094 /* NavigationNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationNode.m; sourceTree = "<group>"; };
+		97E8A80E14F22F4E00E43094 /* PathPlanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathPlanner.h; sourceTree = "<group>"; };
+		97E8A80F14F22F4E00E43094 /* PathPlanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathPlanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -944,6 +950,10 @@
 				4FF76CD314DF556A00AA530A /* GoodsComponent.m */,
 				971A00A014ECB46F00155F35 /* MovementComponent.h */,
 				971A00A114ECB46F00155F35 /* MovementComponent.m */,
+				97E8A80E14F22F4E00E43094 /* PathPlanner.h */,
+				97E8A80F14F22F4E00E43094 /* PathPlanner.m */,
+				97E8A80B14F222C300E43094 /* NavigationNode.h */,
+				97E8A80C14F222C400E43094 /* NavigationNode.m */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -1500,6 +1510,8 @@
 				4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */,
 				4FF458E314E2D2D600999B95 /* LoadScene.m in Sources */,
 				971A00A214ECB46F00155F35 /* MovementComponent.m in Sources */,
+				97E8A80D14F222C400E43094 /* NavigationNode.m in Sources */,
+				97E8A81014F22F4F00E43094 /* PathPlanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
