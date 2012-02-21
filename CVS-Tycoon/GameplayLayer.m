@@ -11,7 +11,7 @@
 #import "GameObject.h"
 
 @implementation GameplayLayer
-@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint;
+@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer, playableAreaOrig, playableAreaEnd;
 
 #pragma mark -
 #pragma mark Update Method
@@ -32,8 +32,6 @@
         // Initialization code here.
 //        CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.isTouchEnabled = YES;
-//        vikingSprite = [CCSprite spriteWithFile:@"sv_anim_1.png"];
-        srand(time(0));
         
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
         sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];
@@ -41,25 +39,54 @@
 
         [self scheduleUpdate];
         
-        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"firstlevel.tmx"];
-        CCTMXLayer* groundLayer = [tiledMapNode layerNamed:@"Tile Layer 1"];
+        tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
+        [self addChild:tiledMapNode];
         
-        [groundLayer removeFromParentAndCleanup:NO];
-        [groundLayer setAnchorPoint:CGPointMake(0.5f, 0.5f)];
-        [self addChild:groundLayer z:30];
-
-        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1.png"];
+        backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
+        groundObjectLayer = [tiledMapNode layerNamed:@"GroundObjects"];
+        objectLayer = [tiledMapNode layerNamed:@"Objects"];
+        collisionLayer = [tiledMapNode layerNamed:@"Collisions"];
+        [collisionLayer setVisible:NO];
+        
+//        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1"];
 //        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
-        CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
+//        CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
 //        CCAnimation* dogAnimWalkDownLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:7 frameCountEnd:9 delay:0.3];
 //        CCAnimation* dogAnimWalkUpLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:10 frameCountEnd:12 delay:0.3];
         
-        [sceneSpriteBatchNode addChild:dog];
-        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:dogAnimWalkDownRight restoreOriginalFrame:NO]];
-        [dog setScale:3.0];
-        [dog runAction:action];
+//        [sceneSpriteBatchNode addChild:dog];
+//        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:dogAnimWalkDownRight restoreOriginalFrame:NO]];
+//        [dog setScale:3.0];
+//        [dog runAction:action];
 //        [[[GameObject alloc] init] loadPlistForAnimation:@"dog_animation"];
         
+        [self setPlayableAreaOrig:ccp(10,10)];
+        [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 10, [tiledMapNode mapSize].height - 10)];
+        
+//		[CCMenuItemFont setFontSize:18];
+//		[CCMenuItemFont setFontName: @"Helvetica"];
+//		CCMenuItemFont *item7 = [CCMenuItemFont itemWithString: @"Quit" block:^(id sender){
+//			[[sender parent] setVisible:NO];
+//		}];
+        
+        CCLabelBMFont* label = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"default_en_26.fnt"];
+        CCMenuItemLabel* item1 = [CCMenuItemLabel itemWithLabel:label block:^(id sender) {
+            [[sender parent] setVisible:NO];
+            CCParticleSystem* emitter = [CCParticleSystemQuad particleWithFile:@"exploding_ring.plist"];
+            [emitter setPosition:[[sender parent] position]];
+            [self addChild:emitter z:10];
+        }];
+        
+		id color_action = [CCTintBy actionWithDuration:0.5f red:0 green:-255 blue:-255];
+		id color_back = [color_action reverse];
+		id seq = [CCSequence actions:color_action, color_back, nil];
+		[item1 runAction:[CCRepeatForever actionWithAction:seq]];
+        
+        CCMenu* menu = [CCMenu menuWithItems:item1, nil];    
+        [menu alignItemsVertically];
+        [menu setVisible:NO];
+        
+        [self addChild:menu z:0 tag:1];
     }
     
     return self;
@@ -72,22 +99,56 @@
 
 -(BOOL) ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInView: [touch view]];		
-    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
-    touchLocation = [self convertToNodeSpace:touchLocation];
-    beginPoint = touchLocation;
+    beginPoint = [self locationFromTouch:touch];
     return YES;
 }
 
 -(void) ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    CGPoint touchLocation = [touch locationInView: [touch view]];		
-    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
-    touchLocation = [self convertToNodeSpace:touchLocation];
+    CGPoint touchLocation = [self locationFromTouch:touch];		
     
     CGPoint diff = ccpSub(beginPoint, touchLocation);
     CGPoint oldPos = [self position];
     [self setPosition:ccpSub(oldPos, diff)];    
+}
+
+-(void) ccTouchEnded:(UITouch*)touch withEvent:(UIEvent*)event
+{
+    CCMenu* menu = (CCMenu*)[self getChildByTag:1];
+    [menu setPosition:[self locationFromTouch:touch]];
+    [menu setVisible:YES];
+}
+
+-(CGPoint) locationFromTouch:(UITouch*)touch
+{
+    CGPoint touchLocation = [touch locationInView: [touch view]];		
+    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
+    touchLocation = [self convertToNodeSpace:touchLocation];
+    
+    return touchLocation;
+}
+
+-(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap
+{
+    CGPoint pos = ccpSub(tileMap.position, location);
+    float tileWidth = [tileMap tileSize].width;
+    float tileHeight = [tileMap tileSize].height;
+    float halfMapWidth = [tileMap mapSize].width;
+    float mapHeight = [tileMap mapSize].height;
+    
+    CGPoint tilePosDiv = ccp(pos.x / tileWidth, pos.y / tileHeight);
+    float inverseTileY = mapHeight - tilePosDiv.y;
+    
+    //http://www.gandraxa.com/isometric_projection.xml
+    float posX = (int)(inverseTileY + tilePosDiv.x - halfMapWidth);
+    float posY = (int)(inverseTileY - tilePosDiv.x + halfMapWidth);
+    
+    posX = MAX(0, posX);
+    posX = MIN([tileMap mapSize].width, posX);
+    posY = MAX(0, posY);
+    posY = MIN([tileMap mapSize].height, posY);
+    
+    return ccp(posX, posY);
 }
 
 @end

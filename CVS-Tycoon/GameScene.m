@@ -8,14 +8,24 @@
 
 #import "GameScene.h"
 
+#import "GameplayLayer.h"
+#import "UserInterfaceLayer.h"
+
 @implementation GameScene
+
+@synthesize gameplayLayer, uiLayer;
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        GameplayLayer* gameplayerLayer = [GameplayLayer node];
-        [self addChild:gameplayerLayer z:5];
+        srand(time(0));
+
+        gameplayLayer = [GameplayLayer node];
+        [self addChild:gameplayLayer z:5];
+        
+        uiLayer = [UserInterfaceLayer node];
+        [self addChild:uiLayer z:1000];
     }
     
     return self;

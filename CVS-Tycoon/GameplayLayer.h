@@ -19,5 +19,16 @@
 
 @property (strong, nonatomic) CCSpriteBatchNode* sceneSpriteBatchNode;
 @property (strong, nonatomic) CCTMXTiledMap* tiledMapNode;
+@property (strong, nonatomic) CCTMXLayer* backgroundLayer;
+@property (strong, nonatomic) CCTMXLayer* groundObjectLayer;
+@property (strong, nonatomic) CCTMXLayer* objectLayer;
+@property (strong, nonatomic) CCTMXLayer* collisionLayer;
+
+@property (nonatomic) CGPoint playableAreaOrig;
+@property (nonatomic) CGPoint playableAreaEnd;
 @property (nonatomic) CGPoint beginPoint;
+
+-(CGPoint)locationFromTouch:(UITouch*)touch;
+-(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap;
+
 @end
