@@ -14,6 +14,8 @@
 
 +(id)nodeWithTilePosition:(CGPoint)tilePos
 {
+    NavigationNode* navNode = [[NavigationNode alloc] initWithTilePosition:ccp(0,0)];
+    return navNode;
 }
 
 -(id)initWithTilePosition:(CGPoint)tilePos

@@ -25,8 +25,8 @@
 
 -(NSMutableArray*)planPath
 {
-    NSMutableArray* openList = [NSMutableArray arrayWithCapacity:4];
-    NSMutableArray* closeList = [NSMutableArray arrayWithCapacity:4];
+//    NSMutableArray* openList = [NSMutableArray arrayWithCapacity:4];
+//    NSMutableArray* closeList = [NSMutableArray arrayWithCapacity:4];
     NSMutableArray* path = [NSMutableArray arrayWithCapacity:4];
     
     return path;
