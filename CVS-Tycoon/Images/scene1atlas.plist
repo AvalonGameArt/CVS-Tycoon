@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>body461.png</key>
+            <key>body461</key>
             <dict>
                 <key>frame</key>
                 <string>{{110,46},{16,14}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body4610.png</key>
+            <key>body4610</key>
             <dict>
                 <key>frame</key>
                 <string>{{92,46},{16,14}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body4611.png</key>
+            <key>body4611</key>
             <dict>
                 <key>frame</key>
                 <string>{{104,2},{14,12}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body4612.png</key>
+            <key>body4612</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,16},{16,12}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body462.png</key>
+            <key>body462</key>
             <dict>
                 <key>frame</key>
                 <string>{{70,2},{14,12}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body463.png</key>
+            <key>body463</key>
             <dict>
                 <key>frame</key>
                 <string>{{86,2},{16,12}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body464.png</key>
+            <key>body464</key>
             <dict>
                 <key>frame</key>
                 <string>{{74,46},{16,14}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body465.png</key>
+            <key>body465</key>
             <dict>
                 <key>frame</key>
                 <string>{{36,2},{14,12}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body466.png</key>
+            <key>body466</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,2},{16,12}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body467.png</key>
+            <key>body467</key>
             <dict>
                 <key>frame</key>
                 <string>{{56,45},{16,14}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body468.png</key>
+            <key>body468</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{14,12}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body469.png</key>
+            <key>body469</key>
             <dict>
                 <key>frame</key>
                 <string>{{18,2},{16,12}}</string>
@@ -160,7 +160,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>dog1.png</key>
+            <key>dog1</key>
             <dict>
                 <key>frame</key>
                 <string>{{38,45},{16,13}}</string>
@@ -173,7 +173,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog10.png</key>
+            <key>dog10</key>
             <dict>
                 <key>frame</key>
                 <string>{{20,45},{16,13}}</string>
@@ -186,7 +186,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog11.png</key>
+            <key>dog11</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,45},{16,13}}</string>
@@ -199,7 +199,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog12.png</key>
+            <key>dog12</key>
             <dict>
                 <key>frame</key>
                 <string>{{110,31},{16,13}}</string>
@@ -212,7 +212,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog2.png</key>
+            <key>dog2</key>
             <dict>
                 <key>frame</key>
                 <string>{{92,31},{16,13}}</string>
@@ -225,7 +225,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog3.png</key>
+            <key>dog3</key>
             <dict>
                 <key>frame</key>
                 <string>{{74,31},{16,13}}</string>
@@ -238,7 +238,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog4.png</key>
+            <key>dog4</key>
             <dict>
                 <key>frame</key>
                 <string>{{56,30},{16,13}}</string>
@@ -251,7 +251,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog5.png</key>
+            <key>dog5</key>
             <dict>
                 <key>frame</key>
                 <string>{{38,30},{16,13}}</string>
@@ -264,7 +264,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog6.png</key>
+            <key>dog6</key>
             <dict>
                 <key>frame</key>
                 <string>{{20,30},{16,13}}</string>
@@ -277,7 +277,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog7.png</key>
+            <key>dog7</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,30},{16,13}}</string>
@@ -290,7 +290,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog8.png</key>
+            <key>dog8</key>
             <dict>
                 <key>frame</key>
                 <string>{{102,16},{16,13}}</string>
@@ -303,7 +303,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>dog9.png</key>
+            <key>dog9</key>
             <dict>
                 <key>frame</key>
                 <string>{{84,16},{16,13}}</string>
@@ -316,7 +316,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>face001.png</key>
+            <key>face001</key>
             <dict>
                 <key>frame</key>
                 <string>{{68,16},{12,14}}</string>
@@ -329,7 +329,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>face002.png</key>
+            <key>face002</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,16},{12,14}}</string>
@@ -342,7 +342,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>face003.png</key>
+            <key>face003</key>
             <dict>
                 <key>frame</key>
                 <string>{{36,16},{12,14}}</string>
@@ -355,7 +355,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>face004.png</key>
+            <key>face004</key>
             <dict>
                 <key>frame</key>
                 <string>{{20,16},{12,14}}</string>
@@ -378,7 +378,7 @@
             <key>size</key>
             <string>{128,64}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:63442d3170546e707c384684cef8a406$</string>
+            <string>$TexturePacker:SmartUpdate:ed0b998ef22664e5ed9fdfb0c07422cb$</string>
             <key>textureFileName</key>
             <string>scene1atlas.pvr.ccz</string>
         </dict>

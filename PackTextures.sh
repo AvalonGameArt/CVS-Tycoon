@@ -37,6 +37,7 @@ ${TP} --smart-update \
 --format cocos2d \
 --data CVS-Tycoon/Images/scene1atlas.plist \
 --sheet CVS-Tycoon/Images/scene1atlas.pvr.ccz \
+--trim-sprite-names \
 --algorithm MaxRects \
 --maxrects-heuristics best \
 --max-size 1024 \
