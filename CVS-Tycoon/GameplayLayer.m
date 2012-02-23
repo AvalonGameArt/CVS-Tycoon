@@ -9,6 +9,7 @@
 #import "GameplayLayer.h"
 #import "Categories.h"
 #import "GameObject.h"
+#import "Customer.h"
 
 @implementation GameplayLayer
 @synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer, playableAreaOrig, playableAreaEnd;
@@ -33,10 +34,6 @@
 //        CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.isTouchEnabled = YES;
         
-        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"scene1atlas.plist"];
-        sceneSpriteBatchNode = [CCSpriteBatchNode batchNodeWithFile:@"scene1atlas.pvr.ccz"];
-        [self addChild:sceneSpriteBatchNode];
-
         [self scheduleUpdate];
         
         tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
@@ -48,17 +45,9 @@
         collisionLayer = [tiledMapNode layerNamed:@"Collisions"];
         [collisionLayer setVisible:NO];
         
-//        CCSprite* dog = [CCSprite spriteWithSpriteFrameName:@"dog1"];
-//        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
-//        CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
-//        CCAnimation* dogAnimWalkDownLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:7 frameCountEnd:9 delay:0.3];
-//        CCAnimation* dogAnimWalkUpLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:10 frameCountEnd:12 delay:0.3];
-        
-//        [sceneSpriteBatchNode addChild:dog];
-//        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:dogAnimWalkDownRight restoreOriginalFrame:NO]];
-//        [dog setScale:3.0];
-//        [dog runAction:action];
-//        [[[GameObject alloc] init] loadPlistForAnimation:@"dog_animation"];
+        Customer* customer = [[Customer alloc] init];
+        [customer setScale:3.0f];
+        [self addChild:customer];
         
         [self setPlayableAreaOrig:ccp(10,10)];
         [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 10, [tiledMapNode mapSize].height - 10)];

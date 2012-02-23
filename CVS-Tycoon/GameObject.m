@@ -12,7 +12,7 @@
 
 
 @implementation GameObject
-@synthesize position, mainFSM, animationDict;
+@synthesize mainFSM, animationDict;
 
 - (id)init
 {
@@ -21,6 +21,7 @@
         // Initialization code here.
         CCLOG(@"GameObject init");
         mainFSM = [[FiniteStateMachine alloc] init];
+        animationDict = [[NSMutableDictionary alloc] init];
         [self scheduleUpdate];
     }
     
@@ -29,13 +30,11 @@
 
 -(void)update:(ccTime)deltaTime
 {
-    CCLOG(@"updateStateWithDeltaTime method should be overridden");
     [[self mainFSM] update:deltaTime];
 }
 
 -(CGRect)adjustedBoundingBox
 {
-    CCLOG(@"GameObject adjustedBoundingBox should be overridden");
     return [self boundingBox];
 }
 
@@ -55,12 +54,12 @@
     id key;
     while (key = [keyIter nextObject]) {
         NSDictionary* settings = [plistDictionary objectForKey:key];
-        NSString* frameBaseName = [[settings objectForKey:@"frameBaseName"] stringValue];
+        NSString* frameBaseName = [settings objectForKey:@"frameBaseName"];
         float delay = [[settings objectForKey:@"delay"] floatValue];
         int frameBegin = [[settings objectForKey:@"frameBegin"] intValue];
         int frameEnd = [[settings objectForKey:@"frameEnd"] intValue];
         CCAnimation* animation = [CCAnimation animationWithFrame:frameBaseName frameCountBegin:frameBegin frameCountEnd:frameEnd delay:delay];
-        [animationDict setObject:animation forKey:(NSString*)key];
+        [[self animationDict] setObject:animation forKey:key];
     }
 }
 

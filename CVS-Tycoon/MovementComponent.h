@@ -15,5 +15,6 @@
 }
 
 -(void) updateVertexZ;
+-(void) update:(ccTime)deltaTime;
 
 @end

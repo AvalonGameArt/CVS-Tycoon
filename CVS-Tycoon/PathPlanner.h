@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NavigationNode* targetPoint;
 
 -(id)initWithTileMap:(CCTMXTiledMap*)tileMap;
+-(NSMutableArray*) planPath;
 
 @end

@@ -49,4 +49,9 @@
     }
 }
 
+-(void)update:(ccTime)deltaTime
+{
+    
+}
+
 @end
