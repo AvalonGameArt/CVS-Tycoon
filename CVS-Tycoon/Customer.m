@@ -17,17 +17,6 @@
     if(self)
     {
         bodySprite = [CCSprite spriteWithSpriteFrameName:@"dog1"];
-//        CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)[[[CCDirector sharedDirector] runningScene] getChildByTag:1];
-//        CCAnimation* dogAnimWalkUpRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:1 frameCountEnd:3 delay:0.3];
-//        CCAnimation* dogAnimWalkDownRight = [CCAnimation animationWithFrame:@"dog" frameCountBegin:4 frameCountEnd:6 delay:0.3];
-//        CCAnimation* dogAnimWalkDownLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:7 frameCountEnd:9 delay:0.3];
-//        CCAnimation* dogAnimWalkUpLeft = [CCAnimation animationWithFrame:@"dog" frameCountBegin:10 frameCountEnd:12 delay:0.3];
-//        
-//        [animations setObject:dogAnimWalkUpRight forKey:@"walkUpRight"];
-//        [animations setObject:dogAnimWalkUpLeft forKey:@"walkUpLeft"];
-//        [animations setObject:dogAnimWalkDownRight forKey:@"walkDownRight"];
-//        [animations setObject:dogAnimWalkDownLeft forKey:@"walkDownLeft"];
-        
         [self loadPlistForAnimation:@"dog_animation"];
         [self addChild:bodySprite];
         [self playAnimation:@"walkDownRight" restoreOriginalFrame:NO repeat:YES];

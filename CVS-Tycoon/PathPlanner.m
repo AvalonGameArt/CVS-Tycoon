@@ -25,9 +25,20 @@
 
 -(NSMutableArray*)planPath
 {
-//    NSMutableArray* openList = [NSMutableArray arrayWithCapacity:4];
-//    NSMutableArray* closeList = [NSMutableArray arrayWithCapacity:4];
+    NSMutableArray* openList = [NSMutableArray arrayWithCapacity:4];
+    NSMutableArray* closeList = [NSMutableArray arrayWithCapacity:4];
     NSMutableArray* path = [NSMutableArray arrayWithCapacity:4];
+    
+    
+    
+    NavigationNode* curNode = [NavigationNode nodeWithTilePosition:[self position]];
+    
+    if(ccpDistance([curNode tilePosition], [targetPoint tilePosition]) < 4)
+    {
+        [path addObject:curNode];
+    }
+    
+    
     
     return path;
 }
