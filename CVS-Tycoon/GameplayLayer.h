@@ -30,5 +30,6 @@
 
 -(CGPoint)locationFromTouch:(UITouch*)touch;
 -(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap;
+-(CGPoint) truncateInPlayableArea:(CGPoint)position;
 
 @end

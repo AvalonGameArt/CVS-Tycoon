@@ -42,7 +42,7 @@ ${TP} --smart-update \
 --maxrects-heuristics best \
 --max-size 1024 \
 --dither-fs-alpha \
---opt RGBA4444 \
+--opt RGBA8888 \
 --premultiply-alpha \
 Assets/Images/*.png
 

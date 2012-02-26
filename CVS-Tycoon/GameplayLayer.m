@@ -31,12 +31,19 @@
     self = [super init];
     if (self) {
         // Initialization code here.
-//        CGSize screenSize = [CCDirector sharedDirector].winSize;
+        CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.isTouchEnabled = YES;
         
         [self scheduleUpdate];
         
         tiledMapNode = [CCTMXTiledMap tiledMapWithTMXFile:@"isometric-with-border.tmx"];
+        const int BORDER_SIZE = 10;
+        [self setPlayableAreaOrig:ccp(BORDER_SIZE,BORDER_SIZE)];
+        [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 1 - BORDER_SIZE, [tiledMapNode mapSize].height - 1 - BORDER_SIZE)];
+        
+//        CGPoint mapPos = ccp(-BORDER_SIZE * [tiledMapNode tileSize].width, -BORDER_SIZE * [tiledMapNode tileSize].height);
+        CGPoint mapPos = ccp(-screenSize.width / 2.0f, -screenSize.height / 2.0f);
+        [tiledMapNode setPosition:mapPos];
         [self addChild:tiledMapNode];
         
         backgroundLayer = [tiledMapNode layerNamed:@"Ground"];
@@ -46,17 +53,9 @@
         [collisionLayer setVisible:NO];
         
         Customer* customer = [[Customer alloc] init];
-        [customer setScale:3.0f];
-        [self addChild:customer];
-        
-        [self setPlayableAreaOrig:ccp(10,10)];
-        [self setPlayableAreaEnd:ccp([tiledMapNode mapSize].width - 10, [tiledMapNode mapSize].height - 10)];
-        
-//		[CCMenuItemFont setFontSize:18];
-//		[CCMenuItemFont setFontName: @"Helvetica"];
-//		CCMenuItemFont *item7 = [CCMenuItemFont itemWithString: @"Quit" block:^(id sender){
-//			[[sender parent] setVisible:NO];
-//		}];
+        [customer setScale:2.0f];
+        [customer setPosition:ccp(200,200)];
+        [self addChild:customer z:100];
         
         CCLabelBMFont* label = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"default_en_26.fnt"];
         CCMenuItemLabel* item1 = [CCMenuItemLabel itemWithLabel:label block:^(id sender) {
@@ -96,9 +95,10 @@
 {
     CGPoint touchLocation = [self locationFromTouch:touch];		
     
-    CGPoint diff = ccpSub(beginPoint, touchLocation);
+    CGPoint diff = ccpSub(touchLocation, beginPoint);
     CGPoint oldPos = [self position];
-    [self setPosition:ccpSub(oldPos, diff)];    
+    CGPoint newPos = ccpAdd(oldPos, diff);
+    [self setPosition:newPos];    
 }
 
 -(void) ccTouchEnded:(UITouch*)touch withEvent:(UIEvent*)event
@@ -122,7 +122,7 @@
     CGPoint pos = ccpSub(tileMap.position, location);
     float tileWidth = [tileMap tileSize].width;
     float tileHeight = [tileMap tileSize].height;
-    float halfMapWidth = [tileMap mapSize].width;
+    float halfMapWidth = [tileMap mapSize].width / 2.0f;
     float mapHeight = [tileMap mapSize].height;
     
     CGPoint tilePosDiv = ccp(pos.x / tileWidth, pos.y / tileHeight);
@@ -132,12 +132,20 @@
     float posX = (int)(inverseTileY + tilePosDiv.x - halfMapWidth);
     float posY = (int)(inverseTileY - tilePosDiv.x + halfMapWidth);
     
-    posX = MAX(0, posX);
-    posX = MIN([tileMap mapSize].width, posX);
-    posY = MAX(0, posY);
-    posY = MIN([tileMap mapSize].height, posY);
+    return [self truncateInPlayableArea:ccp(posX, posY)];
+}
+
+-(CGPoint) truncateInPlayableArea:(CGPoint)position
+{
+    float posX = position.x;
+    float posY = position.y;
+    CGSize tileSize = [tiledMapNode tileSize];
+    posX = MAX(playableAreaOrig.x * tileSize.width, posX);
+    posX = MIN(playableAreaEnd.x * tileSize.width, posX);
+    posY = MAX(playableAreaOrig.y * tileSize.height, posY);
+    posY = MIN(playableAreaEnd.y * tileSize.height, posY);
     
-    return ccp(posX, posY);
+    return ccp(posX, posY);    
 }
 
 @end

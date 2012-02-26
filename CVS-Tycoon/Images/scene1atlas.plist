@@ -4,7 +4,7 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>body461</key>
+            <key>body1</key>
             <dict>
                 <key>frame</key>
                 <string>{{110,46},{16,14}}</string>
@@ -17,7 +17,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body4610</key>
+            <key>body10</key>
             <dict>
                 <key>frame</key>
                 <string>{{92,46},{16,14}}</string>
@@ -30,7 +30,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body4611</key>
+            <key>body11</key>
             <dict>
                 <key>frame</key>
                 <string>{{104,2},{14,12}}</string>
@@ -43,7 +43,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body4612</key>
+            <key>body12</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,16},{16,12}}</string>
@@ -56,7 +56,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body462</key>
+            <key>body2</key>
             <dict>
                 <key>frame</key>
                 <string>{{70,2},{14,12}}</string>
@@ -69,7 +69,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body463</key>
+            <key>body3</key>
             <dict>
                 <key>frame</key>
                 <string>{{86,2},{16,12}}</string>
@@ -82,7 +82,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body464</key>
+            <key>body4</key>
             <dict>
                 <key>frame</key>
                 <string>{{74,46},{16,14}}</string>
@@ -95,7 +95,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body465</key>
+            <key>body5</key>
             <dict>
                 <key>frame</key>
                 <string>{{36,2},{14,12}}</string>
@@ -108,7 +108,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body466</key>
+            <key>body6</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,2},{16,12}}</string>
@@ -121,7 +121,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body467</key>
+            <key>body7</key>
             <dict>
                 <key>frame</key>
                 <string>{{56,45},{16,14}}</string>
@@ -134,7 +134,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body468</key>
+            <key>body8</key>
             <dict>
                 <key>frame</key>
                 <string>{{2,2},{14,12}}</string>
@@ -147,7 +147,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>body469</key>
+            <key>body9</key>
             <dict>
                 <key>frame</key>
                 <string>{{18,2},{16,12}}</string>
@@ -316,7 +316,7 @@
                 <key>sourceSize</key>
                 <string>{16,13}</string>
             </dict>
-            <key>face001</key>
+            <key>face1</key>
             <dict>
                 <key>frame</key>
                 <string>{{68,16},{12,14}}</string>
@@ -329,7 +329,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>face002</key>
+            <key>face2</key>
             <dict>
                 <key>frame</key>
                 <string>{{52,16},{12,14}}</string>
@@ -342,7 +342,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>face003</key>
+            <key>face3</key>
             <dict>
                 <key>frame</key>
                 <string>{{36,16},{12,14}}</string>
@@ -355,7 +355,7 @@
                 <key>sourceSize</key>
                 <string>{16,16}</string>
             </dict>
-            <key>face004</key>
+            <key>face4</key>
             <dict>
                 <key>frame</key>
                 <string>{{20,16},{12,14}}</string>
@@ -378,7 +378,7 @@
             <key>size</key>
             <string>{128,64}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ed0b998ef22664e5ed9fdfb0c07422cb$</string>
+            <string>$TexturePacker:SmartUpdate:bf0aa946b266c42c47439a326d145ba1$</string>
             <key>textureFileName</key>
             <string>scene1atlas.pvr.ccz</string>
         </dict>
