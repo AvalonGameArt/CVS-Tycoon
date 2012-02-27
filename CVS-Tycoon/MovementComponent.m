@@ -6,6 +6,7 @@
 //  Copyright (c) 2012年 AvalonGameArt. All rights reserved.
 //
 
+// boat test code commit
 #import "MovementComponent.h"
 #import "GameObject.h"
 
