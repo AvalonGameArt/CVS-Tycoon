@@ -20,4 +20,5 @@
 
 -(void)playAnimation:(NSString*)animName restoreOriginalFrame:(BOOL)isRestore repeat:(BOOL)isRepeat;
 
+-(id) initWithTileMapNode:(CCTMXTiledMap*)mapNode;
 @end

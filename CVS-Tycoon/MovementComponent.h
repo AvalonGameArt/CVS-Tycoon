@@ -17,4 +17,6 @@
 -(void) updateVertexZ;
 -(void) update:(ccTime)deltaTime;
 
+-(id) initWithOwner:(GameObject*)newOwner WithTileMap:(CCTMXTiledMap*) tileMapNode;
+
 @end

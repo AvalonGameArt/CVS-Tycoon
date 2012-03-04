@@ -52,7 +52,7 @@
 
 -(void)update:(ccTime)deltaTime
 {
-    
+    [self updateVertexZ];
 }
 
 @end

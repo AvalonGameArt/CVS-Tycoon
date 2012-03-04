@@ -24,6 +24,16 @@
     return self;
 }
 
+-(id)initWithTileMapNode:(CCTMXTiledMap *)mapNode
+{
+    self = [self init];
+    if(self)
+    {
+        moveComp = [[MovementComponent alloc] initWithOwner:self WithTileMap:mapNode];
+    }
+    return self;
+}
+
 -(void)update:(ccTime)deltaTime
 {
     [super update:deltaTime];
