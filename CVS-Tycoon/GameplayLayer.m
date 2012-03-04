@@ -10,6 +10,7 @@
 #import "Categories.h"
 #import "GameObject.h"
 #import "Customer.h"
+#import "MapNavInfo.h"
 
 @implementation GameplayLayer
 @synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer, playableAreaOrig, playableAreaEnd;
@@ -52,7 +53,9 @@
         collisionLayer = [tiledMapNode layerNamed:@"Collisions"];
         [collisionLayer setVisible:NO];
         
-        Customer* customer = [[Customer alloc] init];
+        MapNavInfo* mapNavInfo = [[MapNavInfo alloc] initWithMapNode:tiledMapNode];
+        
+        Customer* customer = [[Customer alloc] initWithMapInfo:mapNavInfo];
         [customer setScale:2.0f];
         [customer setPosition:ccp(200,200)];
         [self addChild:customer z:100];
@@ -146,6 +149,23 @@
     posY = MIN(playableAreaEnd.y * tileSize.height, posY);
     
     return ccp(posX, posY);    
+}
+
+-(bool) isTilePosBlocked:(CGPoint)tilePos tileMap:(CCTMXTiledMap*)tileMap
+{
+	CCTMXLayer* layer = [tileMap layerNamed:@"Collisions"];
+	NSAssert(layer != nil, @"Collisions layer not found!");
+	
+	bool isBlocked = NO;
+	unsigned int tileGID = [layer tileGIDAt:tilePos];
+	if (tileGID > 0)
+	{
+		NSDictionary* tileProperties = [tileMap propertiesForGID:tileGID];
+		id blocks_movement = [tileProperties objectForKey:@"blocks_movement"];
+		isBlocked = (blocks_movement != nil);
+	}
+    
+	return isBlocked;
 }
 
 @end

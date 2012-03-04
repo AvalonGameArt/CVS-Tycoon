@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 AvalonGameArt. All rights reserved.
 //
 
+#import "MapNavInfo.h"
 #import "MovementComponent.h"
 #import "PathPlanner.h"
 #import "GameObject.h"
@@ -20,5 +21,5 @@
 
 -(void)playAnimation:(NSString*)animName restoreOriginalFrame:(BOOL)isRestore repeat:(BOOL)isRepeat;
 
--(id) initWithTileMapNode:(CCTMXTiledMap*)mapNode;
+-(id) initWithMapInfo:(MapNavInfo*)mapNode;
 @end

@@ -24,7 +24,7 @@
     return self;
 }
 
--(id)initWithTileMapNode:(CCTMXTiledMap *)mapNode
+-(id)initWithMapInfo:(MapNavInfo *)mapNode
 {
     self = [self init];
     if(self)

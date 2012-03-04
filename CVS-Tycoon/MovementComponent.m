@@ -7,6 +7,8 @@
 //
 
 // boat test code commit
+
+#import "MapNavInfo.h"
 #import "MovementComponent.h"
 #import "GameObject.h"
 
@@ -23,13 +25,13 @@
     return self;
 }
 
--(id) initWithOwner:(GameObject*)newOwner WithTileMap:(CCTMXTiledMap*) tileMapNode
+-(id) initWithOwner:(GameObject*)newOwner WithTileMap:(MapNavInfo*) mapNavInfo
 {
     self = [super init];
     if(self)
     {
         owner = newOwner;
-        tileMap = tileMapNode;
+        mapInfo = mapNavInfo;
     }
     return self;
 }
@@ -39,8 +41,8 @@
     float lowestZ = 0.0f;
     float currentZ = 0.0f;
     
-    if(tileMap)
-        lowestZ = -([tileMap mapSize].width + [tileMap mapSize].height);
+    if(mapInfo)
+        lowestZ = -([mapInfo mapSize].width + [mapInfo mapSize].height);
     
     if(owner)
     {

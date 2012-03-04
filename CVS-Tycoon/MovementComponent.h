@@ -6,17 +6,18 @@
 //  Copyright (c) 2012年 AvalonGameArt. All rights reserved.
 //
 
+@class MapNavInfo;
 @class GameObject;
 
 @interface MovementComponent : CCNode
 {
 @private __weak GameObject* owner;
-@private __weak CCTMXTiledMap* tileMap;
+@private __weak MapNavInfo* mapInfo;
 }
 
 -(void) updateVertexZ;
 -(void) update:(ccTime)deltaTime;
 
--(id) initWithOwner:(GameObject*)newOwner WithTileMap:(CCTMXTiledMap*) tileMapNode;
+-(id) initWithOwner:(GameObject*)newOwner WithTileMap:(MapNavInfo*) mapInfo;
 
 @end

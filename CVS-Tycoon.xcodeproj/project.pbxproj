@@ -11,6 +11,7 @@
 		4F6438B814F14D2300117DA0 /* default_en_26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438B614F14D2300117DA0 /* default_en_26.png */; };
 		4F6438BD14F1C5FC00117DA0 /* exploding_ring.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */; };
 		4F6438BE14F1C5FC00117DA0 /* exploding_ring.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438BC14F1C5FC00117DA0 /* exploding_ring.png */; };
+		4F643A0C15035CB300117DA0 /* MapNavInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F643A0B15035CB300117DA0 /* MapNavInfo.m */; };
 		4FA325E714C08AD700A161CD /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA325E614C08AD700A161CD /* Categories.m */; };
 		4FA325EA14C113DB00A161CD /* scene1atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E814C113DB00A161CD /* scene1atlas.plist */; };
 		4FA325EB14C113DB00A161CD /* scene1atlas.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 4FA325E914C113DB00A161CD /* scene1atlas.pvr.ccz */; };
@@ -510,6 +511,8 @@
 		4F6438B614F14D2300117DA0 /* default_en_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_en_26.png; path = "CVS-Tycoon/Fonts/default_en_26.png"; sourceTree = "<group>"; };
 		4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = exploding_ring.plist; path = "CVS-Tycoon/Particles/exploding_ring.plist"; sourceTree = "<group>"; };
 		4F6438BC14F1C5FC00117DA0 /* exploding_ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = exploding_ring.png; path = "CVS-Tycoon/Particles/exploding_ring.png"; sourceTree = "<group>"; };
+		4F643A0A15035CB300117DA0 /* MapNavInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapNavInfo.h; sourceTree = "<group>"; };
+		4F643A0B15035CB300117DA0 /* MapNavInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapNavInfo.m; sourceTree = "<group>"; };
 		4FA325E514C08AD700A161CD /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
 		4FA325E614C08AD700A161CD /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
 		4FA325E814C113DB00A161CD /* scene1atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scene1atlas.plist; sourceTree = "<group>"; };
@@ -954,6 +957,8 @@
 				97E8A80F14F22F4E00E43094 /* PathPlanner.m */,
 				97E8A80B14F222C300E43094 /* NavigationNode.h */,
 				97E8A80C14F222C400E43094 /* NavigationNode.m */,
+				4F643A0A15035CB300117DA0 /* MapNavInfo.h */,
+				4F643A0B15035CB300117DA0 /* MapNavInfo.m */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -1512,6 +1517,7 @@
 				971A00A214ECB46F00155F35 /* MovementComponent.m in Sources */,
 				97E8A80D14F222C400E43094 /* NavigationNode.m in Sources */,
 				97E8A81014F22F4F00E43094 /* PathPlanner.m in Sources */,
+				4F643A0C15035CB300117DA0 /* MapNavInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
