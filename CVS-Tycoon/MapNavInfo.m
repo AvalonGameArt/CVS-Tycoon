@@ -10,17 +10,45 @@
 
 @implementation MapNavInfo
 
-@synthesize mapNavigationInfo, mapTileSize, mapBorderSize, mapSize;
+@synthesize mapNode, mapNavigationInfo, mapTileSize, mapBorderSize, mapSize;
 
--(id)initWithMapNode:(CCTMXTiledMap *)mapNode
+-(id)initWithMapNode:(CCTMXTiledMap *)tileMapNode
 {
     self = [super init];
     if(self)
     {
+        mapNode = tileMapNode;
         mapBorderSize = CGSizeMake(0.0f, 0.0f);
+        mapTileSize = [mapNode tileSize];
+        mapSize = [mapNode mapSize];
         
+        for(int i = 0; i != mapSize.height; ++i)
+            for(int j = 0; j != mapSize.width; ++j)
+            {
+                CGPoint tilePos = ccp(j,i);
+                
+                bool isBlocked = [self isTilePosBlocked:tilePos];
+            }
     }
     return self;
 }
+
+-(bool) isTilePosBlocked:(CGPoint)tilePos
+{
+	CCTMXLayer* layer = [mapNode layerNamed:@"Collisions"];
+	NSAssert(layer != nil, @"Collisions layer not found!");
+	
+	bool isBlocked = NO;
+	unsigned int tileGID = [layer tileGIDAt:tilePos];
+	if (tileGID > 0)
+	{
+		NSDictionary* tileProperties = [mapNode propertiesForGID:tileGID];
+		id blocks_movement = [tileProperties objectForKey:@"blocks_movement"];
+		isBlocked = (blocks_movement != nil);
+	}
+    
+	return isBlocked;
+}
+
 
 @end

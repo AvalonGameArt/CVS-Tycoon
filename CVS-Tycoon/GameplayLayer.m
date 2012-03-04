@@ -151,21 +151,4 @@
     return ccp(posX, posY);    
 }
 
--(bool) isTilePosBlocked:(CGPoint)tilePos tileMap:(CCTMXTiledMap*)tileMap
-{
-	CCTMXLayer* layer = [tileMap layerNamed:@"Collisions"];
-	NSAssert(layer != nil, @"Collisions layer not found!");
-	
-	bool isBlocked = NO;
-	unsigned int tileGID = [layer tileGIDAt:tilePos];
-	if (tileGID > 0)
-	{
-		NSDictionary* tileProperties = [tileMap propertiesForGID:tileGID];
-		id blocks_movement = [tileProperties objectForKey:@"blocks_movement"];
-		isBlocked = (blocks_movement != nil);
-	}
-    
-	return isBlocked;
-}
-
 @end
