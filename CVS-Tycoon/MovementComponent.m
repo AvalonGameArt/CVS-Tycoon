@@ -14,6 +14,8 @@
 
 @implementation MovementComponent
 
+@synthesize path;
+
 -(id)init
 {
     self = [super init];

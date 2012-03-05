@@ -15,6 +15,8 @@
 @private __weak MapNavInfo* mapInfo;
 }
 
+@property (strong, nonatomic) CCArray* path;
+
 -(void) updateVertexZ;
 -(void) update:(ccTime)deltaTime;
 

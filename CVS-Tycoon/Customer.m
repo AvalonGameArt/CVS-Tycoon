@@ -30,6 +30,7 @@
     if(self)
     {
         moveComp = [[MovementComponent alloc] initWithOwner:self WithTileMap:mapNode];
+        
     }
     return self;
 }
