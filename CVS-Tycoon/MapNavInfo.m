@@ -27,13 +27,14 @@
             {
                 CGPoint tilePos = ccp(j,i);
                 
-                bool isBlocked = [self isTilePosBlocked:tilePos];
+                BOOL isBlocked = [self isTilePosBlocked:tilePos];
+                mapInfoMatrix[j][i] = isBlocked;
             }
     }
     return self;
 }
 
--(bool) isTilePosBlocked:(CGPoint)tilePos
+-(BOOL) isTilePosBlocked:(CGPoint)tilePos
 {
 	CCTMXLayer* layer = [mapNode layerNamed:@"Collisions"];
 	NSAssert(layer != nil, @"Collisions layer not found!");
@@ -50,5 +51,14 @@
 	return isBlocked;
 }
 
+-(int) getTileBlocked:(CGPoint)tilePos
+{
+    return mapInfoMatrix[(int)(tilePos.x)][(int)(tilePos.y)];
+}
+
+-(void) setTileBlocked:(CGPoint)tilePos with:(int)value
+{
+    mapInfoMatrix[(int)(tilePos.x)][(int)(tilePos.y)] = value;
+}
 
 @end

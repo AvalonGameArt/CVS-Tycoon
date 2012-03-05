@@ -7,6 +7,9 @@
 //
 
 @interface MapNavInfo : CCNode
+{
+    int mapInfoMatrix[50][50];    
+}
 
 @property (weak, nonatomic) CCTMXTiledMap* mapNode;
 @property (strong, nonatomic) NSMutableArray* mapNavigationInfo;
@@ -15,7 +18,9 @@
 @property (nonatomic) CGSize mapSize;
 
 -(id) initWithMapNode:(CCTMXTiledMap*)mapNode;
--(bool) isTilePosBlocked:(CGPoint)tilePos;
+-(BOOL) isTilePosBlocked:(CGPoint)tilePos;
 
+-(int) getTileBlocked:(CGPoint)tilePos;
+-(void) setTileBlocked:(CGPoint)tilePos with:(int)value;
 
 @end
