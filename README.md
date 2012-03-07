@@ -23,3 +23,9 @@ Misc
 ----
 
 [Google Objective-C Style Guide.](http://google-styleguide.googlecode.com/svn/trunk/objcguide.xml)
+
+
+GPL v3 License
+-------
+
+Copyright 2012 AvalonGameArt All rights reserved.
