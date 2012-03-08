@@ -49,12 +49,12 @@
 {
     if(isRepeat)
     {
-        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName] restoreOriginalFrame:isRestore]];
+        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName]]];
         [bodySprite runAction:action];
     }
     else
     {
-        id action = [CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName] restoreOriginalFrame:isRestore];
+        id action = [CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName]];
         [bodySprite runAction:action];        
     }
 

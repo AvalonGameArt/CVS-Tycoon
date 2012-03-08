@@ -19,7 +19,7 @@
         CCSpriteFrame* frame = [frameCache spriteFrameByName:file];
         [frames addObject:frame];
     }
-    return [CCAnimation animationWithFrames:frames delay:delay];
+    return [CCAnimation animationWithSpriteFrames:frames delay:delay];
 }
 
 @end
