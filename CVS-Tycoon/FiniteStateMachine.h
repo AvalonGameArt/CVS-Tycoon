@@ -6,10 +6,9 @@
 //  Copyright (c) 2011 AvalonGameArt. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "CommonProtocols.h"
 
-@interface FiniteStateMachine : NSObject
+@interface FiniteStateMachine : CCNode
 
 @property (weak, nonatomic) id owner;
 @property (strong, nonatomic) id<GameObjectStateDelegate> currentState;

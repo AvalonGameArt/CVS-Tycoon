@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4D27D415090C000024F22E /* AnimationComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4D27D315090C000024F22E /* AnimationComponent.m */; };
 		4F6438B714F14D2300117DA0 /* default_en_26.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438B514F14D2300117DA0 /* default_en_26.fnt */; };
 		4F6438B814F14D2300117DA0 /* default_en_26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438B614F14D2300117DA0 /* default_en_26.png */; };
 		4F6438BD14F1C5FC00117DA0 /* exploding_ring.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */; };
@@ -507,6 +508,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F4D27D215090C000024F22E /* AnimationComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationComponent.h; sourceTree = "<group>"; };
+		4F4D27D315090C000024F22E /* AnimationComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationComponent.m; sourceTree = "<group>"; };
 		4F6438B514F14D2300117DA0 /* default_en_26.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = default_en_26.fnt; path = "CVS-Tycoon/Fonts/default_en_26.fnt"; sourceTree = "<group>"; };
 		4F6438B614F14D2300117DA0 /* default_en_26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_en_26.png; path = "CVS-Tycoon/Fonts/default_en_26.png"; sourceTree = "<group>"; };
 		4F6438BB14F1C5FC00117DA0 /* exploding_ring.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = exploding_ring.plist; path = "CVS-Tycoon/Particles/exploding_ring.plist"; sourceTree = "<group>"; };
@@ -953,6 +956,8 @@
 				4FF76CD314DF556A00AA530A /* GoodsComponent.m */,
 				971A00A014ECB46F00155F35 /* MovementComponent.h */,
 				971A00A114ECB46F00155F35 /* MovementComponent.m */,
+				4F4D27D215090C000024F22E /* AnimationComponent.h */,
+				4F4D27D315090C000024F22E /* AnimationComponent.m */,
 				97E8A80E14F22F4E00E43094 /* PathPlanner.h */,
 				97E8A80F14F22F4E00E43094 /* PathPlanner.m */,
 				97E8A80B14F222C300E43094 /* NavigationNode.h */,
@@ -1518,6 +1523,7 @@
 				97E8A80D14F222C400E43094 /* NavigationNode.m in Sources */,
 				97E8A81014F22F4F00E43094 /* PathPlanner.m in Sources */,
 				4F643A0C15035CB300117DA0 /* MapNavInfo.m in Sources */,
+				4F4D27D415090C000024F22E /* AnimationComponent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

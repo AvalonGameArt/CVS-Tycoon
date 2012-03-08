@@ -8,6 +8,7 @@
 
 #import "Categories.h"
 #import "Customer.h"
+#import "AnimationComponent.h"
 
 @implementation Customer
 
@@ -16,10 +17,11 @@
     self = [super init];
     if(self)
     {
-        bodySprite = [CCSprite spriteWithSpriteFrameName:@"dog1"];
-        [self loadPlistForAnimation:@"dog_animation"];
-        [self addChild:bodySprite];
-        [self playAnimation:@"walkDownRight" restoreOriginalFrame:NO repeat:YES];
+        model = [CCSprite spriteWithSpriteFrameName:@"dog1"];
+        [self addChild:model];
+
+        [[self animationComponent] loadPlistForAnimation:@"dog_animation"];
+        [[self animationComponent] playAnimation:@"walkDownRight" onModel:model repeat:YES];
     }
     return self;
 }
@@ -43,21 +45,6 @@
     {
         
     }
-}
-
--(void)playAnimation:(NSString *)animName restoreOriginalFrame:(BOOL)isRestore repeat:(BOOL)isRepeat
-{
-    if(isRepeat)
-    {
-        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName]]];
-        [bodySprite runAction:action];
-    }
-    else
-    {
-        id action = [CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName]];
-        [bodySprite runAction:action];        
-    }
-
 }
 
 @end

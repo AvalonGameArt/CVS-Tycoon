@@ -15,11 +15,9 @@
 {
 @private __strong MovementComponent* moveComp;
 @private __strong PathPlanner* pathPlanner;
-@private __strong CCSprite* bodySprite;
+@private __strong CCSprite* model;
 @private CGPoint targetPosition;
 }
-
--(void)playAnimation:(NSString*)animName restoreOriginalFrame:(BOOL)isRestore repeat:(BOOL)isRepeat;
 
 -(id) initWithMapInfo:(MapNavInfo*)mapNode;
 @end

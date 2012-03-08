@@ -14,14 +14,17 @@
 
 @implementation MovementComponent
 
-@synthesize path;
+@synthesize path, velocity, heading, siding, mass;
 
 -(id)init
 {
     self = [super init];
     if(self)
     {
-        
+        velocity = CGPointZero;
+        heading = CGPointZero;
+        siding = CGPointZero;
+        mass = 1.0f;        
     }
     
     return self;
@@ -57,6 +60,11 @@
 -(void)update:(ccTime)deltaTime
 {
     [self updateVertexZ];
+}
+
+-(CGRect)adjustedBoundingBox
+{
+    return [self boundingBox];
 }
 
 @end

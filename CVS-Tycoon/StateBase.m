@@ -8,20 +8,20 @@
 
 #import "StateBase.h"
 
-@implementation StateBase
--(void)enter:(id)owner
-{
-    
-}
-
--(void)update:(id)owner withTime:(ccTime)deltaTime
-{
-    
-}
-
--(void)exit:(id)owner
-{
-    
-}
-
-@end
+//@implementation StateBase
+//-(void)enter:(id)owner
+//{
+//    
+//}
+//
+//-(void)update:(id)owner withTime:(ccTime)deltaTime
+//{
+//    
+//}
+//
+//-(void)exit:(id)owner
+//{
+//    
+//}
+//
+//@end

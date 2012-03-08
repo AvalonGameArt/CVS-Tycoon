@@ -16,10 +16,17 @@
 }
 
 @property (strong, nonatomic) CCArray* path;
+@property (nonatomic) CGPoint velocity;
+@property (nonatomic) CGPoint heading;
+@property (nonatomic) CGPoint siding;
+@property (nonatomic) float mass;
+
 
 -(void) updateVertexZ;
 -(void) update:(ccTime)deltaTime;
 
 -(id) initWithOwner:(GameObject*)newOwner WithTileMap:(MapNavInfo*) mapInfo;
+
+-(CGRect)adjustedBoundingBox;
 
 @end
