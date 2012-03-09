@@ -8,6 +8,7 @@
 
 @class MapNavInfo;
 @class GameObject;
+typedef CGPoint Vector2D;
 
 @interface MovementComponent : CCNode
 {
@@ -16,9 +17,9 @@
 }
 
 @property (strong, nonatomic) CCArray* path;
-@property (nonatomic) CGPoint velocity;
-@property (nonatomic) CGPoint heading;
-@property (nonatomic) CGPoint siding;
+@property (nonatomic) Vector2D velocity;
+@property (nonatomic) Vector2D heading;
+@property (nonatomic) Vector2D siding;
 @property (nonatomic) float mass;
 
 
@@ -28,5 +29,7 @@
 -(id) initWithOwner:(GameObject*)newOwner WithTileMap:(MapNavInfo*) mapInfo;
 
 -(CGRect)adjustedBoundingBox;
+
+
 
 @end

@@ -40,10 +40,11 @@
 -(void)update:(ccTime)deltaTime
 {
     [super update:deltaTime];
+    [moveComp update:deltaTime];
+
     CGPoint curPos = [self position];
     if(ccpDistance(curPos, targetPosition) < 4)
     {
-        
     }
 }
 

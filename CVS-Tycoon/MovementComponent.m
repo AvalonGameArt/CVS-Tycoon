@@ -12,6 +12,11 @@
 #import "MovementComponent.h"
 #import "GameObject.h"
 
+@interface MovementComponent()
+-(Vector2D) Seek:(Vector2D)targetPosition;
+
+@end
+
 @implementation MovementComponent
 
 @synthesize path, velocity, heading, siding, mass;
@@ -65,6 +70,11 @@
 -(CGRect)adjustedBoundingBox
 {
     return [self boundingBox];
+}
+
+-(Vector2D) Seek:(Vector2D)targetPosition
+{
+    return CGPointZero;
 }
 
 @end
