@@ -61,11 +61,17 @@
         [self addChild:customer z:100];
         
         CCLabelBMFont* label = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"default_en_26.fnt"];
+        [ARCH_OPTIMAL_PARTICLE_SYSTEM particleWithFile:@"exploding_ring.plist"];
+        __weak GameplayLayer* weakSelf = self;
         CCMenuItemLabel* item1 = [CCMenuItemLabel itemWithLabel:label block:^(id sender) {
             [[sender parent] setVisible:NO];
-            CCParticleSystem* emitter = [CCParticleSystemQuad particleWithFile:@"exploding_ring.plist"];
+            CCParticleSystem* emitter = [ARCH_OPTIMAL_PARTICLE_SYSTEM particleWithFile:@"exploding_ring.plist"];
+            [emitter setPositionType:kCCPositionTypeFree];
+            [emitter setAutoRemoveOnFinish:YES];
             [emitter setPosition:[[sender parent] position]];
-            [self addChild:emitter z:10];
+            GameplayLayer* strongSelf = weakSelf;
+            if(strongSelf != nil)
+                [strongSelf addChild:emitter z:10];
         }];
         
 		id color_action = [CCTintBy actionWithDuration:0.5f red:0 green:-255 blue:-255];
