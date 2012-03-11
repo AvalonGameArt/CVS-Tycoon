@@ -23,3 +23,17 @@
 }
 
 @end
+
+@implementation CCNode (Singleton)
+
++(id)sharedInstance
+{
+    static CCNode* inst;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        inst = [[CCNode alloc] init];
+    });
+    return inst;
+}
+
+@end

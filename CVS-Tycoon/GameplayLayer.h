@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "CommonProtocols.h"
+#import "Categories.h"
 
 @interface GameplayLayer : CCLayer
 {
