@@ -21,6 +21,10 @@ typedef CGPoint Vector2D;
 @property (nonatomic) Vector2D heading;
 @property (nonatomic) Vector2D siding;
 @property (nonatomic) float mass;
+@property (nonatomic) float maxSpeed;
+@property (nonatomic) float maxForce;
+@property (nonatomic) CGPoint targetPosition;
+@property (weak, nonatomic) GameObject* targetEntity;
 
 
 -(void) updateVertexZ;
@@ -29,7 +33,5 @@ typedef CGPoint Vector2D;
 -(id) initWithOwner:(GameObject*)newOwner WithTileMap:(MapNavInfo*) mapInfo;
 
 -(CGRect)adjustedBoundingBox;
-
-
 
 @end

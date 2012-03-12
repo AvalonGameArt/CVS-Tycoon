@@ -13,7 +13,8 @@
 #import "MapNavInfo.h"
 
 @implementation GameplayLayer
-@synthesize sceneSpriteBatchNode, tiledMapNode, beginPoint, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer, playableAreaOrig, playableAreaEnd;
+
+@synthesize sceneSpriteBatchNode, tiledMapNode, backgroundLayer, groundObjectLayer, objectLayer, collisionLayer, playableAreaOrig, playableAreaEnd;
 
 #pragma mark -
 #pragma mark Update Method

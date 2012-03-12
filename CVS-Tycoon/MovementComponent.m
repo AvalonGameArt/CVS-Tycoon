@@ -19,7 +19,7 @@
 
 @implementation MovementComponent
 
-@synthesize path, velocity, heading, siding, mass;
+@synthesize path, velocity, heading, siding, mass, maxSpeed, maxForce, targetPosition, targetEntity;
 
 -(id)init
 {
@@ -29,7 +29,9 @@
         velocity = CGPointZero;
         heading = CGPointZero;
         siding = CGPointZero;
-        mass = 1.0f;        
+        mass = 1.0f;
+        maxSpeed = 1.0f;
+        maxForce = 1.0f;
     }
     
     return self;
@@ -51,10 +53,10 @@
     float lowestZ = 0.0f;
     float currentZ = 0.0f;
     
-    if(mapInfo)
+    if(mapInfo != nil)
         lowestZ = -([mapInfo mapSize].width + [mapInfo mapSize].height);
     
-    if(owner)
+    if(owner != nil)
     {
         currentZ = [owner position].x + [owner position].y;
         float finalZ = lowestZ + currentZ - 1;
@@ -62,9 +64,18 @@
     }
 }
 
--(void)update:(ccTime)deltaTime
+-(Vector2D) Seek:(Vector2D)targetPos
 {
-    [self updateVertexZ];
+    Vector2D currentPosition = [self position];
+    Vector2D direction = ccpNormalize(ccpSub(targetPos, currentPosition));
+    Vector2D desiredVelocity = ccpMult(direction, [self maxSpeed]);
+        
+    return ccpSub(desiredVelocity, [self velocity]);        
+}
+
+-(Vector2D)Calculate
+{
+    return CGPointZero;
 }
 
 -(CGRect)adjustedBoundingBox
@@ -72,9 +83,24 @@
     return [self boundingBox];
 }
 
--(Vector2D) Seek:(Vector2D)targetPosition
+-(void)update:(ccTime)deltaTime
 {
-    return CGPointZero;
+    Vector2D force = [self Calculate];
+    Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
+    Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
+    Vector2D velocitySum = ccpAdd([self velocity], deltaVelocity);
+    [self setVelocity: ccpClamp(velocitySum, CGPointZero, ccpMult(ccpNormalize(velocitySum), [self maxSpeed]))];
+    CGPoint newPos = ccpAdd([self position], ccpMult([self velocity], deltaTime));
+    if(owner != nil)
+        [owner setPosition:newPos];
+    
+    if(ccpLengthSQ([self velocity]) > 0.00000001f)
+    {
+        [self setHeading:ccpNormalize([self velocity])];
+        [self setSiding:ccpPerp([self heading])];        
+    }
+    
+    [self updateVertexZ];
 }
 
 @end
