@@ -32,6 +32,7 @@
     if(self)
     {
         moveComp = [[MovementComponent alloc] initWithOwner:self WithTileMap:mapNode];
+        [moveComp setMaxSpeed:10.0f];
         
     }
     return self;
@@ -41,11 +42,13 @@
 {
     [super update:deltaTime];
     [moveComp update:deltaTime];
+}
 
-    CGPoint curPos = [self position];
-    if(ccpDistance(curPos, targetPosition) < 4)
-    {
-    }
+-(void)moveTo:(Vector2D)targetPosition
+{
+    [moveComp setTargetPosition:targetPosition];
+    [moveComp setSeekOn:YES];
+    [moveComp setMaxSpeed:20.0f];
 }
 
 @end

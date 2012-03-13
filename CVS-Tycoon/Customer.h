@@ -16,8 +16,8 @@
 @private __strong MovementComponent* moveComp;
 @private __strong PathPlanner* pathPlanner;
 @private __strong CCSprite* model;
-@private CGPoint targetPosition;
 }
 
 -(id) initWithMapInfo:(MapNavInfo*)mapNode;
+-(void) moveTo:(Vector2D)targetPosition;
 @end

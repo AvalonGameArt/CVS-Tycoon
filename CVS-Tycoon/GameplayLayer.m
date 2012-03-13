@@ -58,8 +58,8 @@
         
         Customer* customer = [[Customer alloc] initWithMapInfo:mapNavInfo];
         [customer setScale:2.0f];
-        [customer setPosition:ccp(200,200)];
-        [self addChild:customer z:100];
+        [customer setPosition:ccp(300,200)];
+        [self addChild:customer z:100 tag:2];
         
         CCLabelBMFont* label = [CCLabelBMFont labelWithString:@"Quit" fntFile:@"default_en_26.fnt"];
         [ARCH_OPTIMAL_PARTICLE_SYSTEM particleWithFile:@"exploding_ring.plist"];
@@ -116,6 +116,9 @@
     CCMenu* menu = (CCMenu*)[self getChildByTag:1];
     [menu setPosition:[self locationFromTouch:touch]];
     [menu setVisible:YES];
+    
+    Customer* c = (Customer*)[self getChildByTag:2];
+    [c moveTo:[self locationFromTouch:touch]];
 }
 
 -(CGPoint) locationFromTouch:(UITouch*)touch
