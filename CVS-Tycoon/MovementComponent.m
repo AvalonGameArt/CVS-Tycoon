@@ -10,7 +10,7 @@
 
 #import "MapNavInfo.h"
 #import "MovementComponent.h"
-#import "GameObject.h"
+#import "MovingObject.h"
 
 @interface MovementComponent()
 -(Vector2D) seek:(Vector2D)targetPosition;
@@ -19,7 +19,7 @@
 
 @implementation MovementComponent
 
-@synthesize path, velocity, heading, siding, mass, maxSpeed, maxForce, targetPosition, offset;
+@synthesize path, targetPosition, offset;
 @synthesize seekOn, fleeOn, arriveOn, wanderOn, followPathOn, pursuitOn, offsetPursuitOn, evadeOn, interposeOn, hideOn, obstacleAvoidanceOn, wallAvoidanceOn, cohesionOn, separationOn, allignmentOn;
 
 -(id)init
@@ -27,13 +27,6 @@
     self = [super init];
     if(self)
     {
-        velocity = CGPointZero;
-        heading = CGPointZero;
-        siding = CGPointZero;
-        mass = 1.0f;
-        maxSpeed = 1.0f;
-        maxForce = 1.0f;
-        
         seekOn = NO;
         fleeOn = NO;
         arriveOn = NO;
@@ -54,7 +47,7 @@
     return self;
 }
 
--(id) initWithOwner:(GameObject*)newOwner WithTileMap:(MapNavInfo*) mapNavInfo
+-(id) initWithOwner:(MovingObject*)newOwner WithTileMap:(MapNavInfo*) mapNavInfo
 {
     self = [self init];
     if(self)
@@ -87,9 +80,9 @@
     {
         Vector2D currentPosition = [owner position];
         Vector2D direction = ccpNormalize(ccpSub(targetPos, currentPosition));
-        Vector2D desiredVelocity = ccpMult(direction, [self maxSpeed]);
+        Vector2D desiredVelocity = ccpMult(direction, [owner maxSpeed]);
         
-        return ccpSub(desiredVelocity, [self velocity]);        
+        return ccpSub(desiredVelocity, [owner velocity]);        
     }
     return CGPointZero;
 }
@@ -112,24 +105,24 @@
 -(void)update:(ccTime)deltaTime
 {
     Vector2D force = [self calculate];
-    Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
+    Vector2D acceleration = ccpMult(force, 1.0f/[owner mass]);
     Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
-    Vector2D velocitySum = ccpAdd([self velocity], deltaVelocity);
-    Vector2D velocityMax = ccpMult(ccpNormalize(velocitySum), [self maxSpeed]);
+    Vector2D velocitySum = ccpAdd([owner velocity], deltaVelocity);
+    Vector2D velocityMax = ccpMult(ccpNormalize(velocitySum), [owner maxSpeed]);
     if(ccpLengthSQ(velocitySum) == 0.0f)
         velocityMax = CGPointZero;
     Vector2D newVelocity = ccpClamp(velocitySum, CGPointZero, velocityMax);
-    [self setVelocity: newVelocity];
+    [owner setVelocity: newVelocity];
     if(owner != nil)
     {
-        CGPoint newPos = ccpAdd([owner position], ccpMult([self velocity], deltaTime));
+        CGPoint newPos = ccpAdd([owner position], ccpMult([owner velocity], deltaTime));
         [owner setPosition:newPos];
     }
     
-    if(ccpLengthSQ([self velocity]) > 0.00000001f)
+    if(ccpLengthSQ([owner velocity]) > 0.00000001f)
     {
-        [self setHeading:ccpNormalize([self velocity])];
-        [self setSiding:ccpPerp([self heading])];        
+        [owner setHeading:ccpNormalize([owner velocity])];
+        [owner setSiding:ccpPerp([owner heading])];        
     }
     
     [self updateVertexZ];

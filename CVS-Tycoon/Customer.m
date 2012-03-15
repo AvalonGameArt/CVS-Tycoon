@@ -26,29 +26,9 @@
     return self;
 }
 
--(id)initWithMapInfo:(MapNavInfo *)mapNode
-{
-    self = [self init];
-    if(self)
-    {
-        moveComp = [[MovementComponent alloc] initWithOwner:self WithTileMap:mapNode];
-        [moveComp setMaxSpeed:10.0f];
-        
-    }
-    return self;
-}
-
 -(void)update:(ccTime)deltaTime
 {
     [super update:deltaTime];
-    [moveComp update:deltaTime];
-}
-
--(void)moveTo:(Vector2D)targetPosition
-{
-    [moveComp setTargetPosition:targetPosition];
-    [moveComp setSeekOn:YES];
-    [moveComp setMaxSpeed:20.0f];
 }
 
 @end

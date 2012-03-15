@@ -7,17 +7,12 @@
 //
 
 #import "MapNavInfo.h"
-#import "MovementComponent.h"
 #import "PathPlanner.h"
-#import "GameObject.h"
+#import "MovingObject.h"
 
-@interface Customer : GameObject
+@interface Customer : MovingObject
 {
-@private __strong MovementComponent* moveComp;
 @private __strong PathPlanner* pathPlanner;
 @private __strong CCSprite* model;
 }
-
--(id) initWithMapInfo:(MapNavInfo*)mapNode;
--(void) moveTo:(Vector2D)targetPosition;
 @end

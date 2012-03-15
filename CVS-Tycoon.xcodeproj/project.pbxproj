@@ -92,6 +92,7 @@
 		4FF76CD114DF544100AA530A /* Shelf.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD014DF544100AA530A /* Shelf.m */; };
 		4FF76CD414DF556A00AA530A /* GoodsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF76CD314DF556A00AA530A /* GoodsComponent.m */; };
 		971A00A214ECB46F00155F35 /* MovementComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 971A00A114ECB46F00155F35 /* MovementComponent.m */; };
+		973D14981510D15600060B49 /* MovingObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 973D14971510D15600060B49 /* MovingObject.m */; };
 		97A658D314EB77D400575E9E /* PositionTextureColorAlphaTest.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 97A658D114EB777100575E9E /* PositionTextureColorAlphaTest.fsh */; };
 		97D7BE6114BD69CD00934812 /* fps_images-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 97D7BE6014BD69CD00934812 /* fps_images-hd.png */; };
 		97E8A80D14F222C400E43094 /* NavigationNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E8A80C14F222C400E43094 /* NavigationNode.m */; };
@@ -617,6 +618,8 @@
 		4FF76CD314DF556A00AA530A /* GoodsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsComponent.m; sourceTree = "<group>"; };
 		971A00A014ECB46F00155F35 /* MovementComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovementComponent.h; sourceTree = "<group>"; };
 		971A00A114ECB46F00155F35 /* MovementComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovementComponent.m; sourceTree = "<group>"; };
+		973D14961510D15600060B49 /* MovingObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingObject.h; sourceTree = "<group>"; };
+		973D14971510D15600060B49 /* MovingObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingObject.m; sourceTree = "<group>"; };
 		97A658D114EB777100575E9E /* PositionTextureColorAlphaTest.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PositionTextureColorAlphaTest.fsh; sourceTree = "<group>"; };
 		97D7BE6014BD69CD00934812 /* fps_images-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fps_images-hd.png"; sourceTree = "<group>"; };
 		97E8A80B14F222C300E43094 /* NavigationNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationNode.h; sourceTree = "<group>"; };
@@ -937,6 +940,8 @@
 			children = (
 				4FAADF7414BC6CC700A8123E /* GameObject.h */,
 				4FAADF7514BC6CC700A8123E /* GameObject.m */,
+				973D14961510D15600060B49 /* MovingObject.h */,
+				973D14971510D15600060B49 /* MovingObject.m */,
 				4FAADF7614BC6CC700A8123E /* GameStaticObj.h */,
 				4FAADF7714BC6CC700A8123E /* GameStaticObj.m */,
 				4FAAE14F14BDE11A00A8123E /* SpawnPoint.h */,
@@ -1524,6 +1529,7 @@
 				97E8A81014F22F4F00E43094 /* PathPlanner.m in Sources */,
 				4F643A0C15035CB300117DA0 /* MapNavInfo.m in Sources */,
 				4F4D27D415090C000024F22E /* AnimationComponent.m in Sources */,
+				973D14981510D15600060B49 /* MovingObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
