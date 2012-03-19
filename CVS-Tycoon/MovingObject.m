@@ -47,8 +47,9 @@
     Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
     Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
     Vector2D velocityFinal = ccpAdd([self velocity], deltaVelocity);
-//    Vector2D velocityMax = CGPointZero;
-    Vector2D velocityMax = ccpMult(ccpNormalize(velocityFinal), maxSpeed);
+    Vector2D velocityMax = CGPointZero;
+    if(ccpLengthSQ(velocityFinal) > 0.000001f)
+        velocityMax = ccpMult(ccpNormalize(velocityFinal), maxSpeed);
     velocityFinal = ccpClamp(velocityFinal, ccpNeg(velocityMax), velocityMax);
     [self setVelocity:velocityFinal];
     [self setHeading:ccpNormalize(velocityFinal)];
