@@ -19,6 +19,7 @@
     if (self) {
         // Initialization code here.
         CCLOG(@"GameObject init");
+        [self setPosition:CGPointZero];
         mainFSM = [[FiniteStateMachine alloc] init];
         animationComponent = [[AnimationComponent alloc] init];
         [self scheduleUpdate];

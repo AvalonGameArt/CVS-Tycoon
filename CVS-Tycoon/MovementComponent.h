@@ -39,10 +39,11 @@ typedef CGPoint Vector2D;
 @property (nonatomic) BOOL allignmentOn;
 
 -(void) updateVertexZ;
--(void) update:(ccTime)deltaTime;
 
 -(id) initWithOwner:(MovingObject*)newOwner WithTileMap:(MapNavInfo*) mapInfo;
 
 -(CGRect)adjustedBoundingBox;
+
+-(Vector2D) calculate;
 
 @end

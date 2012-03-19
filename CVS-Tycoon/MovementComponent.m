@@ -14,6 +14,7 @@
 
 @interface MovementComponent()
 -(Vector2D) seek:(Vector2D)targetPosition;
+-(Vector2D) flee:(Vector2D)targetPosition;
 
 @end
 
@@ -78,11 +79,26 @@
 {
     if(owner != nil)
     {
-        Vector2D currentPosition = [owner position];
+        Vector2D currentPosition = owner.position;
         Vector2D direction = ccpNormalize(ccpSub(targetPos, currentPosition));
         Vector2D desiredVelocity = ccpMult(direction, [owner maxSpeed]);
         
-        return ccpSub(desiredVelocity, [owner velocity]);        
+        Vector2D deltaVelocity = ccpSub(desiredVelocity, [owner velocity]);
+        Vector2D force = ccpMult(ccpNormalize(deltaVelocity), [owner maxForce]);
+        return force;
+    }
+    return CGPointZero;
+}
+
+-(Vector2D) flee:(Vector2D)targetPos
+{
+    if(owner != nil)
+    {
+        Vector2D currentPosition = [owner position];
+        Vector2D direction = ccpNormalize(ccpSub(currentPosition, targetPos));
+        Vector2D desiredVelocity = ccpMult(direction, [owner maxSpeed]);
+        
+        return ccpSub(desiredVelocity, [owner velocity]);                
     }
     return CGPointZero;
 }
@@ -100,32 +116,6 @@
 -(CGRect)adjustedBoundingBox
 {
     return [self boundingBox];
-}
-
--(void)update:(ccTime)deltaTime
-{
-    Vector2D force = [self calculate];
-    Vector2D acceleration = ccpMult(force, 1.0f/[owner mass]);
-    Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
-    Vector2D velocitySum = ccpAdd([owner velocity], deltaVelocity);
-    Vector2D velocityMax = ccpMult(ccpNormalize(velocitySum), [owner maxSpeed]);
-    if(ccpLengthSQ(velocitySum) == 0.0f)
-        velocityMax = CGPointZero;
-    Vector2D newVelocity = ccpClamp(velocitySum, CGPointZero, velocityMax);
-    [owner setVelocity: newVelocity];
-    if(owner != nil)
-    {
-        CGPoint newPos = ccpAdd([owner position], ccpMult([owner velocity], deltaTime));
-        [owner setPosition:newPos];
-    }
-    
-    if(ccpLengthSQ([owner velocity]) > 0.00000001f)
-    {
-        [owner setHeading:ccpNormalize([owner velocity])];
-        [owner setSiding:ccpPerp([owner heading])];        
-    }
-    
-    [self updateVertexZ];
 }
 
 @end
