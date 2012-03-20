@@ -47,24 +47,29 @@
     Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
     Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
     Vector2D velocityFinal = ccpAdd([self velocity], deltaVelocity);
-    Vector2D velocityMax = CGPointZero;
-    if(ccpLengthSQ(velocityFinal) > 0.000001f)
-        velocityMax = ccpMult(ccpNormalize(velocityFinal), maxSpeed);
-    velocityFinal = ccpClamp(velocityFinal, ccpNeg(velocityMax), velocityMax);
-    [self setVelocity:velocityFinal];
-    [self setHeading:ccpNormalize(velocityFinal)];
-    [self setSiding:ccpPerp([self heading])];
-    
-    Vector2D deltaPosition = ccpMult(velocityFinal, deltaTime);
-    Vector2D positionFinal = ccpAdd([self position], deltaPosition);
-    [self setPosition:positionFinal];
+    if(ccpLengthSQ(velocityFinal) > 0.01f)
+    {
+        Vector2D velocityMax = ccpMult(ccpNormalize(velocityFinal), [self maxSpeed]);
+        velocityFinal = ccpClamp(velocityFinal, ccpNeg(velocityMax), velocityMax);
+        [self setVelocity:velocityFinal];
+        [self setHeading:ccpNormalize(velocityFinal)];
+        [self setSiding:ccpPerp([self heading])];
+        
+        Vector2D deltaPosition = ccpMult(velocityFinal, deltaTime);
+        Vector2D positionFinal = ccpAdd([self position], deltaPosition);
+        [self setPosition:positionFinal];        
+    }
+    else
+    {
+        [self setVelocity:CGPointZero];
+    }
 }
 
 -(void)moveTo:(Vector2D)targetPosition
 {
     [moveComp setTargetPosition:targetPosition];
-    [moveComp setSeekOn:YES];
-    [self setMaxSpeed:20.0f];
+//    [moveComp setSeekOn:YES];
+    [moveComp setArriveOn:YES];
 }
 
 
