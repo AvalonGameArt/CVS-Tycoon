@@ -18,6 +18,6 @@
 
 @property (nonatomic, strong) UIWindow *window;
 @property (readonly) UINavigationController *navController;
-@property (readonly) CCDirectorIOS *director;
+@property (weak, readonly) CCDirectorIOS *director;
 
 @end
