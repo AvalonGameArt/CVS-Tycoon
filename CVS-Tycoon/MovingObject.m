@@ -42,21 +42,24 @@
 -(void)update:(ccTime)deltaTime
 {
     [super update:deltaTime];
-    Vector2D force = [moveComp calculate];
-    Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
-    Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
-    Vector2D velocityFinal = ccpAdd([self velocity], deltaVelocity);
-    if(ccpLengthSQ(velocityFinal) > 0.0f)
+    if(ccpDistanceSQ([self position], [moveComp targetPosition]) > 4.0f)
     {
-        Vector2D velocityMax = ccpMult(ccpNormalize(velocityFinal), [self maxSpeed]);
-        velocityFinal = ccpClamp(velocityFinal, ccpNeg(velocityMax), velocityMax);
-        [self setVelocity:velocityFinal];
-        [self setHeading:ccpNormalize(velocityFinal)];
-        [self setSiding:ccpPerp([self heading])];
-        
-        Vector2D deltaPosition = ccpMult(velocityFinal, deltaTime);
-        Vector2D positionFinal = ccpAdd([self position], deltaPosition);
-        [self setPosition:positionFinal];        
+        Vector2D force = [moveComp calculate:deltaTime];
+        Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
+        Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
+        Vector2D velocityFinal = ccpAdd([self velocity], deltaVelocity);
+        if(ccpLengthSQ(velocityFinal) > 0.0f)
+        {
+            Vector2D velocityMax = ccpMult(ccpNormalize(velocityFinal), [self maxSpeed]);
+            velocityFinal = ccpClamp(velocityFinal, ccpNeg(velocityMax), velocityMax);
+            [self setVelocity:velocityFinal];
+            [self setHeading:ccpNormalize(velocityFinal)];
+            [self setSiding:ccpPerp([self heading])];
+            
+            Vector2D deltaPosition = ccpMult(velocityFinal, deltaTime);
+            Vector2D positionFinal = ccpAdd([self position], deltaPosition);
+            [self setPosition:positionFinal];        
+        }        
     }
 }
 

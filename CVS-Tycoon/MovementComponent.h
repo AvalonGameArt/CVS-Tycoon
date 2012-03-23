@@ -44,6 +44,6 @@ typedef CGPoint Vector2D;
 
 -(CGRect)adjustedBoundingBox;
 
--(Vector2D) calculate;
+-(Vector2D) calculate:(ccTime)deltaTime;
 
 @end

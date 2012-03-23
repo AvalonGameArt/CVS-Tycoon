@@ -13,9 +13,9 @@
 #import "MovingObject.h"
 
 @interface MovementComponent()
--(Vector2D) seek:(Vector2D)targetPos;
--(Vector2D) flee:(Vector2D)targetPos;
--(Vector2D) arrive:(Vector2D)targetPos deceleration:(float)dSpeed;
+-(Vector2D) seek:(Vector2D)targetPos withTime:(ccTime)deltaTime;
+-(Vector2D) flee:(Vector2D)targetPos withTime:(ccTime)deltaTime;
+-(Vector2D) arrive:(Vector2D)targetPos withTime:(ccTime)deltaTime;
 @end
 
 @implementation MovementComponent
@@ -75,9 +75,9 @@
     }
 }
 
--(Vector2D) seek:(Vector2D)targetPos
+-(Vector2D) seek:(Vector2D)targetPos withTime:(ccTime)deltaTime
 {
-    Vector2D steer = CGPointZero;
+    Vector2D force = CGPointZero;
     if(owner != nil)
     {
         Vector2D currentPosition = [owner position];
@@ -86,64 +86,79 @@
             Vector2D direction = ccpNormalize(ccpSub(targetPos, currentPosition));
             Vector2D desiredVelocity = ccpMult(direction, [owner maxSpeed]);
             
-            steer = ccpSub(desiredVelocity, [owner velocity]);
+            Vector2D deltaVelocity = ccpSub(desiredVelocity, [owner velocity]);
+            if(ccpLengthSQ(deltaVelocity) > 0.0f)
+            {
+                force = ccpMult(ccpNormalize(deltaVelocity), [owner maxForce]);            
+            }
         }
     }
-    return steer;
+    return force;
 }
 
--(Vector2D) flee:(Vector2D)targetPos
+-(Vector2D) flee:(Vector2D)targetPos withTime:(ccTime)deltaTime
 {
-    Vector2D steer = CGPointZero;
+    Vector2D force = CGPointZero;
     if(owner != nil)
     {
         Vector2D currentPosition = [owner position];
         if(ccpDistanceSQ(currentPosition, targetPos) > 0.0f)
         {
-            Vector2D direction = ccpNormalize(ccpSub(currentPosition, targetPos));
-            Vector2D desiredVelocity = ccpMult(direction, [owner maxSpeed]);
-            
-            steer = ccpSub(desiredVelocity, [owner velocity]);
+            Vector2D off = ccpSub(currentPosition, targetPos);
+            Vector2D direction = ccpNormalize(off);
+            float tweaker = ceil(ccpLength(off) / 10.0f);
+            Vector2D desiredVelocity = ccpMult(direction, [owner maxSpeed]/tweaker);
+            Vector2D deltaVelocity = ccpSub(desiredVelocity, [owner velocity]);
+            if(ccpLengthSQ(deltaVelocity) > 0.0f)
+            {
+                force = ccpMult(ccpNormalize(deltaVelocity), [owner maxForce]);
+            }
         }
     }
-    return steer;
+    return force;
 }
 
--(Vector2D) arrive:(Vector2D)targetPos deceleration:(float)dSpeed
+-(Vector2D) arrive:(Vector2D)targetPos withTime:(ccTime)deltaTime
 {
-    Vector2D steer = CGPointZero;
+    Vector2D force = CGPointZero;
     if(owner != nil)
     {
-        Vector2D off = ccpSub(targetPos, [owner position]);
+        float breakDist = [owner mass] * ccpLengthSQ([owner velocity]) / [owner maxForce] / 2.0f;
+        Vector2D currentPosition = [owner position];
+        Vector2D off = ccpSub(targetPos, currentPosition);
         float offLength = ccpLength(off);
-        if(offLength > 0.0f)
+        float stepLength = ccpLength([owner velocity]) * deltaTime;
+        if(offLength > breakDist + stepLength)
         {
-            const float tweaker = 1.0f;
-            float speed = offLength / (dSpeed * tweaker);
-            speed = min(speed, [owner maxSpeed]);
-            
-            Vector2D desiredVelocity = ccpMult(ccpMult(off, 1.0f/offLength), speed);
-            
-            steer = ccpSub(desiredVelocity, [owner velocity]);
+            force = [self seek:targetPos withTime:deltaTime];
+        }
+        else
+        {
+            float lengSQ = ccpLengthSQ([owner velocity]);
+            if(lengSQ > 0.0f)
+            {
+                Vector2D direct = ccpNeg(ccpNormalize([owner velocity]));
+                force = ccpMult(direct, [owner mass] * lengSQ * 0.5f);
+            }
         }
     }
-    return steer;    
+    return force;    
 }
 
--(Vector2D)calculate
+-(Vector2D)calculate:(ccTime)deltaTime
 {
     Vector2D force = CGPointZero;
     if([self seekOn])
-        force = ccpAdd(force, [self seek:[self targetPosition]]);
+        force = ccpAdd(force, [self seek:[self targetPosition] withTime:deltaTime]);
     if([self fleeOn])
-        force = ccpAdd(force, [self flee:[self targetPosition]]);
+        force = ccpAdd(force, [self flee:[self targetPosition] withTime:deltaTime]);
     if([self arriveOn])
-        force = ccpAdd(force, [self arrive:[self targetPosition] deceleration:1.0f]);
-    if(ccpLengthSQ(force) > 0.0f)
+        force = ccpAdd(force, [self arrive:[self targetPosition] withTime:deltaTime]);
+    
+    if(ccpLengthSQ(force) > 0.0f && owner != nil)
     {
         Vector2D dir = ccpNormalize(force);
-        Vector2D maxF = ccpMult(dir, [owner maxForce]);
-        force = ccpClamp(force, ccpNeg(maxF), maxF);
+        force = ccpMult(dir, [owner maxForce]);
     }
     return force;
 }
