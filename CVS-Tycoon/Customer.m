@@ -18,7 +18,7 @@
     if(self)
     {
         [self setMass:50.0f];
-        [self setMaxSpeed:5.0f];
+        [self setMaxSpeed:150.0f];
         [self setMaxForce:2500.0f];
 
         model = [CCSprite spriteWithSpriteFrameName:@"dog1"];

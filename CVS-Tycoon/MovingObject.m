@@ -35,7 +35,6 @@
     if(self)
     {
         moveComp = [[MovementComponent alloc] initWithOwner:self WithTileMap:mapNode];
-        [self setMaxSpeed:10.0f];        
     }
     return self;
 }

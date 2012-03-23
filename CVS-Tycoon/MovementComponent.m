@@ -118,7 +118,7 @@
         float offLength = ccpLength(off);
         if(offLength > 0.0f)
         {
-            const float tweaker = 0.3f;
+            const float tweaker = 1.0f;
             float speed = offLength / (dSpeed * tweaker);
             speed = min(speed, [owner maxSpeed]);
             
@@ -134,13 +134,17 @@
 {
     Vector2D force = CGPointZero;
     if([self seekOn])
+        force = ccpAdd(force, [self seek:[self targetPosition]]);
+    if([self fleeOn])
+        force = ccpAdd(force, [self flee:[self targetPosition]]);
+    if([self arriveOn])
+        force = ccpAdd(force, [self arrive:[self targetPosition] deceleration:1.0f]);
+    if(ccpLengthSQ(force) > 0.0f)
     {
-        force = [self seek:[self targetPosition]];
+        Vector2D dir = ccpNormalize(force);
+        Vector2D maxF = ccpMult(dir, [owner maxForce]);
+        force = ccpClamp(force, ccpNeg(maxF), maxF);
     }
-    else if([self fleeOn])
-        force = [self flee:[self targetPosition]];
-    else if([self arriveOn])
-        force = [self arrive:[self targetPosition] deceleration:10.0f];
     return force;
 }
 
