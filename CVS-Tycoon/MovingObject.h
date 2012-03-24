@@ -25,5 +25,6 @@
 -(id) initWithMapInfo:(MapNavInfo*)mapNode;
 
 -(void) moveTo:(Vector2D)targetPosition;
+-(void) followPath:(CCArray*)pathArray;
 
 @end

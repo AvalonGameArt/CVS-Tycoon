@@ -18,7 +18,7 @@ typedef CGPoint Vector2D;
 @private __weak MapNavInfo* mapInfo;
 }
 
-@property (strong, nonatomic) CCArray* path;
+@property (strong, nonatomic) CCArray* pathArray;
 @property (nonatomic) CGPoint targetPosition;
 @property (nonatomic) CGPoint offset;
 
@@ -37,6 +37,8 @@ typedef CGPoint Vector2D;
 @property (nonatomic) BOOL cohesionOn;
 @property (nonatomic) BOOL separationOn;
 @property (nonatomic) BOOL allignmentOn;
+
+-(void)turnAllSteerOff;
 
 -(void) updateVertexZ;
 

@@ -48,7 +48,7 @@
         Vector2D acceleration = ccpMult(force, 1.0f/[self mass]);
         Vector2D deltaVelocity = ccpMult(acceleration, deltaTime);
         Vector2D velocityFinal = ccpAdd([self velocity], deltaVelocity);
-        if(ccpLengthSQ(velocityFinal) > 0.0f)
+        if(ccpLengthSQ(velocityFinal) > 0.01f)
         {
             Vector2D velocityMax = ccpMult(ccpNormalize(velocityFinal), [self maxSpeed]);
             velocityFinal = ccpClamp(velocityFinal, ccpNeg(velocityMax), velocityMax);
@@ -59,15 +59,27 @@
             Vector2D deltaPosition = ccpMult(velocityFinal, deltaTime);
             Vector2D positionFinal = ccpAdd([self position], deltaPosition);
             [self setPosition:positionFinal];        
-        }        
+        }
+        else
+        {
+            [self setVelocity:CGPointZero];
+        }
     }
 }
 
 -(void)moveTo:(Vector2D)targetPosition
 {
     [moveComp setTargetPosition:targetPosition];
-//    [moveComp setSeekOn:YES];
+    [moveComp turnAllSteerOff];
     [moveComp setArriveOn:YES];
+}
+
+-(void)followPath:(CCArray *)pathArray
+{
+    [pathArray reverseObjects];
+    [moveComp setPathArray:pathArray];
+    [moveComp turnAllSteerOff];
+    [moveComp setFollowPathOn:YES];
 }
 
 

@@ -73,6 +73,9 @@
             GameplayLayer* strongSelf = weakSelf;
             if(strongSelf != nil)
                 [strongSelf addChild:emitter z:10];
+
+            Customer* c = (Customer*)[strongSelf getChildByTag:2];
+            [c followPath:strongSelf->pathArray];
         }];
         
 		id color_action = [CCTintBy actionWithDuration:0.5f red:0 green:-255 blue:-255];
@@ -85,6 +88,8 @@
         [menu setVisible:NO];
         
         [self addChild:menu z:0 tag:1];
+        
+        pathArray = [[CCArray alloc] init];
     }
     
     return self;
@@ -117,8 +122,10 @@
     [menu setPosition:[self locationFromTouch:touch]];
     [menu setVisible:YES];
     
-    Customer* c = (Customer*)[self getChildByTag:2];
-    [c moveTo:[self locationFromTouch:touch]];
+    [pathArray addObject:[NSValue valueWithCGPoint:[self locationFromTouch:touch]]];
+    
+//    Customer* c = (Customer*)[self getChildByTag:2];
+//    [c moveTo:[self locationFromTouch:touch]];
 }
 
 -(CGPoint) locationFromTouch:(UITouch*)touch
@@ -157,7 +164,7 @@
     posX = MIN(playableAreaEnd.x * tileSize.width, posX);
     posY = MAX(playableAreaOrig.y * tileSize.height, posY);
     posY = MIN(playableAreaEnd.y * tileSize.height, posY);
-    
+        
     return ccp(posX, posY);    
 }
 

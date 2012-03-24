@@ -16,6 +16,7 @@
     CCSpriteBatchNode* sceneSpriteBatchNode;
     CCTMXTiledMap* tiledMapNode;
 @private CGPoint beginPoint;
+@private CCArray* pathArray;
 }
 
 @property (strong, nonatomic) CCSpriteBatchNode* sceneSpriteBatchNode;
