@@ -506,6 +506,13 @@
 			remoteGlobalIDString = 4FAAE06F14BDC46100A8123E;
 			remoteInfo = TexturePacker;
 		};
+		4FC9F8EC151E1DC50014A7DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FAADDD314BC5EBB00A8123E /* cocos2d-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0F8418D151D3B3000EBBFCB;
+			remoteInfo = FileUtilsTest;
+		};
 		4FE34510151BF752003EE211 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4FAADDD314BC5EBB00A8123E /* cocos2d-ios.xcodeproj */;
@@ -822,6 +829,7 @@
 				4FAADE6E14BC5EBE00A8123E /* ActionsEaseTest.app */,
 				4FAADE7014BC5EBE00A8123E /* EffectsTest.app */,
 				4FAADE7214BC5EBE00A8123E /* EffectsAdvancedTest.app */,
+				4FC9F8ED151E1DC50014A7DD /* FileUtilsTest.app */,
 				4FAADE7414BC5EBE00A8123E /* FontTest.app */,
 				4FAADE7614BC5EBE00A8123E /* IntervalTest.app */,
 				4FAADE7814BC5EBE00A8123E /* LabelTest.app */,
@@ -1440,6 +1448,13 @@
 			fileType = wrapper.application;
 			path = Bug1159.app;
 			remoteRef = 4FAADEAB14BC5EBE00A8123E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4FC9F8ED151E1DC50014A7DD /* FileUtilsTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FileUtilsTest.app;
+			remoteRef = 4FC9F8EC151E1DC50014A7DD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4FE34511151BF752003EE211 /* MultithreadTest.app */ = {
