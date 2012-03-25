@@ -84,6 +84,8 @@
 		4FC1571714D81E5B009B27EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571914D81E5B009B27EC /* Localizable.strings */; };
 		4FC1571C14D8206B009B27EC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1571E14D8206B009B27EC /* MainStoryboard.storyboard */; };
 		4FC1572314D821D0009B27EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4FC1572514D821D0009B27EC /* InfoPlist.strings */; };
+		4FC9FDEB151F6B100014A7DD /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4FC9FDEA151F6B100014A7DD /* GLES-Render.mm */; };
+		4FC9FDEC151F6C8C0014A7DD /* libbox2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAADE4214BC5EBE00A8123E /* libbox2d.a */; };
 		4FF458DF14E2CFA000999B95 /* dg_iso32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF458DD14E2CF9F00999B95 /* dg_iso32.png */; };
 		4FF458E014E2CFA000999B95 /* isometric-with-border.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 4FF458DE14E2CFA000999B95 /* isometric-with-border.tmx */; };
 		4FF458E314E2D2D600999B95 /* LoadScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF458E214E2D2D600999B95 /* LoadScene.m */; };
@@ -618,6 +620,8 @@
 		4FC1572014D820E2009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
 		4FC1572414D821D0009B27EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4FC1572614D821D7009B27EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4FC9FDE9151F6B100014A7DD /* GLES-Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
+		4FC9FDEA151F6B100014A7DD /* GLES-Render.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		4FF458DD14E2CF9F00999B95 /* dg_iso32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dg_iso32.png; sourceTree = "<group>"; };
 		4FF458DE14E2CFA000999B95 /* isometric-with-border.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "isometric-with-border.tmx"; sourceTree = "<group>"; };
 		4FF458E114E2D2D600999B95 /* LoadScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadScene.h; sourceTree = "<group>"; };
@@ -647,6 +651,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC9FDEC151F6C8C0014A7DD /* libbox2d.a in Frameworks */,
 				4FAADEB114BC5F8F00A8123E /* libcocos2d.a in Frameworks */,
 				4FAADEB214BC5F8F00A8123E /* libkazmath.a in Frameworks */,
 				4FAADC2514BC5E5A00A8123E /* QuartzCore.framework in Frameworks */,
@@ -792,6 +797,8 @@
 		4FAADDBF14BC5E5D00A8123E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4FC9FDE9151F6B100014A7DD /* GLES-Render.h */,
+				4FC9FDEA151F6B100014A7DD /* GLES-Render.mm */,
 				4FAADDC014BC5E5D00A8123E /* Prefix.pch */,
 				4FAADDC114BC5E5D00A8123E /* main.m */,
 				4FC1572514D821D0009B27EC /* InfoPlist.strings */,
@@ -1560,6 +1567,7 @@
 				4F643A0C15035CB300117DA0 /* MapNavInfo.m in Sources */,
 				4F4D27D415090C000024F22E /* AnimationComponent.m in Sources */,
 				973D14981510D15600060B49 /* MovingObject.m in Sources */,
+				4FC9FDEB151F6B100014A7DD /* GLES-Render.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
