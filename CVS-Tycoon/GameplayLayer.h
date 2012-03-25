@@ -29,8 +29,6 @@
 @property (nonatomic) CGPoint playableAreaOrig;
 @property (nonatomic) CGPoint playableAreaEnd;
 
--(CGPoint)locationFromTouch:(UITouch*)touch;
--(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap;
 -(CGPoint) truncateInPlayableArea:(CGPoint)position;
 
 @end

@@ -113,46 +113,21 @@
     CGPoint diff = ccpSub(touchLocation, beginPoint);
     CGPoint oldPos = [self position];
     CGPoint newPos = ccpAdd(oldPos, diff);
-    [self setPosition:newPos];    
+    [self setPosition:newPos];
+    beginPoint = touchLocation;
 }
 
 -(void) ccTouchEnded:(UITouch*)touch withEvent:(UIEvent*)event
 {
+    CGPoint p = [self convertToNodeSpace:[self locationFromTouch:touch]];
     CCMenu* menu = (CCMenu*)[self getChildByTag:1];
-    [menu setPosition:[self locationFromTouch:touch]];
+    [menu setPosition:p];
     [menu setVisible:YES];
     
-    [pathArray addObject:[NSValue valueWithCGPoint:[self locationFromTouch:touch]]];
+    [pathArray addObject:[NSValue valueWithCGPoint:p]];
     
 //    Customer* c = (Customer*)[self getChildByTag:2];
 //    [c moveTo:[self locationFromTouch:touch]];
-}
-
--(CGPoint) locationFromTouch:(UITouch*)touch
-{
-    CGPoint touchLocation = [touch locationInView: [touch view]];		
-    touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
-    touchLocation = [self convertToNodeSpace:touchLocation];
-    
-    return touchLocation;
-}
-
--(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap
-{
-    CGPoint pos = ccpSub(tileMap.position, location);
-    float tileWidth = [tileMap tileSize].width;
-    float tileHeight = [tileMap tileSize].height;
-    float halfMapWidth = [tileMap mapSize].width / 2.0f;
-    float mapHeight = [tileMap mapSize].height;
-    
-    CGPoint tilePosDiv = ccp(pos.x / tileWidth, pos.y / tileHeight);
-    float inverseTileY = mapHeight - tilePosDiv.y;
-    
-    //http://www.gandraxa.com/isometric_projection.xml
-    float posX = (int)(inverseTileY + tilePosDiv.x - halfMapWidth);
-    float posY = (int)(inverseTileY - tilePosDiv.x + halfMapWidth);
-    
-    return [self truncateInPlayableArea:ccp(posX, posY)];
 }
 
 -(CGPoint) truncateInPlayableArea:(CGPoint)position
