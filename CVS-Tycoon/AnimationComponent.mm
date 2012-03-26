@@ -12,7 +12,7 @@
 
 @implementation AnimationComponent
 
-@synthesize owner, animationDict;
+@synthesize owner = owner_, animationDict;
 
 -(id)init
 {

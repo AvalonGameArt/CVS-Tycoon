@@ -9,6 +9,9 @@
 #import "CommonProtocols.h"
 
 @interface FiniteStateMachine : CCNode
+{
+    __weak id owner_;
+}
 
 @property (weak, nonatomic) id owner;
 @property (strong, nonatomic) id<GameObjectStateDelegate> currentState;

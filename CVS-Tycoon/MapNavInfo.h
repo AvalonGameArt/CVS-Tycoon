@@ -8,7 +8,8 @@
 
 @interface MapNavInfo : CCNode
 {
-    int mapInfoMatrix[50][50];    
+    int mapInfoMatrix[50][50]; 
+    __weak CCTMXTiledMap* mapNode_;
 }
 
 @property (weak, nonatomic) CCTMXTiledMap* mapNode;

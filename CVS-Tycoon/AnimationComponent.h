@@ -9,6 +9,9 @@
 @class GameObject;
 
 @interface AnimationComponent : CCNode
+{
+    __weak GameObject* owner_;
+}
 
 @property (weak, nonatomic) GameObject* owner;
 @property (strong, nonatomic) NSMutableDictionary* animationDict;
