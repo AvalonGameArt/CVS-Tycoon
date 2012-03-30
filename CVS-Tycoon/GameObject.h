@@ -6,21 +6,15 @@
 //  Copyright 2011 AvalonGameArt. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "CommonProtocols.h"
-
 @class FiniteStateMachine;
+@class AnimationComponent;
 
 @interface GameObject : CCNode
 {
 }
 
-@property (nonatomic) CGPoint position;
 @property (strong, nonatomic) FiniteStateMachine* mainFSM;
-@property (strong, nonatomic) NSMutableDictionary* animationDict;
+@property (strong, nonatomic) AnimationComponent* animationComponent;
 
 -(void) update:(ccTime)deltaTime;
--(CGRect)adjustedBoundingBox;
-
--(void)loadPlistForAnimation:(NSString*)plistName;
 @end

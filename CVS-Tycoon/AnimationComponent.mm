@@ -1,42 +1,27 @@
 //
-//  GameObject.m
+//  AnimationComponent.m
 //  CVS-Tycoon
 //
-//  Created by Zhang Zhe on 9/27/11.
-//  Copyright 2011 AvalonGameArt. All rights reserved.
+//  Created by Zhang Zhe on 3/8/12.
+//  Copyright (c) 2012 AvalonGameArt. All rights reserved.
 //
 
-#import "GameObject.h"
-#import "FiniteStateMachine.h"
+#import "AnimationComponent.h"
 #import "Categories.h"
+#import "GameObject.h"
 
+@implementation AnimationComponent
 
-@implementation GameObject
-@synthesize position, mainFSM, animationDict;
+@synthesize owner = owner_, animationDict;
 
-- (id)init
+-(id)init
 {
     self = [super init];
-    if (self) {
-        // Initialization code here.
-        CCLOG(@"GameObject init");
-        mainFSM = [[FiniteStateMachine alloc] init];
-        [self scheduleUpdate];
+    if(self)
+    {
+        animationDict = [[NSMutableDictionary alloc] init];
     }
-    
     return self;
-}
-
--(void)update:(ccTime)deltaTime
-{
-    CCLOG(@"updateStateWithDeltaTime method should be overridden");
-    [[self mainFSM] update:deltaTime];
-}
-
--(CGRect)adjustedBoundingBox
-{
-    CCLOG(@"GameObject adjustedBoundingBox should be overridden");
-    return [self boundingBox];
 }
 
 -(void)loadPlistForAnimation:(NSString*)plistName
@@ -55,13 +40,28 @@
     id key;
     while (key = [keyIter nextObject]) {
         NSDictionary* settings = [plistDictionary objectForKey:key];
-        NSString* frameBaseName = [[settings objectForKey:@"frameBaseName"] stringValue];
+        NSString* frameBaseName = [settings objectForKey:@"frameBaseName"];
         float delay = [[settings objectForKey:@"delay"] floatValue];
         int frameBegin = [[settings objectForKey:@"frameBegin"] intValue];
         int frameEnd = [[settings objectForKey:@"frameEnd"] intValue];
         CCAnimation* animation = [CCAnimation animationWithFrame:frameBaseName frameCountBegin:frameBegin frameCountEnd:frameEnd delay:delay];
-        [animationDict setObject:animation forKey:(NSString*)key];
+        [[self animationDict] setObject:animation forKey:key];
     }
+}
+
+-(void)playAnimation:(NSString *)animName onModel:(CCSprite *)model repeat:(BOOL)isRepeat
+{
+    if(isRepeat)
+    {
+        id action = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName]]];
+        [model runAction:action];
+    }
+    else
+    {
+        id action = [CCAnimate actionWithAnimation:[[self animationDict] objectForKey:animName]];
+        [model runAction:action];
+    }
+    
 }
 
 @end

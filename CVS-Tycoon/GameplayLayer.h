@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 
 #import "CommonProtocols.h"
+#import "Categories.h"
 
 @interface GameplayLayer : CCLayer
 {
     CCSpriteBatchNode* sceneSpriteBatchNode;
     CCTMXTiledMap* tiledMapNode;
-    CGPoint beginPoint;
+@private CGPoint beginPoint;
+@private CCArray* pathArray;
 }
 
 @property (strong, nonatomic) CCSpriteBatchNode* sceneSpriteBatchNode;
@@ -26,9 +28,7 @@
 
 @property (nonatomic) CGPoint playableAreaOrig;
 @property (nonatomic) CGPoint playableAreaEnd;
-@property (nonatomic) CGPoint beginPoint;
 
--(CGPoint)locationFromTouch:(UITouch*)touch;
--(CGPoint) tilePosFromLocation:(CGPoint)location tileMap:(CCTMXTiledMap*)tileMap;
+-(CGPoint) truncateInPlayableArea:(CGPoint)position;
 
 @end
