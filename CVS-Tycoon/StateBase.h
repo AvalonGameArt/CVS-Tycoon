@@ -10,9 +10,9 @@
 #import "GameObject.h"
 
 
-@interface StateBase : NSObject <GameObjectStateDelegate>
-{
-}
-
-@end
+//@interface StateBase : NSObject <GameObjectStateDelegate>
+//{
+//}
+//
+//@end
 

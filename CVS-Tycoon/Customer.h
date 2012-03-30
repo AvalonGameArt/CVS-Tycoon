@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 AvalonGameArt. All rights reserved.
 //
 
-#import "MovementComponent.h"
+#import "MapNavInfo.h"
+#import "PathPlanner.h"
+#import "MovingObject.h"
 
-@interface Customer : CCNode
+@interface Customer : MovingObject
 {
-@private __strong MovementComponent* moveComp;
-@private __strong CCSprite* bodySprite;
-    
+@private __strong PathPlanner* pathPlanner;
+@private __strong CCSprite* model;
 }
-
 @end

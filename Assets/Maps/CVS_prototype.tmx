@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="16" height="16" tilewidth="128" tileheight="64">
+ <tileset firstgid="1" name="CVS_prototype" tilewidth="128" tileheight="128">
+  <image source="CVS_prototype.png" width="1024" height="1024"/>
+ </tileset>
+ <layer name="wall" width="16" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgoB5gpUAvCxqfjwS9zGh8XgrcwYPGFyNBLzcaX5QEvVwkqEUHnGh8YQrMEqJAryAFekfBwAAA6rbn+wAEAAA=
+  </data>
+ </layer>
+ <layer name="floor" width="16" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgGAXIgAkNj+qnr35kM0YB7QEA71I8IgAEAAA=
+  </data>
+ </layer>
+ <objectgroup name="shelf_1_0" width="16" height="16">
+  <object gid="26" x="422" y="442"/>
+  <object x="432" y="344"/>
+  <object x="477" y="391"/>
+  <object x="412" y="476"/>
+ </objectgroup>
+ <objectgroup name="shelf_1_1" width="16" height="16">
+  <object x="546" y="162"/>
+  <object gid="27" x="422" y="442"/>
+ </objectgroup>
+ <objectgroup name="shelf_1_2" width="16" height="16">
+  <object gid="28" x="423" y="442"/>
+ </objectgroup>
+ <objectgroup name="shelf_1_3" width="16" height="16">
+  <object gid="29" x="421" y="441"/>
+ </objectgroup>
+ <objectgroup name="shelf_1_4" width="16" height="16">
+  <object gid="30" x="423" y="444"/>
+ </objectgroup>
+</map>

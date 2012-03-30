@@ -11,13 +11,13 @@
 @interface AppController : UIResponder <UIApplicationDelegate, CCDirectorDelegate>
 {
 	UIWindow *window_;
-	UINavigationController *navController_;
+	UINavigationController *__weak navController_;
 
 	CCDirectorIOS	*__weak director_;							// weak ref
 }
 
 @property (nonatomic, strong) UIWindow *window;
-@property (readonly) UINavigationController *navController;
-@property (readonly) CCDirectorIOS *director;
+@property (weak, readonly) UINavigationController *navController;
+@property (weak, readonly) CCDirectorIOS *director;
 
 @end

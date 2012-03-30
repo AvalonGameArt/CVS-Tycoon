@@ -31,7 +31,5 @@
 -(void)dealloc
 {
     [self setOwner: nil];
-    [self setCurrentState:nil];
-    [self setGlobalState:nil];
 }
 @end
